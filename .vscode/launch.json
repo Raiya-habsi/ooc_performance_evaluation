@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Odoo 19 Debug (.venv1)",
+            "type": "python",
+            "request": "launch",
+            "python": "C:/Odoo 19.0e.20250920/.venv1/Scripts/python.exe",
+            "program": "C:/Odoo 19.0e.20250920/server/odoo-bin",
+            "console": "integratedTerminal",
+            "cwd": "C:/Odoo 19.0e.20250920/server",
+            "args": [
+                "-c",
+                "C:/Odoo 19.0e.20250920/server/odoo.conf",
+                "--dev=all"
+            ],
+            "justMyCode": false,
+            "env": {
+                "PYTHONUNBUFFERED": "1"
+            }
+        }
+    ]
+}
