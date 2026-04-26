@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_performance_goal_kanban" model="ir.ui.view">
+        <field name="name">performance.goal.kanban</field>
+        <field name="model">performance.goal</field>
+        <field name="arch" type="xml">
+            <kanban class="o_perf_goal_kanban">
+                <field name="name"/>
+                <field name="cycle_id"/>
+                <field name="department_id"/>
+                <field name="section_id"/>
+                <field name="weight"/>
+                <field name="target_value"/>
+                <field name="priority"/>
+                <field name="state"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click o_perf_card o_perf_goal_card">
+                            <div class="o_perf_card_header">
+                                <div>
+                                    <div class="o_perf_eyebrow" t-out="record.cycle_id.value"/>
+                                    <strong class="o_perf_title" t-out="record.name.value"/>
+                                </div>
+                                <span class="badge text-bg-secondary" t-out="record.state.value"/>
+                            </div>
+                            <div class="o_perf_meta">
+                                <span t-out="record.department_id.value"/>
+                                <span t-out="record.section_id.value or 'Department Goal'"/>
+                            </div>
+                            <div class="o_perf_metric_grid">
+                                <div class="o_perf_metric">
+                                    <span class="o_perf_metric_value" t-out="record.weight.value"/>
+                                    <span class="o_perf_metric_label">Weight</span>
+                                </div>
+                                <div class="o_perf_metric">
+                                    <span class="o_perf_metric_value" t-out="record.target_value.value"/>
+                                    <span class="o_perf_metric_label">Target</span>
+                                </div>
+                                <div class="o_perf_metric">
+                                    <span class="o_perf_metric_value" t-out="record.priority.value"/>
+                                    <span class="o_perf_metric_label">Priority</span>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_performance_goal_list" model="ir.ui.view">
+        <field name="name">performance.goal.list</field>
+        <field name="model">performance.goal</field>
+        <field name="arch" type="xml">
+            <list decoration-success="state in ('hr_approved', 'locked')" decoration-info="state == 'available'" decoration-warning="state in ('selected', 'manager_approved')" decoration-muted="state == 'cancelled'">
+                <field name="name"/>
+                <field name="cycle_id"/>
+                <field name="department_id"/>
+                <field name="section_id"/>
+                <field name="manager_id"/>
+                <field name="parent_kpi_id"/>
+                <field name="target_value"/>
+                <field name="weight"/>
+                <field name="priority"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_performance_goal_form" model="ir.ui.view">
+        <field name="name">performance.goal.form</field>
+        <field name="model">performance.goal</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_make_available" string="Make Available" type="object" class="btn-primary" invisible="state != 'draft'"/>
+                    <button name="action_cancel" string="Cancel" type="object" invisible="state == 'cancelled'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,available,selected,manager_approved,hr_approved,locked,cancelled"/>
+                </header>
+                <sheet>
+                    <group string="Goal Definition">
+                        <group>
+                            <field name="name"/>
+                            <field name="cycle_id"/>
+                            <field name="department_id"/>
+                            <field name="section_id"/>
+                            <field name="manager_id"/>
+                        </group>
+                        <group>
+                            <field name="parent_kpi_id"/>
+                            <field name="target_value"/>
+                            <field name="measure_unit"/>
+                            <field name="weight"/>
+                            <field name="priority"/>
+                        </group>
+                    </group>
+                    <field name="description" placeholder="Describe the expected outcome, measurement logic, and any delivery constraints."/>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_performance_goal_search" model="ir.ui.view">
+        <field name="name">performance.goal.search</field>
+        <field name="model">performance.goal</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="cycle_id"/>
+                <field name="department_id"/>
+                <field name="manager_id"/>
+                <filter name="available" string="Available" domain="[('state', '=', 'available')]"/>
+                <filter name="approved" string="Approved" domain="[('state', 'in', ('manager_approved', 'hr_approved', 'locked'))]"/>
+                <filter name="locked" string="Locked" domain="[('state', '=', 'locked')]"/>
+                <separator/>
+                <filter name="group_department" string="Department" context="{'group_by': 'department_id'}"/>
+                <filter name="group_cycle" string="Cycle" context="{'group_by': 'cycle_id'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_performance_goals" model="ir.actions.act_window">
+        <field name="name">Goal Bank</field>
+        <field name="res_model">performance.goal</field>
+        <field name="view_mode">list,form,kanban</field>
+        <field name="search_view_id" ref="view_performance_goal_search"/>
+    </record>
+
+    <record id="view_performance_goal_selection_kanban" model="ir.ui.view">
+        <field name="name">performance.goal.selection.kanban</field>
+        <field name="model">performance.goal.selection</field>
+        <field name="arch" type="xml">
+            <kanban class="o_perf_selection_kanban">
+                <field name="employee_id"/>
+                <field name="cycle_id"/>
+                <field name="manager_id"/>
+                <field name="department_id"/>
+                <field name="total_goal_count"/>
+                <field name="total_weight"/>
+                <field name="state"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click o_perf_card o_perf_selection_card">
+                            <div class="o_perf_card_header">
+                                <div>
+                                    <div class="o_perf_eyebrow" t-out="record.cycle_id.value"/>
+                                    <strong class="o_perf_title" t-out="record.employee_id.value"/>
+                                </div>
+                                <span class="badge text-bg-secondary" t-out="record.state.value"/>
+                            </div>
+                            <div class="o_perf_meta">
+                                <span t-out="record.department_id.value"/>
+                                <span>
+                                    Manager:
+                                    <t t-out="record.manager_id.value or 'Unassigned'"/>
+                                </span>
+                            </div>
+                            <div class="o_perf_metric_grid">
+                                <div class="o_perf_metric">
+                                    <span class="o_perf_metric_value" t-out="record.total_goal_count.value"/>
+                                    <span class="o_perf_metric_label">Goals</span>
+                                </div>
+                                <div class="o_perf_metric">
+                                    <span class="o_perf_metric_value" t-out="record.total_weight.value"/>
+                                    <span class="o_perf_metric_label">Weight</span>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_performance_goal_selection_list" model="ir.ui.view">
+        <field name="name">performance.goal.selection.list</field>
+        <field name="model">performance.goal.selection</field>
+        <field name="arch" type="xml">
+            <list decoration-success="state in ('hr_approved', 'locked')" decoration-warning="state in ('submitted', 'manager_approved', 'returned')" decoration-danger="state == 'rejected'">
+                <field name="employee_id"/>
+                <field name="cycle_id"/>
+                <field name="manager_id"/>
+                <field name="department_id"/>
+                <field name="total_goal_count"/>
+                <field name="total_weight"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_performance_goal_selection_form" model="ir.ui.view">
+        <field name="name">performance.goal.selection.form</field>
+        <field name="model">performance.goal.selection</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_submit" string="Submit" type="object" class="btn-primary" invisible="state not in ('draft', 'returned')"/>
+                    <button name="action_manager_approve" string="Manager Approve" type="object" invisible="state != 'submitted'"/>
+                    <button name="action_return_for_correction" string="Return for Correction" type="object" invisible="state != 'submitted'"/>
+                    <button name="action_reject" string="Reject" type="object" invisible="state != 'submitted'"/>
+                    <button name="action_hr_approve" string="HR Approve" type="object" invisible="state != 'manager_approved'"/>
+                    <button name="action_lock" string="Lock" type="object" invisible="state != 'hr_approved'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,submitted,manager_approved,hr_approved,locked"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="action_view_selected_goals" icon="fa-bullseye">
+                            <field name="total_goal_count" string="Selected Goals" widget="statinfo"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="action_view_related_evaluation" icon="fa-file-text-o">
+                            <field name="related_evaluation_count" string="Evaluation" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <group string="Selection Overview">
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="cycle_id"/>
+                            <field name="manager_id" readonly="1"/>
+                            <field name="department_id" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="total_goal_count" readonly="1"/>
+                            <field name="total_weight" readonly="1"/>
+                            <field name="submitted_date" readonly="1"/>
+                            <field name="manager_approved_date" readonly="1"/>
+                            <field name="hr_approved_date" readonly="1"/>
+                        </group>
+                    </group>
+                    <field name="goal_ids" widget="many2many_tags" options="{'no_create': False}" placeholder="Select 3 to 5 approved goals that total 100% weight."/>
+                    <group>
+                        <field name="manager_comment"/>
+                        <field name="hr_comment"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_performance_goal_selections" model="ir.actions.act_window">
+        <field name="name">Goal Approvals</field>
+        <field name="res_model">performance.goal.selection</field>
+        <field name="view_mode">list,form,kanban</field>
+    </record>
+
+    <record id="action_performance_my_goal_selection" model="ir.actions.act_window">
+        <field name="name">My Goals</field>
+        <field name="res_model">performance.goal.selection</field>
+        <field name="view_mode">list,form,kanban</field>
+        <field name="domain">[('employee_id.user_id', '=', uid)]</field>
+    </record>
+
+    <record id="view_performance_midyear_review_list" model="ir.ui.view">
+        <field name="name">performance.midyear.review.list</field>
+        <field name="model">performance.midyear.review</field>
+        <field name="arch" type="xml">
+            <list decoration-success="state == 'done'" decoration-warning="state == 'submitted'">
+                <field name="employee_id"/>
+                <field name="cycle_id"/>
+                <field name="manager_id"/>
+                <field name="review_date"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_performance_midyear_review_form" model="ir.ui.view">
+        <field name="name">performance.midyear.review.form</field>
+        <field name="model">performance.midyear.review</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="cycle_id"/>
+                            <field name="manager_id"/>
+                            <field name="review_date"/>
+                        </group>
+                        <group>
+                            <field name="state"/>
+                        </group>
+                    </group>
+                    <group string="Development Discussion">
+                        <field name="progress_summary"/>
+                        <field name="challenges"/>
+                        <field name="support_required"/>
+                        <field name="priority_changes"/>
+                        <field name="employee_comments"/>
+                        <field name="manager_comments"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_performance_midyear_reviews" model="ir.actions.act_window">
+        <field name="name">Mid-Year Reviews</field>
+        <field name="res_model">performance.midyear.review</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

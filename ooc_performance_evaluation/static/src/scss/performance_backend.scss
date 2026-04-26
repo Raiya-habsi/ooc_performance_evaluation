@@ -1,0 +1,146 @@
+.o_web_client {
+    --perf-accent: #0e7490;
+    --perf-accent-soft: #ecfeff;
+    --perf-surface: #ffffff;
+    --perf-border: #dbe4ee;
+    --perf-text: #132238;
+    --perf-muted: #5f7288;
+    --perf-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+.o_perf_cycle_kanban,
+.o_perf_evaluation_kanban,
+.o_perf_goal_kanban,
+.o_perf_selection_kanban,
+.o_perf_kpi_kanban,
+.o_perf_kpi_score_kanban,
+.o_perf_appeal_kanban,
+.o_perf_plan_kanban {
+    .o_kanban_renderer {
+        padding: 12px;
+        background:
+            radial-gradient(circle at top right, rgba(14, 116, 144, 0.08), transparent 24%),
+            linear-gradient(180deg, #f7fafc 0%, #eef4f8 100%);
+    }
+}
+
+.o_perf_card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-height: 220px;
+    padding: 18px;
+    border: 1px solid var(--perf-border);
+    border-radius: 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
+    color: var(--perf-text);
+    box-shadow: var(--perf-shadow);
+
+    .o_perf_card_header,
+    .o_perf_card_footer,
+    .o_perf_progress_top,
+    .o_perf_meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .o_perf_meta,
+    .o_perf_card_footer {
+        flex-wrap: wrap;
+        color: var(--perf-muted);
+        font-size: 0.88rem;
+    }
+
+    .o_perf_eyebrow {
+        margin-bottom: 4px;
+        color: var(--perf-accent);
+        font-size: 0.74rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+
+    .o_perf_title {
+        font-size: 1.08rem;
+        line-height: 1.3;
+    }
+
+    .o_perf_cycle_year {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    .o_perf_metric_grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .o_perf_metric {
+        padding: 12px;
+        border-radius: 14px;
+        background: var(--perf-accent-soft);
+    }
+
+    .o_perf_metric_value {
+        display: block;
+        font-size: 1.08rem;
+        font-weight: 700;
+    }
+
+    .o_perf_metric_label,
+    .o_perf_score_label {
+        display: block;
+        margin-top: 2px;
+        color: var(--perf-muted);
+        font-size: 0.8rem;
+    }
+
+    .o_perf_score_hero {
+        padding: 16px 18px;
+        border-radius: 18px;
+        background: linear-gradient(135deg, #0f766e 0%, #164e63 100%);
+        color: #fff;
+    }
+
+    .o_perf_score_value {
+        display: block;
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1;
+    }
+
+    .o_perf_progress_block {
+        padding: 12px 14px;
+        border-radius: 16px;
+        background: #f4f8fb;
+
+        progress {
+            width: 100%;
+            height: 10px;
+            margin-top: 8px;
+            accent-color: var(--perf-accent);
+        }
+    }
+
+    .badge {
+        padding: 0.4rem 0.7rem;
+        border-radius: 999px;
+        font-weight: 600;
+    }
+}
+
+.o_form_view {
+    .o_group .o_td_label .o_form_label {
+        font-weight: 600;
+    }
+
+    .o_notebook .nav-link.active {
+        background: linear-gradient(180deg, #ffffff 0%, #eef6f8 100%);
+        color: var(--perf-accent);
+        border-top-color: var(--perf-accent);
+    }
+}

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="ooc_performance_evaluation.PerformanceDashboard" owl="1">
+        <div class="o_perf_dashboard">
+            <div class="o_perf_dashboard__shell">
+                <div class="o_perf_dashboard__toolbar">
+                    <div class="o_perf_dashboard__toolbar_copy">
+                        <strong><t t-esc="state.labels.dashboardFiltersTitle"/></strong>
+                        <span><t t-esc="state.labels.dashboardFiltersSubtitle"/></span>
+                    </div>
+                    <div class="o_perf_dashboard__filters">
+                        <t t-foreach="Object.entries(state.filters)" t-as="filterEntry" t-key="filterEntry[0]">
+                            <t t-if="filterEntry[1].visible">
+                            <label class="o_perf_dashboard__filter">
+                                <span><t t-esc="filterEntry[1].label"/></span>
+                                <select t-att-value="filterEntry[1].value" t-on-change="(ev) => this.onFilterChange(filterEntry[0], ev)">
+                                    <t t-foreach="filterEntry[1].options" t-as="option" t-key="option.value">
+                                        <option t-att-value="option.value"><t t-esc="option.label"/></option>
+                                    </t>
+                                </select>
+                            </label>
+                            </t>
+                        </t>
+                        <button class="o_perf_dashboard__filter_reset" t-on-click="() => this.resetFilters()">
+                            <t t-esc="state.resetFiltersLabel"/>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="o_perf_dashboard__hero">
+                    <div class="o_perf_dashboard__hero_copy">
+                        <div class="o_perf_dashboard__eyebrow"><t t-esc="state.dashboard.hero.eyebrow"/></div>
+                        <h1 class="o_perf_dashboard__title"><t t-esc="state.dashboard.hero.title"/></h1>
+                        <p class="o_perf_dashboard__subtitle"><t t-esc="state.dashboard.hero.subtitle"/></p>
+                        <div class="o_perf_dashboard__hero_pills">
+                            <t t-foreach="state.dashboard.hero_pills" t-as="pill" t-key="pill.label">
+                                <div class="o_perf_dashboard__pill">
+                                    <span><t t-esc="pill.label"/></span>
+                                    <strong><t t-esc="pill.value"/></strong>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="o_perf_dashboard__hero_side">
+                        <div t-attf-class="o_perf_dashboard__posture o_perf_dashboard__posture--#{state.dashboard.posture.tone}">
+                            <span class="o_perf_dashboard__posture_label"><t t-esc="state.labels.operatingPosture"/></span>
+                            <strong class="o_perf_dashboard__posture_value"><t t-esc="state.dashboard.posture.label"/></strong>
+                            <p class="o_perf_dashboard__posture_note"><t t-esc="state.dashboard.posture.note"/></p>
+                        </div>
+                        <t t-foreach="state.dashboard.hero_actions" t-as="action" t-key="action.label">
+                            <button t-attf-class="o_perf_dashboard__hero_action o_perf_dashboard__hero_action--#{action.variant}" t-on-click="() => this.openAction(action.action)">
+                                <t t-esc="action.label"/>
+                            </button>
+                        </t>
+                    </div>
+                </div>
+
+                <div class="o_perf_dashboard__rail">
+                    <t t-foreach="state.dashboard.rail_cards" t-as="card" t-key="card.label">
+                        <button class="o_perf_dashboard__rail_card" t-on-click="() => this.openAction(card.action)">
+                            <span class="o_perf_dashboard__rail_label"><t t-esc="card.label"/></span>
+                            <strong class="o_perf_dashboard__rail_value"><t t-esc="card.value"/></strong>
+                            <span class="o_perf_dashboard__rail_hint"><t t-esc="card.hint"/></span>
+                        </button>
+                    </t>
+                </div>
+
+                <div class="o_perf_dashboard__grid">
+                    <section class="o_perf_dashboard__panel o_perf_dashboard__panel--overview">
+                        <div class="o_perf_dashboard__panel_heading">
+                            <div>
+                                <span class="o_perf_dashboard__panel_eyebrow"><t t-esc="state.labels.liveMetrics"/></span>
+                                <h2><t t-esc="state.labels.operationalSnapshot"/></h2>
+                            </div>
+                            <span class="o_perf_dashboard__panel_caption"><t t-esc="state.labels.metricsCaption"/></span>
+                        </div>
+                        <div class="o_perf_dashboard__metric_grid">
+                            <t t-foreach="state.dashboard.metrics" t-as="metric" t-key="metric.label">
+                                <button t-attf-class="o_perf_dashboard__metric o_perf_dashboard__metric--#{metric.tone}" t-on-click="() => this.openAction(metric.action)">
+                                    <span class="o_perf_dashboard__metric_label"><t t-esc="metric.label"/></span>
+                                    <strong class="o_perf_dashboard__metric_value"><t t-esc="metric.value"/></strong>
+                                    <span class="o_perf_dashboard__metric_hint"><t t-esc="metric.hint"/></span>
+                                </button>
+                            </t>
+                        </div>
+                    </section>
+
+                    <section class="o_perf_dashboard__panel o_perf_dashboard__panel--bi">
+                        <div class="o_perf_dashboard__panel_heading">
+                            <div>
+                                <span class="o_perf_dashboard__panel_eyebrow"><t t-esc="state.labels.biShortcuts"/></span>
+                                <h2><t t-esc="state.labels.analysisViews"/></h2>
+                            </div>
+                            <span class="o_perf_dashboard__panel_caption"><t t-esc="state.labels.biCaption"/></span>
+                        </div>
+                        <div class="o_perf_dashboard__bi_grid">
+                            <t t-foreach="state.dashboard.bi_actions" t-as="biAction" t-key="biAction.label">
+                                <button class="o_perf_dashboard__bi_card" t-on-click="() => this.openAction(biAction.action)">
+                                    <strong><t t-esc="biAction.label"/></strong>
+                                    <span><t t-esc="biAction.description"/></span>
+                                </button>
+                            </t>
+                        </div>
+                    </section>
+
+                    <section class="o_perf_dashboard__panel o_perf_dashboard__panel--focus">
+                        <div class="o_perf_dashboard__panel_heading">
+                            <div>
+                                <span class="o_perf_dashboard__panel_eyebrow"><t t-esc="state.labels.focusEyebrow"/></span>
+                                <h2><t t-esc="state.labels.focusTitle"/></h2>
+                            </div>
+                            <span class="o_perf_dashboard__panel_caption"><t t-esc="state.labels.focusCaption"/></span>
+                        </div>
+                        <div class="o_perf_dashboard__focus_grid">
+                            <t t-if="state.dashboard.focus_panels.length">
+                                <t t-foreach="state.dashboard.focus_panels" t-as="panel" t-key="panel.title">
+                                    <div class="o_perf_dashboard__focus_card">
+                                        <div class="o_perf_dashboard__focus_heading">
+                                            <div>
+                                                <span class="o_perf_dashboard__panel_eyebrow"><t t-esc="panel.eyebrow"/></span>
+                                                <h3><t t-esc="panel.title"/></h3>
+                                            </div>
+                                            <p class="o_perf_dashboard__panel_caption"><t t-esc="panel.caption"/></p>
+                                        </div>
+                                        <div class="o_perf_dashboard__focus_rows">
+                                            <t t-foreach="panel.items" t-as="item" t-key="panel.title + item.label">
+                                                <button t-attf-class="o_perf_dashboard__focus_row o_perf_dashboard__focus_row--#{item.tone}" t-on-click="() => this.openAction(item.action)">
+                                                    <div class="o_perf_dashboard__focus_copy">
+                                                        <strong><t t-esc="item.label"/></strong>
+                                                        <span><t t-esc="item.note"/></span>
+                                                    </div>
+                                                    <div class="o_perf_dashboard__focus_value"><t t-esc="item.value"/></div>
+                                                </button>
+                                            </t>
+                                        </div>
+                                    </div>
+                                </t>
+                            </t>
+                            <t t-else="">
+                                <div class="o_perf_dashboard__empty_state">
+                                    <strong><t t-esc="state.labels.noRecordsTitle"/></strong>
+                                    <span><t t-esc="state.labels.noRelatedSubtitle"/></span>
+                                </div>
+                            </t>
+                        </div>
+                    </section>
+
+                    <section class="o_perf_dashboard__panel o_perf_dashboard__panel--analytics">
+                        <div class="o_perf_dashboard__panel_heading">
+                            <div>
+                                <span class="o_perf_dashboard__panel_eyebrow"><t t-esc="state.labels.analyticsEyebrow"/></span>
+                                <h2><t t-esc="state.labels.analyticsTitle"/></h2>
+                            </div>
+                            <span class="o_perf_dashboard__panel_caption"><t t-esc="state.labels.analyticsCaption"/></span>
+                        </div>
+                        <div class="o_perf_dashboard__analytics_grid">
+                            <t t-foreach="state.dashboard.analytics_panels" t-as="panel" t-key="panel.title">
+                                <div class="o_perf_dashboard__analytics_card">
+                                    <div class="o_perf_dashboard__analytics_heading">
+                                        <div>
+                                            <span class="o_perf_dashboard__panel_eyebrow"><t t-esc="panel.eyebrow"/></span>
+                                            <h3><t t-esc="panel.title"/></h3>
+                                        </div>
+                                        <div t-if="panel.summary_label" class="o_perf_dashboard__analytics_summary">
+                                            <span><t t-esc="panel.summary_label"/></span>
+                                            <strong><t t-esc="panel.summary_value"/></strong>
+                                        </div>
+                                    </div>
+                                    <p class="o_perf_dashboard__panel_caption"><t t-esc="panel.caption"/></p>
+                                    <div class="o_perf_dashboard__analytics_rows">
+                                        <t t-if="panel.items.length">
+                                            <t t-foreach="panel.items" t-as="item" t-key="panel.title + item.label">
+                                                <button class="o_perf_dashboard__analytics_row" t-on-click="() => this.openAction(item.action)">
+                                                    <div class="o_perf_dashboard__analytics_copy">
+                                                        <div class="o_perf_dashboard__analytics_topline">
+                                                            <strong><t t-esc="item.label"/></strong>
+                                                            <span><t t-esc="item.value"/> <t t-if="item.sublabel"><t t-esc="item.sublabel"/></t></span>
+                                                        </div>
+                                                        <div class="o_perf_dashboard__analytics_bar">
+                                                            <div class="o_perf_dashboard__analytics_fill" t-att-style="'width:' + item.ratio + '%'"></div>
+                                                        </div>
+                                                        <small><t t-esc="item.hint"/></small>
+                                                    </div>
+                                                    <span class="o_perf_dashboard__analytics_share"><t t-esc="item.ratio"/>%</span>
+                                                </button>
+                                            </t>
+                                        </t>
+                                        <t t-else="">
+                                            <div class="o_perf_dashboard__empty_state">
+                                                <strong><t t-esc="state.labels.noRecordsTitle"/></strong>
+                                                <span><t t-esc="state.labels.noRelatedSubtitle"/></span>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                    </section>
+
+                    <section class="o_perf_dashboard__panel o_perf_dashboard__panel--recent">
+                        <div class="o_perf_dashboard__panel_heading">
+                            <div>
+                                <span class="o_perf_dashboard__panel_eyebrow"><t t-esc="state.dashboard.primary_list.eyebrow"/></span>
+                                <h2><t t-esc="state.dashboard.primary_list.title"/></h2>
+                            </div>
+                            <span class="o_perf_dashboard__panel_caption"><t t-esc="state.dashboard.primary_list.caption"/></span>
+                        </div>
+                        <div class="o_perf_dashboard__recent_list">
+                            <t t-if="state.dashboard.primary_list.items.length">
+                                <t t-foreach="state.dashboard.primary_list.items" t-as="item" t-key="item.title + item.badge">
+                                    <button class="o_perf_dashboard__recent_item" t-on-click="() => this.openAction(item.action)">
+                                        <div class="o_perf_dashboard__recent_main">
+                                            <div class="o_perf_dashboard__recent_topline">
+                                                <strong><t t-esc="item.title"/></strong>
+                                                <span class="o_perf_dashboard__badge"><t t-esc="item.badge"/></span>
+                                            </div>
+                                            <div class="o_perf_dashboard__recent_meta">
+                                                <t t-foreach="item.meta" t-as="meta" t-key="meta">
+                                                    <span><t t-esc="meta"/></span>
+                                                </t>
+                                            </div>
+                                            <small t-if="item.footnote"><t t-esc="item.footnote"/></small>
+                                        </div>
+                                        <div class="o_perf_dashboard__recent_side">
+                                            <strong><t t-esc="item.side_value"/></strong>
+                                            <span><t t-esc="item.side_label"/></span>
+                                        </div>
+                                    </button>
+                                </t>
+                            </t>
+                            <t t-else="">
+                                <div class="o_perf_dashboard__empty_state">
+                                    <strong><t t-esc="state.labels.noRecordsTitle"/></strong>
+                                    <span><t t-esc="state.labels.noRecordsSubtitle"/></span>
+                                </div>
+                            </t>
+                        </div>
+                    </section>
+
+                    <section class="o_perf_dashboard__panel o_perf_dashboard__panel--timeline">
+                        <div class="o_perf_dashboard__panel_heading">
+                            <div>
+                                <span class="o_perf_dashboard__panel_eyebrow"><t t-esc="state.dashboard.secondary_list.eyebrow"/></span>
+                                <h2><t t-esc="state.dashboard.secondary_list.title"/></h2>
+                            </div>
+                            <span class="o_perf_dashboard__panel_caption"><t t-esc="state.dashboard.secondary_list.caption"/></span>
+                        </div>
+                        <div class="o_perf_dashboard__recent_list">
+                            <t t-if="state.dashboard.secondary_list.items.length">
+                                <t t-foreach="state.dashboard.secondary_list.items" t-as="item" t-key="item.title + item.badge">
+                                    <button class="o_perf_dashboard__recent_item" t-on-click="() => this.openAction(item.action)">
+                                        <div class="o_perf_dashboard__recent_main">
+                                            <div class="o_perf_dashboard__recent_topline">
+                                                <strong><t t-esc="item.title"/></strong>
+                                                <span class="o_perf_dashboard__badge"><t t-esc="item.badge"/></span>
+                                            </div>
+                                            <div class="o_perf_dashboard__recent_meta">
+                                                <t t-foreach="item.meta" t-as="meta" t-key="meta">
+                                                    <span><t t-esc="meta"/></span>
+                                                </t>
+                                            </div>
+                                            <small t-if="item.footnote"><t t-esc="item.footnote"/></small>
+                                        </div>
+                                        <div class="o_perf_dashboard__recent_side">
+                                            <strong><t t-esc="item.side_value"/></strong>
+                                            <span><t t-esc="item.side_label"/></span>
+                                        </div>
+                                    </button>
+                                </t>
+                            </t>
+                            <t t-else="">
+                                <div class="o_perf_dashboard__empty_state">
+                                    <strong><t t-esc="state.labels.noRecordsTitle"/></strong>
+                                    <span><t t-esc="state.labels.noRelatedSubtitle"/></span>
+                                </div>
+                            </t>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

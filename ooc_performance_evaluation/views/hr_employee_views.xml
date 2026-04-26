@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hr_employee_form_performance" model="ir.ui.view">
+        <field name="name">hr.employee.form.performance.evaluation</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Performance Evaluation">
+                    <group>
+                        <group>
+                            <field name="evaluation_category"/>
+                            <field name="evaluation_service_start_date"/>
+                            <field name="performance_manual_basic_salary"/>
+                            <field name="evaluation_section_id"/>
+                            <field name="evaluation_manager_id" readonly="1"/>
+                            <field name="evaluation_department_id" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="is_evaluation_eligible" readonly="1"/>
+                            <field name="evaluation_exclusion_reason" readonly="1"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_hr_employee_list_performance" model="ir.ui.view">
+        <field name="name">hr.employee.list.performance.evaluation</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="inside">
+                <field name="evaluation_category" optional="show"/>
+                <field name="evaluation_department_id" optional="show"/>
+                <field name="evaluation_manager_id" optional="show"/>
+                <field name="is_evaluation_eligible" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

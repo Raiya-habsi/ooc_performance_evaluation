@@ -1,0 +1,903 @@
+.o_perf_dashboard {
+    --perf-navy: #0f3344;
+    --perf-deep: #14394a;
+    --perf-teal: #1c8f86;
+    --perf-mint: #74cfae;
+    --perf-amber: #d9993f;
+    --perf-coral: #db6b57;
+    --perf-rose: #c95e84;
+    --perf-ink: #112838;
+    --perf-copy: #607584;
+    --perf-line: #d8e2e8;
+    --perf-shell: #edf3f7;
+    --perf-panel: #ffffff;
+    --perf-shadow: 0 20px 60px rgba(17, 40, 56, 0.12);
+    --perf-soft-shadow: 0 16px 38px rgba(17, 40, 56, 0.09);
+    min-height: 100%;
+    padding: 24px;
+    background:
+        radial-gradient(circle at top left, rgba(28, 143, 134, 0.12), transparent 26%),
+        radial-gradient(circle at top right, rgba(116, 207, 174, 0.16), transparent 26%),
+        linear-gradient(180deg, #f8fbfd 0%, #edf3f7 100%);
+    color: var(--perf-ink);
+    font-family: "Segoe UI Variable", "Segoe UI", sans-serif;
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+.o_perf_dashboard__shell {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.o_perf_dashboard__toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+    padding: 18px 22px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(17, 40, 56, 0.08);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: var(--perf-soft-shadow);
+}
+
+.o_perf_dashboard__toolbar_copy strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 16px;
+    color: var(--perf-ink);
+}
+
+.o_perf_dashboard__toolbar_copy span {
+    font-size: 13px;
+    color: var(--perf-copy);
+}
+
+.o_perf_dashboard__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.o_perf_dashboard__filter {
+    display: grid;
+    gap: 6px;
+    min-width: 160px;
+}
+
+.o_perf_dashboard__filter span {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--perf-copy);
+}
+
+.o_perf_dashboard__filter select,
+.o_perf_dashboard__filter_reset {
+    min-height: 42px;
+    padding: 10px 14px;
+    border: 1px solid rgba(17, 40, 56, 0.14);
+    border-radius: 14px;
+    background: #fff;
+    color: var(--perf-ink);
+}
+
+.o_perf_dashboard__filter_reset {
+    align-self: end;
+    font-weight: 700;
+}
+
+.o_perf_dashboard__hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.95fr);
+    gap: 18px;
+    padding: 28px;
+    margin-bottom: 18px;
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at top right, rgba(116, 207, 174, 0.3), transparent 34%),
+        linear-gradient(125deg, var(--perf-navy) 0%, #1a5d78 52%, var(--perf-teal) 100%);
+    box-shadow: var(--perf-shadow);
+}
+
+.o_perf_dashboard__hero_copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 170px;
+}
+
+.o_perf_dashboard__eyebrow,
+.o_perf_dashboard__panel_eyebrow,
+.o_perf_dashboard__posture_label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.o_perf_dashboard__eyebrow {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.o_perf_dashboard__title {
+    margin: 0;
+    font-family: "Bahnschrift", "Segoe UI Variable", sans-serif;
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1;
+    color: #fff;
+}
+
+.o_perf_dashboard__subtitle {
+    max-width: 720px;
+    margin: 14px 0 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.o_perf_dashboard__hero_pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.o_perf_dashboard__pill {
+    min-width: 170px;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.o_perf_dashboard__pill span {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.o_perf_dashboard__pill strong {
+    font-size: 26px;
+    line-height: 1;
+    color: #fff;
+}
+
+.o_perf_dashboard__hero_side {
+    display: grid;
+    gap: 10px;
+    align-content: start;
+    grid-auto-rows: minmax(0, auto);
+}
+
+.o_perf_dashboard__posture {
+    padding: 18px 18px 20px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
+
+.o_perf_dashboard__posture_value {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 32px;
+    line-height: 1;
+}
+
+.o_perf_dashboard__posture_note {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.o_perf_dashboard__posture--attention {
+    box-shadow: inset 0 0 0 1px rgba(219, 107, 87, 0.22);
+}
+
+.o_perf_dashboard__posture--active {
+    box-shadow: inset 0 0 0 1px rgba(217, 153, 63, 0.22);
+}
+
+.o_perf_dashboard__posture--stable {
+    box-shadow: inset 0 0 0 1px rgba(116, 207, 174, 0.22);
+}
+
+.o_perf_dashboard__hero_action,
+.o_perf_dashboard__rail_card,
+.o_perf_dashboard__metric,
+.o_perf_dashboard__alert,
+.o_perf_dashboard__recent_item {
+    border: 0;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.o_perf_dashboard__hero_action:hover,
+.o_perf_dashboard__rail_card:hover,
+.o_perf_dashboard__metric:hover,
+.o_perf_dashboard__alert:hover,
+.o_perf_dashboard__recent_item:hover {
+    transform: translateY(-2px);
+}
+
+.o_perf_dashboard__hero_action {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 18px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.o_perf_dashboard__hero_action--light {
+    color: var(--perf-navy);
+    background: #f7fbfb;
+}
+
+.o_perf_dashboard__hero_action--soft {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.o_perf_dashboard__hero_action--dark {
+    color: #fff;
+    background: rgba(12, 37, 50, 0.74);
+}
+
+.o_perf_dashboard__rail {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.o_perf_dashboard__rail_card,
+.o_perf_dashboard__panel,
+.o_perf_dashboard__metric,
+.o_perf_dashboard__alert,
+.o_perf_dashboard__recent_item {
+    border: 1px solid rgba(17, 40, 56, 0.08);
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: var(--perf-soft-shadow);
+}
+
+.o_perf_dashboard__rail_card {
+    min-height: 112px;
+    padding: 18px 18px;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.o_perf_dashboard__rail_label,
+.o_perf_dashboard__metric_label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--perf-copy);
+}
+
+.o_perf_dashboard__rail_value {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--perf-ink);
+}
+
+.o_perf_dashboard__rail_hint,
+.o_perf_dashboard__metric_hint,
+.o_perf_dashboard__panel_caption {
+    display: block;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--perf-copy);
+}
+
+.o_perf_dashboard__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: start;
+}
+
+.o_perf_dashboard__panel {
+    padding: 22px;
+    border-radius: 24px;
+    min-height: 100%;
+}
+
+.o_perf_dashboard__panel--overview,
+.o_perf_dashboard__panel--analytics,
+.o_perf_dashboard__panel--recent {
+    grid-column: span 2;
+}
+
+.o_perf_dashboard__panel--bi,
+.o_perf_dashboard__panel--focus,
+.o_perf_dashboard__panel--timeline {
+    grid-column: span 1;
+}
+
+.o_perf_dashboard__panel_heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+.o_perf_dashboard__panel_heading h2 {
+    margin: 0;
+    font-family: "Bahnschrift", "Segoe UI Variable", sans-serif;
+    font-size: 28px;
+    line-height: 1.1;
+}
+
+.o_perf_dashboard__panel_eyebrow {
+    margin-bottom: 8px;
+    color: #6d7f88;
+}
+
+.o_perf_dashboard__metric_grid,
+.o_perf_dashboard__bi_grid,
+.o_perf_dashboard__focus_grid,
+.o_perf_dashboard__analytics_grid,
+.o_perf_dashboard__alerts,
+.o_perf_dashboard__recent_list {
+    display: grid;
+    gap: 12px;
+}
+
+.o_perf_dashboard__metric_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.o_perf_dashboard__bi_grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.o_perf_dashboard__analytics_grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.o_perf_dashboard__focus_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.o_perf_dashboard__bi_card {
+    display: grid;
+    gap: 8px;
+    min-height: 134px;
+    padding: 18px;
+    border: 1px solid rgba(17, 40, 56, 0.08);
+    border-radius: 18px;
+    background: linear-gradient(180deg, #ffffff 0%, #f4f9fb 100%);
+    text-align: left;
+    box-shadow: var(--perf-soft-shadow);
+}
+
+.o_perf_dashboard__analytics_card {
+    display: grid;
+    gap: 14px;
+    align-content: start;
+    padding: 18px;
+    border: 1px solid rgba(17, 40, 56, 0.08);
+    border-radius: 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #f7fbfd 100%);
+    box-shadow: var(--perf-soft-shadow);
+}
+
+.o_perf_dashboard__focus_card {
+    display: grid;
+    gap: 14px;
+    align-content: start;
+    padding: 18px;
+    border: 1px solid rgba(17, 40, 56, 0.08);
+    border-radius: 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #f6fafc 100%);
+    box-shadow: var(--perf-soft-shadow);
+}
+
+.o_perf_dashboard__focus_heading {
+    display: grid;
+    gap: 6px;
+}
+
+.o_perf_dashboard__focus_heading h3 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.1;
+    color: var(--perf-ink);
+}
+
+.o_perf_dashboard__focus_rows {
+    display: grid;
+    gap: 10px;
+}
+
+.o_perf_dashboard__focus_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(17, 40, 56, 0.06);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.92);
+    text-align: left;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.o_perf_dashboard__focus_row:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--perf-soft-shadow);
+}
+
+.o_perf_dashboard__focus_copy {
+    display: grid;
+    gap: 4px;
+    min-width: 0;
+}
+
+.o_perf_dashboard__focus_copy strong {
+    font-size: 14px;
+    color: var(--perf-ink);
+}
+
+.o_perf_dashboard__focus_copy span {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--perf-copy);
+}
+
+.o_perf_dashboard__focus_value {
+    min-width: 84px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: right;
+    color: var(--perf-ink);
+}
+
+.o_perf_dashboard__focus_row--teal {
+    box-shadow: inset 4px 0 0 0 var(--perf-teal);
+}
+
+.o_perf_dashboard__focus_row--mint {
+    box-shadow: inset 4px 0 0 0 var(--perf-mint);
+}
+
+.o_perf_dashboard__focus_row--amber {
+    box-shadow: inset 4px 0 0 0 var(--perf-amber);
+}
+
+.o_perf_dashboard__focus_row--rose {
+    box-shadow: inset 4px 0 0 0 var(--perf-rose);
+}
+
+.o_perf_dashboard__focus_row--slate {
+    box-shadow: inset 4px 0 0 0 var(--perf-navy);
+}
+
+.o_perf_dashboard__analytics_heading,
+.o_perf_dashboard__analytics_topline {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.o_perf_dashboard__analytics_heading h3 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.1;
+    color: var(--perf-ink);
+}
+
+.o_perf_dashboard__analytics_summary {
+    min-width: 96px;
+    text-align: right;
+}
+
+.o_perf_dashboard__analytics_summary span,
+.o_perf_dashboard__analytics_share,
+.o_perf_dashboard__analytics_copy small {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--perf-copy);
+}
+
+.o_perf_dashboard__analytics_summary strong {
+    display: block;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--perf-ink);
+}
+
+.o_perf_dashboard__analytics_rows {
+    display: grid;
+    gap: 10px;
+}
+
+.o_perf_dashboard__analytics_row {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(17, 40, 56, 0.06);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.85);
+    text-align: left;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.o_perf_dashboard__analytics_row:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--perf-soft-shadow);
+}
+
+.o_perf_dashboard__analytics_copy {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.o_perf_dashboard__analytics_topline strong {
+    font-size: 14px;
+    color: var(--perf-ink);
+}
+
+.o_perf_dashboard__analytics_topline span {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--perf-deep);
+}
+
+.o_perf_dashboard__analytics_bar {
+    position: relative;
+    height: 8px;
+    margin: 10px 0 8px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(17, 40, 56, 0.08);
+}
+
+.o_perf_dashboard__analytics_fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--perf-teal) 0%, var(--perf-mint) 100%);
+}
+
+.o_perf_dashboard__analytics_share {
+    min-width: 52px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.o_perf_dashboard__bi_card strong {
+    font-size: 15px;
+    color: var(--perf-ink);
+}
+
+.o_perf_dashboard__bi_card span {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--perf-copy);
+}
+
+.o_perf_dashboard__metric {
+    position: relative;
+    min-height: 122px;
+    padding: 18px;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.o_perf_dashboard__metric::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: 4px;
+}
+
+.o_perf_dashboard__metric_value {
+    display: block;
+    margin-bottom: 6px;
+    font-size: clamp(34px, 3vw, 40px);
+    line-height: 1;
+    color: var(--perf-ink);
+}
+
+.o_perf_dashboard__metric--teal::before {
+    background: var(--perf-teal);
+}
+
+.o_perf_dashboard__metric--mint::before {
+    background: var(--perf-mint);
+}
+
+.o_perf_dashboard__metric--amber::before {
+    background: var(--perf-amber);
+}
+
+.o_perf_dashboard__metric--rose::before {
+    background: var(--perf-rose);
+}
+
+.o_perf_dashboard__metric--slate::before {
+    background: var(--perf-navy);
+}
+
+.o_perf_dashboard__alert,
+.o_perf_dashboard__recent_item {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    min-height: 112px;
+    padding: 16px 18px;
+    border-radius: 18px;
+    text-align: left;
+}
+
+.o_perf_dashboard__alert {
+    align-items: center;
+    border-left-width: 5px;
+}
+
+.o_perf_dashboard__alert_copy strong,
+.o_perf_dashboard__recent_topline strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: var(--perf-ink);
+}
+
+.o_perf_dashboard__alert_copy p,
+.o_perf_dashboard__recent_meta,
+.o_perf_dashboard__recent_main small {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--perf-copy);
+}
+
+.o_perf_dashboard__alert_action {
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--perf-ink);
+}
+
+.o_perf_dashboard__alert--critical {
+    border-left-color: var(--perf-coral);
+}
+
+.o_perf_dashboard__alert--warning {
+    border-left-color: var(--perf-amber);
+}
+
+.o_perf_dashboard__alert--attention {
+    border-left-color: var(--perf-rose);
+}
+
+.o_perf_dashboard__alert--neutral {
+    border-left-color: var(--perf-teal);
+}
+
+.o_perf_dashboard__recent_main {
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.o_perf_dashboard__recent_topline {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.o_perf_dashboard__recent_meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+}
+
+.o_perf_dashboard__recent_side {
+    min-width: 80px;
+    text-align: right;
+}
+
+.o_perf_dashboard__recent_side strong {
+    display: block;
+    font-size: 28px;
+    line-height: 1;
+    color: var(--perf-ink);
+}
+
+.o_perf_dashboard__recent_side span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--perf-copy);
+}
+
+.o_perf_dashboard__badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(15, 51, 68, 0.08);
+    color: var(--perf-deep);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.o_perf_dashboard__empty_state {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 180px;
+    padding: 18px;
+    border: 1px dashed rgba(17, 40, 56, 0.16);
+    border-radius: 18px;
+    background: rgba(248, 251, 252, 0.88);
+    text-align: center;
+}
+
+.o_perf_dashboard__empty_state strong {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: var(--perf-ink);
+}
+
+.o_perf_dashboard__empty_state span {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--perf-copy);
+}
+
+@media (max-width: 1360px) {
+    .o_perf_dashboard__rail {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1100px) {
+    .o_perf_dashboard {
+        padding: 18px;
+    }
+
+    .o_perf_dashboard__toolbar,
+    .o_perf_dashboard__hero,
+    .o_perf_dashboard__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .o_perf_dashboard__rail,
+    .o_perf_dashboard__bi_grid,
+    .o_perf_dashboard__focus_grid,
+    .o_perf_dashboard__analytics_grid,
+    .o_perf_dashboard__metric_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .o_perf_dashboard__panel--overview,
+    .o_perf_dashboard__panel--analytics,
+    .o_perf_dashboard__panel--recent {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 820px) {
+    .o_perf_dashboard__rail,
+    .o_perf_dashboard__bi_grid,
+    .o_perf_dashboard__focus_grid,
+    .o_perf_dashboard__analytics_grid,
+    .o_perf_dashboard__metric_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .o_perf_dashboard__toolbar,
+    .o_perf_dashboard__panel_heading,
+    .o_perf_dashboard__focus_row,
+    .o_perf_dashboard__analytics_heading,
+    .o_perf_dashboard__analytics_topline,
+    .o_perf_dashboard__analytics_row,
+    .o_perf_dashboard__recent_item,
+    .o_perf_dashboard__recent_topline {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .o_perf_dashboard__recent_side {
+        min-width: 0;
+        text-align: left;
+    }
+}
+
+[dir="rtl"] .o_perf_dashboard {
+    direction: rtl;
+}
+
+[dir="rtl"] .o_perf_dashboard__filters {
+    justify-content: flex-start;
+}
+
+[dir="rtl"] .o_perf_dashboard__rail_card,
+[dir="rtl"] .o_perf_dashboard__metric,
+[dir="rtl"] .o_perf_dashboard__focus_row,
+[dir="rtl"] .o_perf_dashboard__recent_item,
+[dir="rtl"] .o_perf_dashboard__bi_card,
+[dir="rtl"] .o_perf_dashboard__analytics_card,
+[dir="rtl"] .o_perf_dashboard__analytics_row {
+    text-align: right;
+}
+
+[dir="rtl"] .o_perf_dashboard__analytics_summary,
+[dir="rtl"] .o_perf_dashboard__analytics_share,
+[dir="rtl"] .o_perf_dashboard__focus_value,
+[dir="rtl"] .o_perf_dashboard__recent_side {
+    text-align: left;
+}
+
+[dir="rtl"] .o_perf_dashboard__focus_row--teal,
+[dir="rtl"] .o_perf_dashboard__focus_row--mint,
+[dir="rtl"] .o_perf_dashboard__focus_row--amber,
+[dir="rtl"] .o_perf_dashboard__focus_row--rose,
+[dir="rtl"] .o_perf_dashboard__focus_row--slate {
+    box-shadow: inset -4px 0 0 0 transparent;
+}
+
+[dir="rtl"] .o_perf_dashboard__focus_row--teal {
+    box-shadow: inset -4px 0 0 0 var(--perf-teal);
+}
+
+[dir="rtl"] .o_perf_dashboard__focus_row--mint {
+    box-shadow: inset -4px 0 0 0 var(--perf-mint);
+}
+
+[dir="rtl"] .o_perf_dashboard__focus_row--amber {
+    box-shadow: inset -4px 0 0 0 var(--perf-amber);
+}
+
+[dir="rtl"] .o_perf_dashboard__focus_row--rose {
+    box-shadow: inset -4px 0 0 0 var(--perf-rose);
+}
+
+[dir="rtl"] .o_perf_dashboard__focus_row--slate {
+    box-shadow: inset -4px 0 0 0 var(--perf-navy);
+}
+
+[dir="rtl"] .o_perf_dashboard__analytics_fill {
+    inset: 0 0 0 auto;
+}
+
+[dir="rtl"] .o_perf_dashboard__recent_side {
+    text-align: left;
+}

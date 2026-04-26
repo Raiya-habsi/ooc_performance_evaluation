@@ -1,0 +1,4340 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ooc_performance_evaluation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e-20260419\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-25 00:22+0000\n"
+"PO-Revision-Date: 2026-04-25 00:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "%s active development plan(s) need follow-up."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "%s appeal case(s) remain open in your reporting line."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "%s appeal record(s) still need a decision."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "%s evaluation record(s) are not yet finalized."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "%s evaluation(s) are currently waiting for HR confirmation."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "%s evaluation(s) still need discipline linkage before confirmation."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "%s goal selection(s) still need manager or HR approval."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "%s locked KPI(s) in %s still have no centralized score sheet."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "%s/%s evaluations completed"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_score_kanban
+msgid "<span class=\"o_perf_metric_label\">Actual</span>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_kanban
+msgid "<span class=\"o_perf_metric_label\">Appeals</span>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_kanban
+msgid "<span class=\"o_perf_metric_label\">Completed</span>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_kanban
+msgid "<span class=\"o_perf_metric_label\">Discipline</span>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_kanban
+msgid "<span class=\"o_perf_metric_label\">Eligible</span>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_kanban
+msgid "<span class=\"o_perf_metric_label\">Events</span>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_kanban
+msgid "<span class=\"o_perf_metric_label\">Excluded</span>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_kanban
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_selection_kanban
+msgid "<span class=\"o_perf_metric_label\">Goals</span>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_kanban
+msgid "<span class=\"o_perf_metric_label\">Priority</span>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_kanban
+msgid "<span class=\"o_perf_metric_label\">Rating</span>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_kanban
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_kanban
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_score_kanban
+msgid "<span class=\"o_perf_metric_label\">Target</span>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_kanban
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_selection_kanban
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_kanban
+msgid "<span class=\"o_perf_metric_label\">Weight</span>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_score_kanban
+msgid "<span class=\"o_perf_metric_label\">Weighted</span>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_kanban
+msgid "<span class=\"o_perf_score_label\">Final Score</span>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_kanban
+msgid "<span>Completion</span>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_development_plan_kanban
+msgid "<span>Progress</span>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "<strong>Category</strong>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "<strong>Cycle</strong>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "<strong>Department</strong>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "<strong>Employee</strong>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "<strong>HR:</strong>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "<strong>Manager:</strong>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "<strong>Manager</strong>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "<strong>Rating</strong>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "<strong>Reward:</strong>"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "A confirmed institutional KPI score is required before submission."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "A discipline score record is required for this evaluation."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__absence_count
+msgid "Absence Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.module.category,description:ooc_performance_evaluation.module_category_performance_evaluation
+msgid "Access rights for OOC performance evaluation."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "Achievement"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation_line__achievement_score
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__achievement_score
+msgid "Achievement Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__message_needaction
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__message_needaction
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__message_needaction
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__message_needaction
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__message_needaction
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__message_needaction
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__message_needaction
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__message_needaction
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__message_needaction
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Action Queue"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_form
+msgid "Activate"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_reward_rule__active
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_kpi__state__active
+msgid "Active"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__reward_salary_source__contract
+msgid "Active Contract"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Active plans first, then appeal records when they exist."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__activity_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__activity_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__activity_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__activity_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__activity_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__activity_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__activity_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__activity_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__activity_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__activity_exception_decoration
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__activity_exception_decoration
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__activity_exception_decoration
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__activity_exception_decoration
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__activity_exception_decoration
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__activity_exception_decoration
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__activity_exception_decoration
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__activity_exception_decoration
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__activity_exception_decoration
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__activity_state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__activity_state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__activity_state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__activity_state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__activity_state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__activity_state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__activity_state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__activity_state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__activity_state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__activity_type_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__activity_type_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__activity_type_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__activity_type_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__activity_type_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__activity_type_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__activity_type_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__activity_type_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__activity_type_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "Actual"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation_line__actual_value
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__actual_value
+msgid "Actual Value"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "All evaluation lines must have actual values before submission."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_cycle.py:0
+msgid "All goal selections must be HR approved before goals can be locked."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "All of your cycle evaluations"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "All performance cycles"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_goal_selection.py:0
+msgid ""
+"All selected goals must be linked to a parent KPI and the employee "
+"department."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__appeal_ids
+msgid "Appeal"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__appeal_count
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__appeal_count
+msgid "Appeal Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__appeal_deadline
+msgid "Appeal Deadline"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__appeal_description
+msgid "Appeal Description"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_cycle__state__appeal_period
+msgid "Appeal Period"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__appeal_reason
+msgid "Appeal Reason"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__appeal_working_days
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_res_config_settings__performance_appeal_working_days
+msgid "Appeal Working Days"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Appeal records you submitted"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Appeal still in progress"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__state__appealed
+msgid "Appealed"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_cycle.py:0
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_appeals
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_appeals
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Appeals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Appeals %s"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Appeals need a response"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Appeals requiring follow-up"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Appeals still in progress"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Applied Reward Rule"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Approval Trail"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Approvals And Reviews"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Approve Board"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Approve Budget"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__reward_status__approved
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_search
+msgid "Approved"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Approved Goals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__approved_leave_count
+msgid "Approved Leave Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__message_attachment_count
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__message_attachment_count
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__message_attachment_count
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__message_attachment_count
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__message_attachment_count
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__message_attachment_count
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__message_attachment_count
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__message_attachment_count
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__message_attachment_count
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__attachment_ids
+msgid "Attachments"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Attendance and leave-based score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_goal__state__available
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_search
+msgid "Available"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__average_final_score
+msgid "Average Final Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Average Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Average across visible evaluations"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Average final score in the latest cycle"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Average scores by department for the latest cycle."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Avg Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_kanban
+msgid "Avg Score:"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Best published outcomes in the current cycle."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "Budget approval is required before board approval."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_form
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_form
+msgid "Cancel"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_goal__state__cancelled
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_kpi__state__cancelled
+msgid "Cancelled"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_res_config_settings__performance_score_cap
+msgid "Cap Achievement Score at 100%"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_score_form
+msgid ""
+"Capture assumptions, evidence summary, or exceptions behind the "
+"institutional result."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid ""
+"Capture evaluation context, notable outcomes, and next-step expectations."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Cases needing recovery plans"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_search
+msgid "Category"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Central institutional score at organization level"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Central institutional score feeding section evaluations"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_midyear_review__challenges
+msgid "Challenges"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__child_count
+msgid "Child Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_kpi.py:0
+msgid ""
+"Child KPI weights under '%s' must total exactly 100%%; current total is "
+"%.2f%%."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_kpi.py:0
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__child_ids
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_form
+msgid "Child KPIs"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-javascript
+#: code:addons/ooc_performance_evaluation/static/src/xml/performance_dashboard.xml:0
+msgid "Click any card to drill into the underlying records."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_appeal_form
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_development_plan_form
+msgid "Close"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Close Cycle"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_appeal__state__closed
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_cycle__state__closed
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_development_plan__state__closed
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__state__closed
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_search
+msgid "Closed"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__code
+msgid "Code"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "Comments"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__committee_notes
+msgid "Committee Notes"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_appeal__state__committee_review
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_appeal_form
+msgid "Committee Review"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_development_plan_form
+msgid "Complete"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_development_plan__state__completed
+msgid "Completed"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__completed_evaluation_count
+msgid "Completed Evaluation Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Completion"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__completion_rate
+msgid "Completion Rate"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model,name:ooc_performance_evaluation.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_configuration_root
+msgid "Configuration"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_discipline_form
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_score_form
+msgid "Confirm"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Confirm Evaluations"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_discipline_score__state__confirmed
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_kpi_score__state__confirmed
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_score_search
+msgid "Confirmed"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__confirmed_by
+msgid "Confirmed By"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__confirmed_date
+msgid "Confirmed Date"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid ""
+"Coordinate centralized KPI scoring, cycle readiness, HR review, appeals, and"
+" development follow-up from one control room."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Create a cycle to begin performance operations."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.actions.act_window,help:ooc_performance_evaluation.action_performance_cycles
+msgid ""
+"Create an annual performance cycle to drive goal setting, evaluations, "
+"publication, appeals, and development plans."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__created_by_hr
+msgid "Created By Hr"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__create_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__create_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__create_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__create_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__create_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__create_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation_line__create_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__create_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__create_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__create_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__create_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__create_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_midyear_review__create_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_reward_rule__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__create_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__create_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__create_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__create_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__create_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__create_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation_line__create_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__create_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__create_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__create_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__create_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__create_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_midyear_review__create_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_reward_rule__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_hr_employee__company_currency_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Current Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Current approved goal set"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__cycle_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__cycle_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__cycle_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__cycle_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__cycle_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__cycle_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__cycle_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__cycle_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__cycle_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_midyear_review__cycle_id
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_search
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_search
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_score_search
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_search
+msgid "Cycle"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Cycle Controlled"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Cycle In Motion"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Cycle Monitor"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Cycle Overview"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Cycle-level completion, average score, and appeal exposure."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Cycles"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_dashboard_root
+msgid "Dashboard"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__deadline
+msgid "Deadline"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Deadline %s"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Deadline pending"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__decision_date
+msgid "Decision Date"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_appeal__state__decision_issued
+msgid "Decision Issued"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_appeal_kanban
+msgid "Decision:"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__department_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__department_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__department_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__department_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__department_id
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_kpi__kpi_level__department
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_kpi_score__owner_type__department
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_search
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_search
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_search
+msgid "Department"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Department Comparison"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Department Evaluations"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Department KPIs"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Department View"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Department-level score sheets"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_form
+msgid ""
+"Describe the expected outcome, measurement logic, and any delivery "
+"constraints."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__description
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__description
+msgid "Description"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_midyear_review_form
+msgid "Development Discussion"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__development_plan_ids
+msgid "Development Plan"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__development_plan_count
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__development_plan_count
+msgid "Development Plan Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__development_plan_deadline
+msgid "Development Plan Deadline"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__development_plan_working_days
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_res_config_settings__performance_development_plan_working_days
+msgid "Development Plan Working Days"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_cycle.py:0
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_development_plans
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_development_plans
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Development Plans"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Development actions are open"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Development plans still active"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Direct Reports"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_discipline
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_discipline
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Discipline"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__discipline_component_weight
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_res_config_settings__performance_discipline_component_weight
+msgid "Discipline Component Weight"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__discipline_score
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__discipline_score_id
+msgid "Discipline Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "Discipline data is missing for %s."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Discipline inputs are incomplete"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__display_name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__display_name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__display_name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_dashboard__display_name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__display_name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__display_name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__display_name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation_line__display_name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__display_name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__display_name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__display_name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__display_name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__display_name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_midyear_review__display_name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_reward_rule__display_name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_midyear_review__state__done
+msgid "Done"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_appeal__state__draft
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_cycle__state__draft
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_development_plan__state__draft
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_discipline_score__state__draft
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__state__draft
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_goal__state__draft
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_goal_selection__state__draft
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_kpi__state__draft
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_kpi_score__state__draft
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_midyear_review__state__draft
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_search
+msgid "Draft"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_development_plan_kanban
+msgid "Due:"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__early_leave_count
+msgid "Early Leave Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__reward_status__eligible
+msgid "Eligible"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Eligible %s"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__eligible_employee_count
+msgid "Eligible Employee Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Eligible Staff"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model,name:ooc_performance_evaluation.model_hr_employee
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__employee_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__employee_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__employee_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__employee_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__employee_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__employee_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_midyear_review__employee_id
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__hr_employee__evaluation_category__employee
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__evaluation_category__employee
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_kpi__kpi_level__employee
+msgid "Employee"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__employee_attachment_ids
+msgid "Employee Attachments"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_midyear_review__employee_comments
+msgid "Employee Comments"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Employee Context"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.actions.report,name:ooc_performance_evaluation.action_report_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "Employee Evaluation"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_report_employee
+msgid "Employee Evaluation Report"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_search
+msgid "Employee Goal"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_res_config_settings__performance_employee_individual_weight
+msgid "Employee Individual Goal Weight"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__employee_individual_weight
+msgid "Employee Individual Weight"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_res_config_settings__performance_employee_institutional_weight
+msgid "Employee Institutional Goal Weight"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__employee_institutional_weight
+msgid "Employee Institutional Weight"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "Employee evaluations require approved goals."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/hr_employee.py:0
+msgid "Employee fallback basic salary"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_kpi.py:0
+msgid "Employee goals must have a department or section KPI parent."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_search
+msgid "Employees"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Employees with excellent ratings"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: code:addons/ooc_performance_evaluation/models/performance_goal_selection.py:0
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__evaluation_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__evaluation_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__evaluation_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation_line__evaluation_id
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_selection_form
+msgid "Evaluation"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_hr_employee__evaluation_category
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__evaluation_category
+msgid "Evaluation Category"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__evaluation_count
+msgid "Evaluation Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_kanban
+msgid "Evaluation Cycle"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_cycles
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_cycles
+msgid "Evaluation Cycles"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_hr_employee__evaluation_department_id
+msgid "Evaluation Department"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_hr_employee__evaluation_exclusion_reason
+msgid "Evaluation Exclusion Reason"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__line_ids
+msgid "Evaluation Lines"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_hr_employee__evaluation_manager_id
+msgid "Evaluation Manager"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Evaluation Progress"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_hr_employee__evaluation_section_id
+msgid "Evaluation Section"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_hr_employee__evaluation_service_start_date
+msgid "Evaluation Service Start Date"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Evaluation Timeline"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "Evaluation department is required."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "Evaluation manager is required."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_cycle.py:0
+msgid "Evaluation records were generated for eligible employees."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_cycle.py:0
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_evaluations_root
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Evaluations"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Evaluations Awaiting HR"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Evaluations not yet finalized"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Evaluations still in flight"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Evaluations waiting HR confirmation"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Event Contributions"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__event_count
+msgid "Event Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__event_date
+msgid "Event Date"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__event_name
+msgid "Event Name"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__event_type
+msgid "Event Type"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "Event data is missing for %s."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_events
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_events
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Events"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__events_component_weight
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_res_config_settings__performance_events_component_weight
+msgid "Events Component Weight"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__events_score
+msgid "Events Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation_line__evidence_attachment_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__evidence_attachment_ids
+msgid "Evidence"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Excellent"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Excellent Evaluations"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Excellent Ratings"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-javascript
+#: code:addons/ooc_performance_evaluation/static/src/xml/performance_dashboard.xml:0
+msgid "Exceptions & Reminders"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__excluded_employee_count
+msgid "Excluded Employee Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_dashboard_executive
+#: model:ir.actions.client,name:ooc_performance_evaluation.action_performance_dashboard_executive_client
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_dashboard_executive
+msgid "Executive Dashboard"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Executive Performance Overview"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Executive Readout"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_form
+msgid ""
+"Explain how this KPI is measured and how it cascades to the next level."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Explain why this reward was rejected or returned."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_hr_employee__performance_manual_basic_salary
+msgid "Fallback Basic Salary"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__reward_salary_source__manual
+msgid "Fallback Salary"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "Final"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__final_decision
+msgid "Final Decision"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_cycle__state__final_evaluation
+msgid "Final Evaluation"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__final_evaluation_end
+msgid "Final Evaluation End"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__final_evaluation_start
+msgid "Final Evaluation Start"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__final_score
+msgid "Final Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_appeal.py:0
+msgid "Final decision text is required before issuing a decision."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "Final score cannot be negative."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Follow Up"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__message_follower_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__message_follower_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__message_follower_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__message_follower_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__message_follower_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__message_follower_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__message_follower_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__message_follower_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__message_follower_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__message_partner_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__message_partner_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__message_partner_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__message_partner_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__message_partner_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__message_partner_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__message_partner_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__message_partner_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__message_partner_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_appeal__activity_type_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_cycle__activity_type_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_development_plan__activity_type_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_discipline_score__activity_type_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_evaluation__activity_type_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_event_participation__activity_type_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal__activity_type_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal_selection__activity_type_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi__activity_type_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi_score__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.res_config_settings_view_form_performance
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_config_settings_form
+msgid "Formula Weights"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Generate Evaluation Records"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__goal_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation_line__goal_id
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "Goal"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_goal_selections
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_goal_approvals
+msgid "Goal Approvals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_goals
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_goal_bank
+msgid "Goal Bank"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__goal_component_weight
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_res_config_settings__performance_goal_component_weight
+msgid "Goal Component Weight"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__goal_count
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__goal_count
+msgid "Goal Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_form
+msgid "Goal Definition"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Goal Evaluation"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Goal Lines"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__goal_score
+msgid "Goal Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.res_config_settings_view_form_performance
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_config_settings_form
+msgid "Goal Selection"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_cycle__state__goal_setting
+msgid "Goal Setting"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__goal_setting_start_date
+msgid "Goal Setting Start Date"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Goal Status"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__goal_submission_deadline
+msgid "Goal Submission Deadline"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__goal_total_weight
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_res_config_settings__performance_goal_total_weight
+msgid "Goal Total Weight"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Goal approvals are waiting"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid ""
+"Goal approvals first, then pending evaluations when the approval queue is "
+"clear."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_goal_selection.py:0
+msgid "Goal selection must contain between %s and %s goals."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_goal_selection.py:0
+msgid "Goal selection needs approval"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Goal selection still needs approval"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Goal selections waiting action"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_goal.py:0
+msgid "Goal weight must be greater than 0 and not more than 100."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "Goal weights must total 100%% for %s."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_cycle.py:0
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_goals_root
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Goals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__goals_lock_date
+msgid "Goals Lock Date"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_cycle__state__goals_locked
+msgid "Goals Locked"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "Goals are not HR approved for %s."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_goal.py:0
+msgid "Goals must be linked to a department or section KPI."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_cycle__state__hr_approval
+msgid "HR Approval"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_selection_form
+msgid "HR Approve"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_goal__state__hr_approved
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_goal_selection__state__hr_approved
+msgid "HR Approved"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "HR Confirm"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_cycle__state__hr_confirmation
+msgid "HR Confirmation"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__state__hr_confirmed
+msgid "HR Confirmed"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_dashboard_hr
+#: model:ir.actions.client,name:ooc_performance_evaluation.action_performance_dashboard_hr_client
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_dashboard_hr
+msgid "HR Dashboard"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_hr_evaluations
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_hr_evaluations
+msgid "HR Evaluations"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "HR Performance Command Center"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_appeal__state__hr_review
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__state__hr_review
+msgid "HR Review"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "HR Review Required"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_development_plan__state__hr_reviewed
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_development_plan_form
+msgid "HR Reviewed"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "HR notes, publication observations, or appeal guidance."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_discipline.py:0
+msgid "HR overrides require a reason and at least one attachment."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "HR review queue is active"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__has_message
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__has_message
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__has_message
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__has_message
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__has_message
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__has_message
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__has_message
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__has_message
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__has_message
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_goal__priority__1
+msgid "High"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Highest Scores"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Highest scores in your visible evaluation set."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__hr_approval_deadline
+msgid "Hr Approval Deadline"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__hr_approved_date
+msgid "Hr Approved Date"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__hr_comment
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__hr_comment
+msgid "Hr Comment"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__hr_decision
+msgid "Hr Decision"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__hr_override_score
+msgid "Hr Override Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__hr_reviewer_id
+msgid "Hr Reviewer"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_hr_employee__id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_dashboard__id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation_line__id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_midyear_review__id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_reward_rule__id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__activity_exception_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__activity_exception_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__activity_exception_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__activity_exception_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__activity_exception_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__activity_exception_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__activity_exception_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__activity_exception_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__activity_exception_icon
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_appeal__activity_exception_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_cycle__activity_exception_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_development_plan__activity_exception_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_discipline_score__activity_exception_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_evaluation__activity_exception_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_event_participation__activity_exception_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal__activity_exception_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal_selection__activity_exception_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi__activity_exception_icon
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi_score__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_appeal__message_needaction
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_cycle__message_needaction
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_development_plan__message_needaction
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_discipline_score__message_needaction
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_evaluation__message_needaction
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_event_participation__message_needaction
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal__message_needaction
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal_selection__message_needaction
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi__message_needaction
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi_score__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_appeal__message_has_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_appeal__message_has_sms_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_cycle__message_has_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_cycle__message_has_sms_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_development_plan__message_has_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_development_plan__message_has_sms_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_discipline_score__message_has_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_discipline_score__message_has_sms_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_evaluation__message_has_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_evaluation__message_has_sms_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_event_participation__message_has_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_event_participation__message_has_sms_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal__message_has_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal__message_has_sms_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal_selection__message_has_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal_selection__message_has_sms_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi__message_has_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi__message_has_sms_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi_score__message_has_error
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi_score__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_development_plan__state__in_progress
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_search
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_development_plan_form
+msgid "In Progress"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "Individual"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "Individual Goals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__individual_score
+msgid "Individual Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "Institutional"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_kpi_score.py:0
+msgid ""
+"Institutional KPI score sheets cannot be created for employee-level KPIs."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Institutional KPI sheets are missing"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Institutional KPIs"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__institutional_score
+msgid "Institutional Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Institutional participation contribution"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_hr_employee__is_evaluation_eligible
+msgid "Is Evaluation Eligible"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__message_is_follower
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__message_is_follower
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__message_is_follower
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__message_is_follower
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__message_is_follower
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__message_is_follower
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__message_is_follower
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__message_is_follower
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__message_is_follower
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_appeal_form
+msgid "Issue Decision"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_form
+msgid "KPI Definition"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_kpi_scores
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_score_sheet
+msgid "KPI Score Sheet"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_cycle.py:0
+#: code:addons/ooc_performance_evaluation/models/performance_kpi.py:0
+msgid "KPI Score Sheets"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_kpis
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_kpis
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "KPI Structure"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_kpi.py:0
+msgid "KPI weights must be greater than 0 and not more than 100."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_cycle.py:0
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_kpis_root
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "KPIs"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__kpi_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__kpi_id
+msgid "Kpi"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__kpi_count
+msgid "Kpi Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__kpi_level
+msgid "Kpi Level"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__write_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__write_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__write_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__write_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__write_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__write_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation_line__write_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__write_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__write_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__write_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__write_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__write_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_midyear_review__write_uid
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_reward_rule__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__write_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__write_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__write_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__write_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__write_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__write_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation_line__write_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__write_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__write_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__write_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__write_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__write_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_midyear_review__write_date
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_reward_rule__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__late_count
+msgid "Late Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Latest Cycle"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Latest Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid ""
+"Latest cycle %s has %s missing KPI sheets, %s missing discipline links, and "
+"%s evaluations in HR review."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid ""
+"Latest cycle %s is %.2f%% complete with an organization KPI score of %.2f."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Latest cycle eligibility snapshot"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Latest cycle evaluation records"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Latest records still in HR review."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__leadership_skills
+msgid "Leadership Skills"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_search
+msgid "Level"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__line_count
+msgid "Line Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_kpi.py:0
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_form
+msgid "Linked Goals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-javascript
+#: code:addons/ooc_performance_evaluation/static/src/xml/performance_dashboard.xml:0
+msgid "Live Metrics"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_discipline_form
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_selection_form
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_form
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_score_form
+msgid "Lock"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Lock Goals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_discipline_score__state__locked
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_goal__state__locked
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_goal_selection__state__locked
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_kpi__state__locked
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_kpi_score__state__locked
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_search
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_score_search
+msgid "Locked"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_kpi_score.py:0
+msgid "Locked KPI score sheets cannot be modified."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Locked institutional KPI records without score sheets"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_goal__priority__3
+msgid "Low"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__low_performance_threshold
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_res_config_settings__performance_low_threshold
+msgid "Low Performance Threshold"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Low performers requiring intervention"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_form
+msgid "Make Available"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__manager_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__manager_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__manager_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__manager_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_midyear_review__manager_id
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__hr_employee__evaluation_category__manager
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__evaluation_category__manager
+msgid "Manager"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_cycle__state__manager_approval
+msgid "Manager Approval"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__manager_approval_deadline
+msgid "Manager Approval Deadline"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_selection_form
+msgid "Manager Approve"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_goal__state__manager_approved
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_goal_selection__state__manager_approved
+msgid "Manager Approved"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__manager_approved_date
+msgid "Manager Approved Date"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__manager_comment
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation_line__manager_comment
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__manager_comment
+msgid "Manager Comment"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_midyear_review__manager_comments
+msgid "Manager Comments"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__state__manager_evaluation
+msgid "Manager Evaluation"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__manager_events_component_weight
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_res_config_settings__performance_manager_events_component_weight
+msgid "Manager Events Component Weight"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__manager_goal_component_weight
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_res_config_settings__performance_manager_goal_component_weight
+msgid "Manager Goal Component Weight"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Manager Notes"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_development_plan__state__manager_prepared
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_development_plan_form
+msgid "Manager Prepared"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__manager_quality_comment
+msgid "Manager Quality Comment"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__manager_recommendation
+msgid "Manager Recommendation"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__manager_response
+msgid "Manager Response"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__state__manager_submitted
+msgid "Manager Submitted"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "Manager evaluation is missing for %s."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "Manager, department, and evaluation category are mandatory."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_development_plan_kanban
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_kanban
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_selection_kanban
+msgid "Manager:"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_search
+msgid "Managers"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_reward_rule__max_score
+msgid "Max Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__maximum_goals
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_res_config_settings__performance_maximum_goals
+msgid "Maximum Goals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__measure_unit
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__measure_unit
+msgid "Measure Unit"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_goal__priority__2
+msgid "Medium"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__message_has_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__message_has_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__message_has_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__message_has_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__message_has_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__message_has_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__message_has_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__message_has_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__message_has_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__mid_year_review_end
+msgid "Mid Year Review End"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__mid_year_review_start
+msgid "Mid Year Review Start"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_cycle__state__mid_year_review
+msgid "Mid-Year Review"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_cycle.py:0
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_midyear_reviews
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_midyear
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Mid-Year Reviews"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__midyear_review_count
+msgid "Midyear Review Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_reward_rule__min_score
+msgid "Min Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__minimum_goals
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_res_config_settings__performance_minimum_goals
+msgid "Minimum Goals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Missing Discipline"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Missing KPI"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid ""
+"Monitor approvals, evaluation readiness, published scores, and follow-up "
+"actions for the people you oversee."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_dashboard_employee
+#: model:ir.actions.client,name:ooc_performance_evaluation.action_performance_dashboard_employee_client
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_dashboard_employee
+msgid "My Dashboard"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_my_evaluation
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_my_evaluation
+msgid "My Evaluation"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "My Evaluations"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_my_goal_selection
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_my_goals
+msgid "My Goals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "My Performance Desk"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_search
+msgid "My Records"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_search
+msgid "My Team"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__name
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__name
+msgid "Name"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Needs Attention"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__activity_calendar_event_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__activity_calendar_event_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__activity_calendar_event_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__activity_calendar_event_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__activity_calendar_event_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__activity_calendar_event_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__activity_calendar_event_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__activity_calendar_event_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__activity_calendar_event_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__activity_date_deadline
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__activity_summary
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__activity_summary
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__activity_summary
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__activity_summary
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__activity_summary
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__activity_summary
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__activity_summary
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__activity_summary
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__activity_summary
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__activity_type_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__activity_type_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__activity_type_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__activity_type_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__activity_type_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__activity_type_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__activity_type_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__activity_type_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__activity_type_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__reward_salary_source__none
+msgid "No Salary Source"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "No approval bottlenecks are visible for your current scope."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "No cycle data is available yet."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-javascript
+#: code:addons/ooc_performance_evaluation/static/src/xml/performance_dashboard.xml:0
+msgid "No exception records are visible in this scope."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "No manager note yet."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-javascript
+#: code:addons/ooc_performance_evaluation/static/src/xml/performance_dashboard.xml:0
+msgid "No records in this panel yet."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Non-manager evaluations still missing discipline"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "None"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__reward_status__not_applicable
+msgid "Not Applicable"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Not Selected"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__message_needaction_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__message_needaction_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__message_needaction_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__message_needaction_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__message_needaction_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__message_needaction_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__message_needaction_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__message_needaction_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__message_needaction_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_reward_rule__reward_multiplier
+msgid "Number of basic salaries granted by this reward rule."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__message_has_error_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__message_has_error_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__message_has_error_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__message_has_error_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__message_has_error_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__message_has_error_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__message_has_error_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__message_has_error_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__message_has_error_counter
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_appeal__message_needaction_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_cycle__message_needaction_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_development_plan__message_needaction_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_discipline_score__message_needaction_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_evaluation__message_needaction_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_event_participation__message_needaction_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal__message_needaction_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal_selection__message_needaction_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi__message_needaction_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi_score__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_appeal__message_has_error_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_cycle__message_has_error_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_development_plan__message_has_error_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_discipline_score__message_has_error_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_evaluation__message_has_error_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_event_participation__message_has_error_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal__message_has_error_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal_selection__message_has_error_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi__message_has_error_counter
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi_score__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:hr.department,name:ooc_performance_evaluation.dept_perf_finance
+msgid "OOC Finance"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:hr.department,name:ooc_performance_evaluation.dept_perf_hr
+msgid "OOC HR"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:hr.department,name:ooc_performance_evaluation.dept_perf_it
+msgid "OOC IT"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:hr.department,name:ooc_performance_evaluation.dept_perf_media
+msgid "OOC Media"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:hr.department,name:ooc_performance_evaluation.dept_perf_olympic_academy
+msgid "OOC Olympic Academy"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:hr.department,name:ooc_performance_evaluation.dept_perf_technical_affairs
+msgid "OOC Technical Affairs"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__official_mission_count
+msgid "Official Mission Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "On Track"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-javascript
+#: code:addons/ooc_performance_evaluation/static/src/xml/performance_dashboard.xml:0
+msgid "Once related actions appear, they will surface here."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-javascript
+#: code:addons/ooc_performance_evaluation/static/src/xml/performance_dashboard.xml:0
+msgid ""
+"Once the workflow starts producing data, this feed will update "
+"automatically."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_goal_selection.py:0
+msgid "Only employees in the 'Employee' category can submit individual goals."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_goal_selection.py:0
+msgid "Only the employee's manager or HR can approve the goal selection."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Open Appeal Period"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Open Appeals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Open HR review"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Open KPIs"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Open Mid-Year Review"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Open appeal workload"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Open approvals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Open evaluations"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Open goals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Open plans requiring follow-up"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-javascript
+#: code:addons/ooc_performance_evaluation/static/src/xml/performance_dashboard.xml:0
+msgid "Operating Posture"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-javascript
+#: code:addons/ooc_performance_evaluation/static/src/xml/performance_dashboard.xml:0
+msgid "Operational Alerts"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-javascript
+#: code:addons/ooc_performance_evaluation/static/src/xml/performance_dashboard.xml:0
+msgid "Operational Snapshot"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_kpi__kpi_level__organization
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_kpi_score__owner_type__organization
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_search
+msgid "Organization"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Organization KPI"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_kpi.py:0
+msgid "Organization KPIs cannot have a parent KPI."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Organization Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__override_attachment_ids
+msgid "Override Attachments"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__override_reason
+msgid "Override Reason"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Overview"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_score_search
+msgid "Owner"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__owner_employee_id
+msgid "Owner Employee"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__owner_type
+msgid "Owner Type"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__parent_id
+msgid "Parent KPI"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__parent_kpi_id
+msgid "Parent Kpi"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__participation_role
+msgid "Participation Role"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_search
+msgid "Payable Rewards"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__penalty_points
+msgid "Penalty Points"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_search
+msgid "Pending"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Pending Appeals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Pending Approvals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__reward_status__pending_board
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_search
+msgid "Pending Board Approval"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__reward_status__pending_budget
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_search
+msgid "Pending Budget Approval"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Pending Evaluations"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:res.groups,name:ooc_performance_evaluation.group_performance_administrator
+msgid "Performance / Administrator"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:res.groups,name:ooc_performance_evaluation.group_performance_direct_manager
+msgid "Performance / Direct Manager"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:res.groups,name:ooc_performance_evaluation.group_performance_employee
+msgid "Performance / Employee"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:res.groups,name:ooc_performance_evaluation.group_performance_executive_viewer
+msgid "Performance / Executive Viewer"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:res.groups,name:ooc_performance_evaluation.group_performance_hr_manager
+msgid "Performance / HR Manager"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:res.groups,name:ooc_performance_evaluation.group_performance_hr_officer
+msgid "Performance / HR Officer"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:res.groups,name:ooc_performance_evaluation.group_performance_section_head
+msgid "Performance / Section Head"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model,name:ooc_performance_evaluation.model_performance_appeal
+msgid "Performance Appeal"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model,name:ooc_performance_evaluation.model_performance_config_settings
+msgid "Performance Configuration"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.actions.server,name:ooc_performance_evaluation.ir_cron_performance_cycle_auto_state_ir_actions_server
+msgid "Performance Cycle Auto State Update"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.actions.server,name:ooc_performance_evaluation.ir_cron_performance_cycle_reminders_ir_actions_server
+msgid "Performance Cycle Deadline Reminders"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.model,name:ooc_performance_evaluation.model_performance_dashboard
+msgid "Performance Dashboard"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model,name:ooc_performance_evaluation.model_performance_development_plan
+msgid "Performance Development Plan"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model,name:ooc_performance_evaluation.model_performance_discipline_score
+msgid "Performance Discipline Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model,name:ooc_performance_evaluation.model_performance_evaluation
+#: model:ir.module.category,name:ooc_performance_evaluation.module_category_performance_evaluation
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_root
+#: model:res.groups.privilege,name:ooc_performance_evaluation.res_groups_privilege_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.res_config_settings_view_form_performance
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_hr_employee_form_performance
+msgid "Performance Evaluation"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model,name:ooc_performance_evaluation.model_performance_cycle
+msgid "Performance Evaluation Cycle"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model,name:ooc_performance_evaluation.model_performance_evaluation_line
+msgid "Performance Evaluation Line"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.res_config_settings_view_form_performance
+msgid "Performance Evaluation Settings"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model,name:ooc_performance_evaluation.model_performance_event_participation
+msgid "Performance Event Participation"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model,name:ooc_performance_evaluation.model_performance_goal
+msgid "Performance Goal"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model,name:ooc_performance_evaluation.model_performance_goal_selection
+msgid "Performance Goal Selection"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model,name:ooc_performance_evaluation.model_performance_kpi
+msgid "Performance KPI"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model,name:ooc_performance_evaluation.model_performance_kpi_score
+msgid "Performance KPI Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model,name:ooc_performance_evaluation.model_performance_midyear_review
+msgid "Performance Mid-Year Review"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Performance Operations"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model,name:ooc_performance_evaluation.model_performance_reward_rule
+msgid "Performance Reward Rule"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_config
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_config_settings_form
+msgid "Performance Settings"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_cycle.py:0
+msgid "Performance evaluation results have been published."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Personal Workspace"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__planned_activities
+msgid "Planned Activities"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Plans"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Plans And Appeals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Plans Open"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Plans assigned to you"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Plans created from latest cycle results"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Portfolio Stable"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Print Evaluation"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__priority
+msgid "Priority"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_midyear_review__priority_changes
+msgid "Priority Changes"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__professional_skills
+msgid "Professional Skills"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__progress
+msgid "Progress"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_midyear_review__progress_summary
+msgid "Progress Summary"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "Provide a rejection reason before rejecting the reward."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Publish"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Publish Results"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_cycle__state__published
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__state__published
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_search
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_search
+msgid "Published"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__published_evaluation_count
+msgid "Published Evaluation Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Published Evaluations"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Published Results"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Published evaluations in the latest cycle"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Published or archived results"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_kanban
+msgid "Published:"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__quality_rating
+msgid "Quality Rating"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Ranked against other departments in the current cycle."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__rating
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_reward_rule__rating
+msgid "Rating"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Recent Cycles"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Recent Results"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Recognized institutional contributions"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Records in your current scope"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_discipline_form
+msgid "Refresh From Attendance/Leave"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_selection_form
+msgid "Reject"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Reject Reward"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__reward_status__rejected
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_goal_selection__state__rejected
+msgid "Rejected"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_appeal__state__rejected_late
+msgid "Rejected Late"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_goal_selection.py:0
+msgid "Related Evaluation"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__related_evaluation_count
+msgid "Related Evaluation Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__remarks
+msgid "Remarks"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_reports_root
+msgid "Reports"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_appeal_form
+msgid "Request Manager Response"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__requested_change
+msgid "Requested Change"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_reward_rule__requires_board_approval
+msgid "Requires Board Approval"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_reward_rule__requires_budget_approval
+msgid "Requires Budget Approval"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Reset Reward Approval"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__activity_user_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__activity_user_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__activity_user_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__activity_user_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__activity_user_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__activity_user_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__activity_user_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__activity_user_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__activity_user_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__result_publish_date
+msgid "Result Publish Date"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Results already published"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_selection_form
+msgid "Return for Correction"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_goal_selection__state__returned
+msgid "Returned"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_midyear_review__review_date
+msgid "Review Date"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Review Queue"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Review Queue Active"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid ""
+"Review organization KPI achievement, rating distribution, top performers, "
+"and department comparisons without opening operational records first."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_amount
+msgid "Reward Amount"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_search
+msgid "Reward Approved"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_basic_salary_amount
+msgid "Reward Basic Salary Amount"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_board_approved_by
+msgid "Reward Board Approved By"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_board_approved_date
+msgid "Reward Board Approved Date"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_budget_approved_by
+msgid "Reward Budget Approved By"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_budget_approved_date
+msgid "Reward Budget Approved Date"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__reward_count
+msgid "Reward Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_description
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_reward_rule__reward_description
+msgid "Reward Description"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Reward Logic"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_multiplier
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_reward_rule__reward_multiplier
+msgid "Reward Multiplier"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_search
+msgid "Reward Rejected"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_rejected_by
+msgid "Reward Rejected By"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_rejected_date
+msgid "Reward Rejected Date"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_rejection_reason
+msgid "Reward Rejection Reason"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_requires_board_approval
+msgid "Reward Requires Board Approval"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_requires_budget_approval
+msgid "Reward Requires Budget Approval"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_rule_id
+msgid "Reward Rule"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_reward_rules
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_reward_rules
+msgid "Reward Rules"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_salary_reference
+msgid "Reward Salary Reference"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_salary_source
+msgid "Reward Salary Source"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__reward_status
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_search
+msgid "Reward Status"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Rewards"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__message_has_sms_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__message_has_sms_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__message_has_sms_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__message_has_sms_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__message_has_sms_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__message_has_sms_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__message_has_sms_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__message_has_sms_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__message_has_sms_error
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__score
+msgid "Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_config_settings__score_cap
+msgid "Score Cap"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_score_form
+msgid "Score Sheet"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__score_sheet_count
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__score_sheet_count
+msgid "Score Sheet Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__score_sheet_id
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_form
+msgid "Score Sheets"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Score Summary"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "Scores"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__section_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__section_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__section_id
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__section_id
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_kpi__kpi_level__section
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_kpi_score__owner_type__section
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_search
+msgid "Section"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_dashboard_section
+#: model:ir.actions.client,name:ooc_performance_evaluation.action_performance_dashboard_section_client
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_dashboard_section_head
+msgid "Section Dashboard"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_section_evaluations
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_section_evaluations
+msgid "Section Evaluations"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__hr_employee__evaluation_category__section_head
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__evaluation_category__section_head
+msgid "Section Head"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_search
+msgid "Section Heads"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Section KPI"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Section KPIs"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Section Oversight"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Section Performance Console"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Section-level score sheets"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_selection_form
+msgid "Select 3 to 5 approved goals that total 100% weight."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_goal__state__selected
+msgid "Selected"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_goal_selection.py:0
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__goal_ids
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_selection_form
+msgid "Selected Goals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_goal_selection.py:0
+msgid "Selected goals must total %.2f%% weight."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_selection_form
+msgid "Selection Overview"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Send to HR"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_settings
+msgid "Settings"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Shared Inputs"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Shared KPI score pulled into your evaluation"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:hr.department,name:ooc_performance_evaluation.dept_perf_software_section
+msgid "Software Delivery Section"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_cycle.py:0
+msgid "Some locked institutional KPIs do not have a score sheet."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Stable Delivery"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_cycle.py:0
+msgid "Staff Rewards"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_reward_approvals
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_report_reward_approvals
+msgid "Staff Rewards Approval"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__start_date
+msgid "Start Date"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Start Evaluation"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Start Final Evaluation"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Start Goal Setting"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Start HR Approval"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_appeal_form
+msgid "Start HR Review"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Start Manager Approval"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__state
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_midyear_review__state
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_search
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_search
+msgid "State"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_appeal__activity_state
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_cycle__activity_state
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_development_plan__activity_state
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_discipline_score__activity_state
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_evaluation__activity_state
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_event_participation__activity_state
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal__activity_state
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal_selection__activity_state
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi__activity_state
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi_score__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__submission_date
+msgid "Submission Date"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_appeal_form
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_goal_selection_form
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_kpi_score_form
+msgid "Submit"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_evaluation_form
+msgid "Submit Manager Evaluation"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_appeal__state__submitted
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_goal_selection__state__submitted
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_kpi_score__state__submitted
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_midyear_review__state__submitted
+msgid "Submitted"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__submitted_date
+msgid "Submitted Date"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_midyear_review__support_required
+msgid "Support Required"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "Target"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation_line__target_value
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__target_value
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__target_value
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__target_value
+msgid "Target Value"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_dashboard_manager
+#: model:ir.actions.client,name:ooc_performance_evaluation.action_performance_dashboard_manager_client
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_dashboard_manager
+msgid "Team Dashboard"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.actions.act_window,name:ooc_performance_evaluation.action_performance_team_evaluations
+#: model:ir.ui.menu,name:ooc_performance_evaluation.menu_performance_team_evaluations
+msgid "Team Evaluations"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Team Performance Console"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Team Size"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-javascript
+#: code:addons/ooc_performance_evaluation/static/src/xml/performance_dashboard.xml:0
+msgid "The current performance workflow is clear."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_cycle.py:0
+msgid "The cycle must be in HR Confirmation before results can be published."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_discipline.py:0
+msgid "The cycle must have a start date to compute discipline scores."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_goal_selection.py:0
+msgid "The goal submission deadline has passed."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_kpi.py:0
+msgid "The parent KPI level for %s must be %s."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_goal.py:0
+msgid "The parent KPI must belong to the same cycle as the goal."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_cycle.py:0
+msgid "The result publish date cannot be earlier than the cycle start date."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "There are %s goal approvals and %s evaluations still requiring action."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "This evaluation has no payable reward to approve."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_form
+msgid "Timeline"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Top Performers"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Top Results"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Top performers in your scope"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__total_goal_count
+msgid "Total Goal Count"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__total_weight
+msgid "Total Weight"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid ""
+"Track your approved goals, published evaluations, appeals, and development "
+"actions from one place."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__training_programs
+msgid "Training Programs"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_appeal__activity_exception_decoration
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_cycle__activity_exception_decoration
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_development_plan__activity_exception_decoration
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_discipline_score__activity_exception_decoration
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_evaluation__activity_exception_decoration
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_event_participation__activity_exception_decoration
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal__activity_exception_decoration
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal_selection__activity_exception_decoration
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi__activity_exception_decoration
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi_score__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "Unrated"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_hr_employee__performance_manual_basic_salary
+msgid "Used for reward calculations when no active HR contract is available."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_hr_employee__evaluation_service_start_date
+msgid ""
+"Used to determine whether the employee has completed the minimum service "
+"period for annual evaluations."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Very Good"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Very Good Evaluations"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Very good performers"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "View appeals"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "View plans"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_evaluation__state__waiting_inputs
+msgid "Waiting Inputs"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields.selection,name:ooc_performance_evaluation.selection__performance_appeal__state__waiting_manager_response
+msgid "Waiting Manager Response"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Weak"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Weak Evaluations"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Weak Ratings"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__weakness_points
+msgid "Weakness Points"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_appeal__website_message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__website_message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_development_plan__website_message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_discipline_score__website_message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation__website_message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_event_participation__website_message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__website_message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal_selection__website_message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__website_message_ids
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_appeal__website_message_ids
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_cycle__website_message_ids
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_development_plan__website_message_ids
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_discipline_score__website_message_ids
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_evaluation__website_message_ids
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_event_participation__website_message_ids
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal__website_message_ids
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_goal_selection__website_message_ids
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi__website_message_ids
+#: model:ir.model.fields,help:ooc_performance_evaluation.field_performance_kpi_score__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation_line__weight
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_goal__weight
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi__weight
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__weight
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "Weight"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_evaluation_line__weighted_score
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_kpi_score__weighted_score
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.report_performance_evaluation_document
+msgid "Weighted Score"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Weighted individual and institutional result"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#: model:ir.model.fields,field_description:ooc_performance_evaluation.field_performance_cycle__year
+#: model_terms:ir.ui.view,arch_db:ooc_performance_evaluation.view_performance_cycle_search
+msgid "Year"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Your %s goal selection is in %s."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Your evaluation record is waiting for the first cycle inputs."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Your latest performance records and their publication state."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_dashboard.py:0
+msgid "Your latest score is %s with a %s rating."
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_cycle.py:0
+msgid "cycle_id"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "employee_id"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_evaluation.py:0
+msgid "evaluation_id"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_goal_selection.py:0
+msgid "id"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_kpi.py:0
+msgid "kpi_id"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_kpi.py:0
+msgid "parent_id"
+msgstr ""
+
+#. module: ooc_performance_evaluation
+#. odoo-python
+#: code:addons/ooc_performance_evaluation/models/performance_kpi.py:0
+msgid "parent_kpi_id"
+msgstr ""

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="module_category_performance_evaluation" model="ir.module.category">
+            <field name="name">Performance Evaluation</field>
+            <field name="description">Access rights for OOC performance evaluation.</field>
+            <field name="sequence">35</field>
+        </record>
+
+        <record id="res_groups_privilege_performance_evaluation" model="res.groups.privilege">
+            <field name="name">Performance Evaluation</field>
+            <field name="description">Access level for the OOC performance evaluation module.</field>
+            <field name="placeholder">No Access</field>
+            <field name="sequence">80</field>
+            <field name="category_id" ref="module_category_performance_evaluation"/>
+        </record>
+
+        <record id="group_performance_employee" model="res.groups">
+            <field name="name">Performance / Employee</field>
+            <field name="sequence">10</field>
+            <field name="privilege_id" ref="res_groups_privilege_performance_evaluation"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="group_performance_direct_manager" model="res.groups">
+            <field name="name">Performance / Direct Manager</field>
+            <field name="sequence">20</field>
+            <field name="privilege_id" ref="res_groups_privilege_performance_evaluation"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user')), (4, ref('group_performance_employee'))]"/>
+        </record>
+
+        <record id="group_performance_section_head" model="res.groups">
+            <field name="name">Performance / Section Head</field>
+            <field name="sequence">30</field>
+            <field name="privilege_id" ref="res_groups_privilege_performance_evaluation"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user')), (4, ref('group_performance_employee'))]"/>
+        </record>
+
+        <record id="group_performance_hr_officer" model="res.groups">
+            <field name="name">Performance / HR Officer</field>
+            <field name="sequence">40</field>
+            <field name="privilege_id" ref="res_groups_privilege_performance_evaluation"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="group_performance_hr_manager" model="res.groups">
+            <field name="name">Performance / HR Manager</field>
+            <field name="sequence">50</field>
+            <field name="privilege_id" ref="res_groups_privilege_performance_evaluation"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user')), (4, ref('group_performance_hr_officer'))]"/>
+        </record>
+
+        <record id="group_performance_executive_viewer" model="res.groups">
+            <field name="name">Performance / Executive Viewer</field>
+            <field name="sequence">60</field>
+            <field name="privilege_id" ref="res_groups_privilege_performance_evaluation"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="group_performance_administrator" model="res.groups">
+            <field name="name">Performance / Administrator</field>
+            <field name="sequence">70</field>
+            <field name="privilege_id" ref="res_groups_privilege_performance_evaluation"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_system')), (4, ref('group_performance_hr_manager'))]"/>
+            <field name="user_ids" eval="[(4, ref('base.user_admin'))]"/>
+        </record>
+
+        <record id="rule_performance_goal_selection_employee" model="ir.rule">
+            <field name="name">Goal Selection - Employee Own</field>
+            <field name="model_id" ref="model_performance_goal_selection"/>
+            <field name="groups" eval="[(4, ref('group_performance_employee'))]"/>
+            <field name="domain_force">[('employee_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_goal_selection_manager" model="ir.rule">
+            <field name="name">Goal Selection - Direct Manager</field>
+            <field name="model_id" ref="model_performance_goal_selection"/>
+            <field name="groups" eval="[(4, ref('group_performance_direct_manager'))]"/>
+            <field name="domain_force">[('employee_id.parent_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_goal_selection_section_head" model="ir.rule">
+            <field name="name">Goal Selection - Section Head</field>
+            <field name="model_id" ref="model_performance_goal_selection"/>
+            <field name="groups" eval="[(4, ref('group_performance_section_head'))]"/>
+            <field name="domain_force">[('employee_id.evaluation_section_id.manager_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_evaluation_employee" model="ir.rule">
+            <field name="name">Evaluation - Employee Own</field>
+            <field name="model_id" ref="model_performance_evaluation"/>
+            <field name="groups" eval="[(4, ref('group_performance_employee'))]"/>
+            <field name="domain_force">[('employee_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_evaluation_manager" model="ir.rule">
+            <field name="name">Evaluation - Direct Manager</field>
+            <field name="model_id" ref="model_performance_evaluation"/>
+            <field name="groups" eval="[(4, ref('group_performance_direct_manager'))]"/>
+            <field name="domain_force">[('employee_id.parent_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_evaluation_section_head" model="ir.rule">
+            <field name="name">Evaluation - Section Head</field>
+            <field name="model_id" ref="model_performance_evaluation"/>
+            <field name="groups" eval="[(4, ref('group_performance_section_head'))]"/>
+            <field name="domain_force">[('employee_id.evaluation_section_id.manager_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_evaluation_hr_officer_all" model="ir.rule">
+            <field name="name">Evaluation - HR Officer Full Access</field>
+            <field name="model_id" ref="model_performance_evaluation"/>
+            <field name="groups" eval="[(4, ref('group_performance_hr_officer'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+        </record>
+
+        <record id="rule_performance_evaluation_hr_manager_all" model="ir.rule">
+            <field name="name">Evaluation - HR Manager Full Access</field>
+            <field name="model_id" ref="model_performance_evaluation"/>
+            <field name="groups" eval="[(4, ref('group_performance_hr_manager'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+        </record>
+
+        <record id="rule_performance_evaluation_admin_all" model="ir.rule">
+            <field name="name">Evaluation - Administrator Full Access</field>
+            <field name="model_id" ref="model_performance_evaluation"/>
+            <field name="groups" eval="[(4, ref('group_performance_administrator'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+        </record>
+
+        <record id="rule_performance_discipline_employee" model="ir.rule">
+            <field name="name">Discipline - Employee Own</field>
+            <field name="model_id" ref="model_performance_discipline_score"/>
+            <field name="groups" eval="[(4, ref('group_performance_employee'))]"/>
+            <field name="domain_force">[('employee_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_discipline_manager" model="ir.rule">
+            <field name="name">Discipline - Direct Manager</field>
+            <field name="model_id" ref="model_performance_discipline_score"/>
+            <field name="groups" eval="[(4, ref('group_performance_direct_manager'))]"/>
+            <field name="domain_force">[('employee_id.parent_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_discipline_section_head" model="ir.rule">
+            <field name="name">Discipline - Section Head</field>
+            <field name="model_id" ref="model_performance_discipline_score"/>
+            <field name="groups" eval="[(4, ref('group_performance_section_head'))]"/>
+            <field name="domain_force">[('employee_id.evaluation_section_id.manager_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_event_employee" model="ir.rule">
+            <field name="name">Events - Employee Own</field>
+            <field name="model_id" ref="model_performance_event_participation"/>
+            <field name="groups" eval="[(4, ref('group_performance_employee'))]"/>
+            <field name="domain_force">[('employee_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_event_manager" model="ir.rule">
+            <field name="name">Events - Direct Manager</field>
+            <field name="model_id" ref="model_performance_event_participation"/>
+            <field name="groups" eval="[(4, ref('group_performance_direct_manager'))]"/>
+            <field name="domain_force">[('employee_id.parent_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_event_section_head" model="ir.rule">
+            <field name="name">Events - Section Head</field>
+            <field name="model_id" ref="model_performance_event_participation"/>
+            <field name="groups" eval="[(4, ref('group_performance_section_head'))]"/>
+            <field name="domain_force">[('employee_id.evaluation_section_id.manager_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_appeal_employee" model="ir.rule">
+            <field name="name">Appeal - Employee Own</field>
+            <field name="model_id" ref="model_performance_appeal"/>
+            <field name="groups" eval="[(4, ref('group_performance_employee'))]"/>
+            <field name="domain_force">[('employee_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_appeal_manager" model="ir.rule">
+            <field name="name">Appeal - Direct Manager</field>
+            <field name="model_id" ref="model_performance_appeal"/>
+            <field name="groups" eval="[(4, ref('group_performance_direct_manager'))]"/>
+            <field name="domain_force">[('employee_id.parent_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_appeal_section_head" model="ir.rule">
+            <field name="name">Appeal - Section Head</field>
+            <field name="model_id" ref="model_performance_appeal"/>
+            <field name="groups" eval="[(4, ref('group_performance_section_head'))]"/>
+            <field name="domain_force">[('employee_id.evaluation_section_id.manager_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_dev_plan_employee" model="ir.rule">
+            <field name="name">Development Plan - Employee Own</field>
+            <field name="model_id" ref="model_performance_development_plan"/>
+            <field name="groups" eval="[(4, ref('group_performance_employee'))]"/>
+            <field name="domain_force">[('employee_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_dev_plan_manager" model="ir.rule">
+            <field name="name">Development Plan - Direct Manager</field>
+            <field name="model_id" ref="model_performance_development_plan"/>
+            <field name="groups" eval="[(4, ref('group_performance_direct_manager'))]"/>
+            <field name="domain_force">[('employee_id.parent_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_dev_plan_section_head" model="ir.rule">
+            <field name="name">Development Plan - Section Head</field>
+            <field name="model_id" ref="model_performance_development_plan"/>
+            <field name="groups" eval="[(4, ref('group_performance_section_head'))]"/>
+            <field name="domain_force">[('employee_id.evaluation_section_id.manager_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_midyear_employee" model="ir.rule">
+            <field name="name">Mid-Year Review - Employee Own</field>
+            <field name="model_id" ref="model_performance_midyear_review"/>
+            <field name="groups" eval="[(4, ref('group_performance_employee'))]"/>
+            <field name="domain_force">[('employee_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_midyear_manager" model="ir.rule">
+            <field name="name">Mid-Year Review - Direct Manager</field>
+            <field name="model_id" ref="model_performance_midyear_review"/>
+            <field name="groups" eval="[(4, ref('group_performance_direct_manager'))]"/>
+            <field name="domain_force">[('employee_id.parent_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_midyear_section_head" model="ir.rule">
+            <field name="name">Mid-Year Review - Section Head</field>
+            <field name="model_id" ref="model_performance_midyear_review"/>
+            <field name="groups" eval="[(4, ref('group_performance_section_head'))]"/>
+            <field name="domain_force">[('employee_id.evaluation_section_id.manager_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_goal_employee" model="ir.rule">
+            <field name="name">Goal Bank - Employee Department</field>
+            <field name="model_id" ref="model_performance_goal"/>
+            <field name="groups" eval="[(4, ref('group_performance_employee'))]"/>
+            <field name="domain_force">['|', ('department_id', '=', user.employee_id.department_id.id), ('section_id', '=', user.employee_id.department_id.id)]</field>
+        </record>
+
+        <record id="rule_performance_goal_manager" model="ir.rule">
+            <field name="name">Goal Bank - Manager Own</field>
+            <field name="model_id" ref="model_performance_goal"/>
+            <field name="groups" eval="[(4, ref('group_performance_direct_manager'))]"/>
+            <field name="domain_force">[('manager_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_goal_section_head" model="ir.rule">
+            <field name="name">Goal Bank - Section Head Own</field>
+            <field name="model_id" ref="model_performance_goal"/>
+            <field name="groups" eval="[(4, ref('group_performance_section_head'))]"/>
+            <field name="domain_force">['|', ('section_id.manager_id.user_id', '=', user.id), ('department_id.manager_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_evaluation_line_employee" model="ir.rule">
+            <field name="name">Evaluation Line - Employee Own</field>
+            <field name="model_id" ref="model_performance_evaluation_line"/>
+            <field name="groups" eval="[(4, ref('group_performance_employee'))]"/>
+            <field name="domain_force">[('evaluation_id.employee_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_evaluation_line_manager" model="ir.rule">
+            <field name="name">Evaluation Line - Direct Manager</field>
+            <field name="model_id" ref="model_performance_evaluation_line"/>
+            <field name="groups" eval="[(4, ref('group_performance_direct_manager'))]"/>
+            <field name="domain_force">[('evaluation_id.employee_id.parent_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_evaluation_line_section_head" model="ir.rule">
+            <field name="name">Evaluation Line - Section Head</field>
+            <field name="model_id" ref="model_performance_evaluation_line"/>
+            <field name="groups" eval="[(4, ref('group_performance_section_head'))]"/>
+            <field name="domain_force">[('evaluation_id.employee_id.evaluation_section_id.manager_id.user_id', '=', user.id)]</field>
+        </record>
+
+        <record id="rule_performance_kpi_executive_read_all" model="ir.rule">
+            <field name="name">KPI - Executive Read All</field>
+            <field name="model_id" ref="model_performance_kpi"/>
+            <field name="groups" eval="[(4, ref('group_performance_executive_viewer'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="rule_performance_kpi_score_executive_read_all" model="ir.rule">
+            <field name="name">KPI Score - Executive Read All</field>
+            <field name="model_id" ref="model_performance_kpi_score"/>
+            <field name="groups" eval="[(4, ref('group_performance_executive_viewer'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="rule_performance_cycle_executive_read_all" model="ir.rule">
+            <field name="name">Cycle - Executive Read All</field>
+            <field name="model_id" ref="model_performance_cycle"/>
+            <field name="groups" eval="[(4, ref('group_performance_executive_viewer'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+    </data>
+</odoo>

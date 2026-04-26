@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_performance_discipline_list" model="ir.ui.view">
+        <field name="name">performance.discipline.score.list</field>
+        <field name="model">performance.discipline.score</field>
+        <field name="arch" type="xml">
+            <list decoration-success="state in ('confirmed', 'locked')" decoration-warning="hr_override_score not in (False, 0)">
+                <field name="employee_id"/>
+                <field name="cycle_id"/>
+                <field name="late_count"/>
+                <field name="early_leave_count"/>
+                <field name="absence_count"/>
+                <field name="penalty_points"/>
+                <field name="score"/>
+                <field name="hr_override_score"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_performance_discipline_form" model="ir.ui.view">
+        <field name="name">performance.discipline.score.form</field>
+        <field name="model">performance.discipline.score</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_refresh_from_sources" string="Refresh From Attendance/Leave" type="object"/>
+                    <button name="action_confirm" string="Confirm" type="object" invisible="state != 'draft'"/>
+                    <button name="action_lock" string="Lock" type="object" invisible="state != 'confirmed'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,locked"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="cycle_id"/>
+                            <field name="late_count"/>
+                            <field name="early_leave_count"/>
+                            <field name="absence_count"/>
+                        </group>
+                        <group>
+                            <field name="approved_leave_count" readonly="1"/>
+                            <field name="official_mission_count" readonly="1"/>
+                            <field name="penalty_points" readonly="1"/>
+                            <field name="score" readonly="1"/>
+                            <field name="hr_override_score"/>
+                        </group>
+                    </group>
+                    <field name="override_reason"/>
+                    <field name="override_attachment_ids" widget="many2many_binary"/>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_performance_discipline" model="ir.actions.act_window">
+        <field name="name">Discipline</field>
+        <field name="res_model">performance.discipline.score</field>
+        <field name="view_mode">list,form,pivot,graph</field>
+    </record>
+
+    <record id="view_performance_event_list" model="ir.ui.view">
+        <field name="name">performance.event.participation.list</field>
+        <field name="model">performance.event.participation</field>
+        <field name="arch" type="xml">
+            <list decoration-success="created_by_hr" decoration-info="quality_rating &gt;= 4">
+                <field name="employee_id"/>
+                <field name="cycle_id"/>
+                <field name="event_name"/>
+                <field name="event_date"/>
+                <field name="event_type"/>
+                <field name="participation_role"/>
+                <field name="quality_rating"/>
+                <field name="created_by_hr"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_performance_event_form" model="ir.ui.view">
+        <field name="name">performance.event.participation.form</field>
+        <field name="model">performance.event.participation</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="cycle_id"/>
+                            <field name="event_name"/>
+                            <field name="event_date"/>
+                        </group>
+                        <group>
+                            <field name="event_type"/>
+                            <field name="participation_role"/>
+                            <field name="quality_rating"/>
+                            <field name="created_by_hr"/>
+                        </group>
+                    </group>
+                    <field name="manager_quality_comment"/>
+                    <field name="attachment_ids" widget="many2many_binary"/>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_performance_events" model="ir.actions.act_window">
+        <field name="name">Events</field>
+        <field name="res_model">performance.event.participation</field>
+        <field name="view_mode">list,form,pivot,graph</field>
+    </record>
+
+    <record id="view_performance_appeal_kanban" model="ir.ui.view">
+        <field name="name">performance.appeal.kanban</field>
+        <field name="model">performance.appeal</field>
+        <field name="arch" type="xml">
+            <kanban class="o_perf_appeal_kanban">
+                <field name="employee_id"/>
+                <field name="evaluation_id"/>
+                <field name="appeal_reason"/>
+                <field name="submission_date"/>
+                <field name="decision_date"/>
+                <field name="state"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click o_perf_card o_perf_appeal_card">
+                            <div class="o_perf_card_header">
+                                <div>
+                                    <div class="o_perf_eyebrow" t-out="record.employee_id.value"/>
+                                    <strong class="o_perf_title" t-out="record.appeal_reason.value"/>
+                                </div>
+                                <span class="badge text-bg-secondary" t-out="record.state.value"/>
+                            </div>
+                            <div class="o_perf_meta">
+                                <span t-out="record.evaluation_id.value"/>
+                                <span t-out="record.submission_date.value or 'Not submitted'"/>
+                            </div>
+                            <div class="o_perf_card_footer">
+                                <span>
+                                    Decision:
+                                    <strong t-out="record.decision_date.value or 'Pending'"/>
+                                </span>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_performance_appeal_list" model="ir.ui.view">
+        <field name="name">performance.appeal.list</field>
+        <field name="model">performance.appeal</field>
+        <field name="arch" type="xml">
+            <list decoration-warning="state in ('submitted', 'hr_review', 'waiting_manager_response', 'committee_review')" decoration-success="state in ('decision_issued', 'closed')" decoration-danger="state == 'rejected_late'">
+                <field name="employee_id"/>
+                <field name="evaluation_id"/>
+                <field name="appeal_reason"/>
+                <field name="submission_date"/>
+                <field name="decision_date"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_performance_appeal_form" model="ir.ui.view">
+        <field name="name">performance.appeal.form</field>
+        <field name="model">performance.appeal</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_submit" string="Submit" type="object" invisible="state != 'draft'"/>
+                    <button name="action_start_hr_review" string="Start HR Review" type="object" invisible="state != 'submitted'"/>
+                    <button name="action_request_manager_response" string="Request Manager Response" type="object" invisible="state != 'hr_review'"/>
+                    <button name="action_start_committee_review" string="Committee Review" type="object" invisible="state != 'waiting_manager_response'"/>
+                    <button name="action_issue_decision" string="Issue Decision" type="object" invisible="state != 'committee_review'"/>
+                    <button name="action_close" string="Close" type="object" invisible="state != 'decision_issued'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,submitted,hr_review,waiting_manager_response,committee_review,decision_issued,closed,rejected_late"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="evaluation_id"/>
+                            <field name="cycle_id" readonly="1"/>
+                            <field name="appeal_reason"/>
+                        </group>
+                        <group>
+                            <field name="submission_date" readonly="1"/>
+                            <field name="decision_date" readonly="1"/>
+                        </group>
+                    </group>
+                    <field name="appeal_description"/>
+                    <field name="requested_change"/>
+                    <field name="employee_attachment_ids" widget="many2many_binary"/>
+                    <group>
+                        <field name="manager_response"/>
+                        <field name="manager_recommendation"/>
+                        <field name="hr_decision"/>
+                        <field name="committee_notes"/>
+                        <field name="final_decision"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_performance_appeals" model="ir.actions.act_window">
+        <field name="name">Appeals</field>
+        <field name="res_model">performance.appeal</field>
+        <field name="view_mode">list,form,pivot,graph,kanban</field>
+    </record>
+
+    <record id="view_performance_development_plan_kanban" model="ir.ui.view">
+        <field name="name">performance.development.plan.kanban</field>
+        <field name="model">performance.development.plan</field>
+        <field name="arch" type="xml">
+            <kanban class="o_perf_plan_kanban">
+                <field name="employee_id"/>
+                <field name="cycle_id"/>
+                <field name="manager_id"/>
+                <field name="deadline"/>
+                <field name="progress"/>
+                <field name="state"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click o_perf_card o_perf_plan_card">
+                            <div class="o_perf_card_header">
+                                <div>
+                                    <div class="o_perf_eyebrow" t-out="record.cycle_id.value"/>
+                                    <strong class="o_perf_title" t-out="record.employee_id.value"/>
+                                </div>
+                                <span class="badge text-bg-secondary" t-out="record.state.value"/>
+                            </div>
+                            <div class="o_perf_meta">
+                                <span>
+                                    Manager:
+                                    <t t-out="record.manager_id.value"/>
+                                </span>
+                                <span>
+                                    Due:
+                                    <t t-out="record.deadline.value or 'TBD'"/>
+                                </span>
+                            </div>
+                            <div class="o_perf_progress_block">
+                                <div class="o_perf_progress_top">
+                                    <span>Progress</span>
+                                    <strong t-out="record.progress.value"/>
+                                </div>
+                                <progress max="100" t-att-value="record.progress.raw_value or 0"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_performance_development_plan_list" model="ir.ui.view">
+        <field name="name">performance.development.plan.list</field>
+        <field name="model">performance.development.plan</field>
+        <field name="arch" type="xml">
+            <list decoration-warning="state in ('draft', 'manager_prepared', 'hr_reviewed')" decoration-success="state in ('completed', 'closed')" decoration-info="state == 'in_progress'">
+                <field name="employee_id"/>
+                <field name="evaluation_id"/>
+                <field name="cycle_id"/>
+                <field name="manager_id"/>
+                <field name="deadline"/>
+                <field name="progress"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_performance_development_plan_form" model="ir.ui.view">
+        <field name="name">performance.development.plan.form</field>
+        <field name="model">performance.development.plan</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_manager_prepare" string="Manager Prepared" type="object" invisible="state != 'draft'"/>
+                    <button name="action_hr_review" string="HR Reviewed" type="object" invisible="state != 'manager_prepared'"/>
+                    <button name="action_start_progress" string="In Progress" type="object" invisible="state != 'hr_reviewed'"/>
+                    <button name="action_complete" string="Complete" type="object" invisible="state != 'in_progress'"/>
+                    <button name="action_close" string="Close" type="object" invisible="state != 'completed'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,manager_prepared,hr_reviewed,in_progress,completed,closed"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="evaluation_id"/>
+                            <field name="cycle_id"/>
+                            <field name="manager_id"/>
+                            <field name="hr_reviewer_id"/>
+                        </group>
+                        <group>
+                            <field name="deadline"/>
+                            <field name="progress"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="weakness_points"/>
+                        <field name="training_programs"/>
+                        <field name="professional_skills"/>
+                        <field name="leadership_skills"/>
+                        <field name="planned_activities"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_performance_development_plans" model="ir.actions.act_window">
+        <field name="name">Development Plans</field>
+        <field name="res_model">performance.development.plan</field>
+        <field name="view_mode">list,form,pivot,graph,kanban</field>
+    </record>
+
+    <record id="view_performance_reward_rule_list" model="ir.ui.view">
+        <field name="name">performance.reward.rule.list</field>
+        <field name="model">performance.reward.rule</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="min_score"/>
+                <field name="max_score"/>
+                <field name="rating"/>
+                <field name="reward_description"/>
+                <field name="reward_multiplier"/>
+                <field name="requires_budget_approval"/>
+                <field name="requires_board_approval"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_performance_reward_rule_form" model="ir.ui.view">
+        <field name="name">performance.reward.rule.form</field>
+        <field name="model">performance.reward.rule</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="min_score"/>
+                        <field name="max_score"/>
+                        <field name="rating"/>
+                        <field name="reward_description"/>
+                        <field name="reward_multiplier"/>
+                        <field name="requires_budget_approval"/>
+                        <field name="requires_board_approval"/>
+                        <field name="active"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_performance_reward_rules" model="ir.actions.act_window">
+        <field name="name">Reward Rules</field>
+        <field name="res_model">performance.reward.rule</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_performance_reward_batch_list" model="ir.ui.view">
+        <field name="name">performance.reward.batch.list</field>
+        <field name="model">performance.reward.batch</field>
+        <field name="arch" type="xml">
+            <list decoration-success="state in ('approved', 'closed')" decoration-warning="state in ('budget_review', 'board_review')" decoration-danger="state == 'rejected'">
+                <field name="name"/>
+                <field name="cycle_id"/>
+                <field name="evaluation_count"/>
+                <field name="total_reward_amount"/>
+                <field name="pending_budget_count"/>
+                <field name="pending_board_count"/>
+                <field name="approved_count"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_performance_reward_batch_search" model="ir.ui.view">
+        <field name="name">performance.reward.batch.search</field>
+        <field name="model">performance.reward.batch</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="cycle_id"/>
+                <filter name="ready_batches" string="Ready" domain="[('state', '=', 'ready')]"/>
+                <filter name="budget_review" string="Budget Review" domain="[('state', '=', 'budget_review')]"/>
+                <filter name="board_review" string="Board Review" domain="[('state', '=', 'board_review')]"/>
+                <filter name="approved_batches" string="Approved" domain="[('state', '=', 'approved')]"/>
+                <filter name="closed_batches" string="Closed" domain="[('state', '=', 'closed')]"/>
+                <separator/>
+                <filter name="group_state" string="State" context="{'group_by': 'state'}"/>
+                <filter name="group_cycle" string="Cycle" context="{'group_by': 'cycle_id'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_performance_reward_batch_form" model="ir.ui.view">
+        <field name="name">performance.reward.batch.form</field>
+        <field name="model">performance.reward.batch</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_prepare" string="Refresh Batch" type="object" class="btn-secondary"/>
+                    <button name="action_submit_budget" string="Submit Approval Batch" type="object" class="btn-primary" invisible="state not in ('draft', 'ready', 'rejected')"/>
+                    <button name="action_approve_budget" string="Approve Budget For All" type="object" class="btn-primary" invisible="state != 'budget_review'" groups="ooc_performance_evaluation.group_performance_hr_manager,ooc_performance_evaluation.group_performance_administrator"/>
+                    <button name="action_approve_board" string="Approve Board For All" type="object" class="btn-primary" invisible="state != 'board_review'" groups="ooc_performance_evaluation.group_performance_hr_manager,ooc_performance_evaluation.group_performance_administrator"/>
+                    <button name="action_reject_batch" string="Reject Batch" type="object" invisible="state in ('approved', 'closed')" groups="ooc_performance_evaluation.group_performance_hr_manager,ooc_performance_evaluation.group_performance_administrator"/>
+                    <button name="action_reset_batch" string="Reset Batch" type="object" invisible="state == 'closed'" groups="ooc_performance_evaluation.group_performance_hr_manager,ooc_performance_evaluation.group_performance_administrator"/>
+                    <button name="action_close_batch" string="Close" type="object" invisible="state != 'approved'" groups="ooc_performance_evaluation.group_performance_hr_manager,ooc_performance_evaluation.group_performance_administrator"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,ready,budget_review,board_review,approved,rejected,closed"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="action_view_evaluations" icon="fa-money">
+                            <field name="evaluation_count" string="Staff Rewards" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+                    <group string="Batch Summary" col="4">
+                        <field name="cycle_id" readonly="1"/>
+                        <field name="evaluation_count" readonly="1"/>
+                        <field name="total_reward_amount" readonly="1"/>
+                        <field name="pending_budget_count" readonly="1"/>
+                        <field name="pending_board_count" readonly="1"/>
+                        <field name="approved_count" readonly="1"/>
+                        <field name="rejected_count" readonly="1"/>
+                    </group>
+                    <group string="Approval Notes">
+                        <field name="rejection_reason" placeholder="Capture the reason if this reward batch is rejected or returned."/>
+                    </group>
+                    <notebook>
+                        <page string="Staff Reward Queue">
+                            <field name="evaluation_ids" readonly="1">
+                                <list decoration-success="reward_status == 'approved'" decoration-warning="reward_status in ('pending_budget', 'pending_board')" decoration-danger="reward_status == 'rejected'">
+                                    <field name="employee_id"/>
+                                    <field name="department_id"/>
+                                    <field name="final_score"/>
+                                    <field name="rating"/>
+                                    <field name="reward_description"/>
+                                    <field name="reward_multiplier" optional="hide"/>
+                                    <field name="reward_basic_salary_amount"/>
+                                    <field name="reward_amount"/>
+                                    <field name="reward_requires_budget_approval" optional="hide"/>
+                                    <field name="reward_requires_board_approval" optional="hide"/>
+                                    <field name="reward_status"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_performance_reward_batches" model="ir.actions.act_window">
+        <field name="name">Staff Rewards Approval</field>
+        <field name="res_model">performance.reward.batch</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_performance_reward_batch_search"/>
+        <field name="context">{'create': False}</field>
+    </record>
+</odoo>

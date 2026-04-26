@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_performance_evaluation_kanban" model="ir.ui.view">
+        <field name="name">performance.evaluation.kanban</field>
+        <field name="model">performance.evaluation</field>
+        <field name="arch" type="xml">
+            <kanban class="o_perf_evaluation_kanban">
+                <field name="employee_id"/>
+                <field name="cycle_id"/>
+                <field name="department_id"/>
+                <field name="manager_id"/>
+                <field name="evaluation_category"/>
+                <field name="goal_score"/>
+                <field name="discipline_score"/>
+                <field name="events_score"/>
+                <field name="final_score"/>
+                <field name="rating"/>
+                <field name="state"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click o_perf_card o_perf_evaluation_card">
+                            <div class="o_perf_card_header">
+                                <div>
+                                    <div class="o_perf_eyebrow" t-out="record.cycle_id.value"/>
+                                    <strong class="o_perf_title" t-out="record.employee_id.value"/>
+                                </div>
+                                <span class="badge text-bg-primary" t-out="record.state.value"/>
+                            </div>
+                            <div class="o_perf_meta">
+                                <span t-out="record.department_id.value"/>
+                                <span t-out="record.evaluation_category.value"/>
+                            </div>
+                            <div class="o_perf_score_hero">
+                                <span class="o_perf_score_value" t-out="record.final_score.value"/>
+                                <span class="o_perf_score_label">Final Score</span>
+                            </div>
+                            <div class="o_perf_metric_grid">
+                                <div class="o_perf_metric">
+                                    <span class="o_perf_metric_value" t-out="record.goal_score.value"/>
+                                    <span class="o_perf_metric_label">Goals</span>
+                                </div>
+                                <div class="o_perf_metric">
+                                    <span class="o_perf_metric_value" t-out="record.discipline_score.value"/>
+                                    <span class="o_perf_metric_label">Discipline</span>
+                                </div>
+                                <div class="o_perf_metric">
+                                    <span class="o_perf_metric_value" t-out="record.events_score.value"/>
+                                    <span class="o_perf_metric_label">Events</span>
+                                </div>
+                                <div class="o_perf_metric">
+                                    <span class="o_perf_metric_value" t-out="record.rating.value"/>
+                                    <span class="o_perf_metric_label">Rating</span>
+                                </div>
+                            </div>
+                            <div class="o_perf_card_footer">
+                                <span>
+                                    Manager:
+                                    <strong t-out="record.manager_id.value or 'Unassigned'"/>
+                                </span>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_performance_evaluation_list" model="ir.ui.view">
+        <field name="name">performance.evaluation.list</field>
+        <field name="model">performance.evaluation</field>
+        <field name="arch" type="xml">
+            <list decoration-success="state in ('published', 'appealed', 'closed')" decoration-warning="state in ('waiting_inputs', 'manager_evaluation', 'manager_submitted', 'hr_review')" decoration-muted="state == 'draft'">
+                <field name="employee_id"/>
+                <field name="cycle_id"/>
+                <field name="department_id"/>
+                <field name="manager_id"/>
+                <field name="evaluation_category"/>
+                <field name="individual_score" optional="hide"/>
+                <field name="institutional_score"/>
+                <field name="discipline_score" optional="show"/>
+                <field name="events_score"/>
+                <field name="final_score"/>
+                <field name="rating"/>
+                <field name="reward_rule_id" optional="show"/>
+                <field name="reward_amount" optional="show"/>
+                <field name="reward_description" optional="show"/>
+                <field name="reward_status"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_performance_evaluation_search" model="ir.ui.view">
+        <field name="name">performance.evaluation.search</field>
+        <field name="model">performance.evaluation</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="employee_id"/>
+                <field name="cycle_id"/>
+                <field name="department_id"/>
+                <field name="manager_id"/>
+                <field name="evaluation_category"/>
+                <field name="reward_status"/>
+                <filter name="my_records" string="My Records" domain="[('employee_id.user_id', '=', uid)]"/>
+                <filter name="my_team" string="My Team" domain="[('manager_id.user_id', '=', uid)]"/>
+                <filter name="employee_category" string="Employees" domain="[('evaluation_category', '=', 'employee')]"/>
+                <filter name="section_head_category" string="Section Heads" domain="[('evaluation_category', '=', 'section_head')]"/>
+                <filter name="manager_category" string="Managers" domain="[('evaluation_category', '=', 'manager')]"/>
+                <filter name="pending" string="Pending" domain="[('state', 'in', ('waiting_inputs', 'manager_evaluation', 'manager_submitted', 'hr_review'))]"/>
+                <filter name="published" string="Published" domain="[('state', 'in', ('published', 'appealed', 'closed'))]"/>
+                <filter name="payable_rewards" string="Payable Rewards" domain="[('reward_amount', '&gt;', 0), ('state', 'in', ('hr_confirmed', 'published', 'appealed', 'closed'))]"/>
+                <filter name="reward_pending_budget" string="Pending Budget Approval" domain="[('reward_status', '=', 'pending_budget')]"/>
+                <filter name="reward_pending_board" string="Pending Board Approval" domain="[('reward_status', '=', 'pending_board')]"/>
+                <filter name="reward_approved" string="Reward Approved" domain="[('reward_status', '=', 'approved')]"/>
+                <filter name="reward_rejected" string="Reward Rejected" domain="[('reward_status', '=', 'rejected')]"/>
+                <separator/>
+                <filter name="group_department" string="Department" context="{'group_by': 'department_id'}"/>
+                <filter name="group_category" string="Category" context="{'group_by': 'evaluation_category'}"/>
+                <filter name="group_cycle" string="Cycle" context="{'group_by': 'cycle_id'}"/>
+                <filter name="group_reward_status" string="Reward Status" context="{'group_by': 'reward_status'}"/>
+                <filter name="group_state" string="State" context="{'group_by': 'state'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_performance_evaluation_line_list" model="ir.ui.view">
+        <field name="name">performance.evaluation.line.list</field>
+        <field name="model">performance.evaluation.line</field>
+        <field name="arch" type="xml">
+            <list decoration-success="achievement_score &gt;= 90" decoration-warning="achievement_score &lt; 70">
+                <field name="evaluation_id"/>
+                <field name="goal_id"/>
+                <field name="target_value"/>
+                <field name="actual_value"/>
+                <field name="achievement_score"/>
+                <field name="weight"/>
+                <field name="weighted_score"/>
+                <field name="manager_comment"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_performance_evaluation_line_form" model="ir.ui.view">
+        <field name="name">performance.evaluation.line.form</field>
+        <field name="model">performance.evaluation.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="evaluation_id" readonly="1"/>
+                            <field name="goal_id" readonly="1"/>
+                            <field name="target_value" readonly="1"/>
+                            <field name="actual_value"/>
+                        </group>
+                        <group>
+                            <field name="achievement_score" readonly="1"/>
+                            <field name="weight" readonly="1"/>
+                            <field name="weighted_score" readonly="1"/>
+                        </group>
+                    </group>
+                    <field name="manager_comment"/>
+                    <field name="evidence_attachment_ids" widget="many2many_binary"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_performance_evaluation_form" model="ir.ui.view">
+        <field name="name">performance.evaluation.form</field>
+        <field name="model">performance.evaluation</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_start_manager_evaluation" string="Start Evaluation" type="object" class="btn-primary" invisible="state not in ('draft', 'waiting_inputs')"/>
+                    <button name="action_submit_manager" string="Submit Manager Evaluation" type="object" invisible="state != 'manager_evaluation'"/>
+                    <button name="action_send_to_hr" string="Send to HR" type="object" invisible="state != 'manager_submitted'"/>
+                    <button name="action_hr_confirm" string="HR Confirm" type="object" invisible="state != 'hr_review'"/>
+                    <button name="action_publish" string="Publish" type="object" invisible="state != 'hr_confirmed'"/>
+                    <button name="%(action_report_performance_evaluation)d" string="Print Evaluation" type="action"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,waiting_inputs,manager_evaluation,manager_submitted,hr_review,hr_confirmed,published,appealed,closed"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="action_view_goal_lines" icon="fa-list-alt" invisible="evaluation_category != 'employee'">
+                            <field name="line_count" string="Goal Lines" widget="statinfo"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="action_view_events" icon="fa-calendar-check-o">
+                            <field name="event_count" string="Events" widget="statinfo"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="action_view_appeals" icon="fa-gavel">
+                            <field name="appeal_count" string="Appeals" widget="statinfo"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="action_view_development_plans" icon="fa-road">
+                            <field name="development_plan_count" string="Plans" widget="statinfo"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="action_view_discipline_record" icon="fa-clock-o" invisible="evaluation_category == 'manager'">
+                            <field name="discipline_score" string="Discipline" widget="statinfo"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="action_view_reward_batch" icon="fa-money" invisible="reward_amount &lt;= 0">
+                            <field name="reward_amount" string="Reward Batch" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <group string="Employee Context">
+                        <group>
+                            <field name="employee_id" readonly="state != 'draft'"/>
+                            <field name="cycle_id" readonly="state != 'draft'"/>
+                            <field name="department_id" readonly="1"/>
+                            <field name="section_id" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="manager_id" readonly="1"/>
+                            <field name="evaluation_category" readonly="1"/>
+                            <field name="reward_rule_id" readonly="1"/>
+                            <field name="reward_status" readonly="1"/>
+                            <field name="reward_batch_id" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Score Summary" col="4">
+                        <field name="individual_score" readonly="1" invisible="evaluation_category != 'employee'"/>
+                        <field name="institutional_score" readonly="1"/>
+                        <field name="goal_score" readonly="1"/>
+                        <field name="discipline_score" readonly="1" invisible="evaluation_category == 'manager'"/>
+                        <field name="events_score" readonly="1"/>
+                        <field name="final_score" readonly="1"/>
+                        <field name="rating" readonly="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Reward Logic">
+                            <group string="Applied Reward Rule">
+                                <group>
+                                    <field name="final_score" readonly="1"/>
+                                    <field name="rating" readonly="1"/>
+                                    <field name="reward_rule_id" readonly="1"/>
+                                    <field name="reward_description" readonly="1"/>
+                                    <field name="reward_multiplier" readonly="1"/>
+                                    <field name="reward_amount" readonly="1"/>
+                                </group>
+                                <group>
+                                    <field name="reward_batch_id" readonly="1"/>
+                                    <field name="reward_batch_state" readonly="1"/>
+                                    <field name="reward_status" readonly="1"/>
+                                    <field name="reward_salary_source" readonly="1"/>
+                                    <field name="reward_salary_reference" readonly="1"/>
+                                    <field name="reward_basic_salary_amount" readonly="1"/>
+                                    <field name="reward_requires_budget_approval" readonly="1"/>
+                                    <field name="reward_requires_board_approval" readonly="1"/>
+                                </group>
+                            </group>
+                            <group string="Approval Trail">
+                                <group>
+                                    <field name="reward_budget_approved_by" readonly="1"/>
+                                    <field name="reward_budget_approved_date" readonly="1"/>
+                                    <field name="reward_board_approved_by" readonly="1"/>
+                                    <field name="reward_board_approved_date" readonly="1"/>
+                                </group>
+                                <group>
+                                    <field name="reward_rejected_by" readonly="1"/>
+                                    <field name="reward_rejected_date" readonly="1"/>
+                                    <field name="reward_rejection_reason" placeholder="Explain why this reward was rejected or returned."/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Goal Evaluation" invisible="evaluation_category != 'employee'">
+                            <field name="line_ids">
+                                <list editable="bottom" decoration-success="achievement_score &gt;= 90" decoration-warning="achievement_score &lt; 70">
+                                    <field name="goal_id" readonly="1"/>
+                                    <field name="target_value" readonly="1"/>
+                                    <field name="actual_value"/>
+                                    <field name="achievement_score" readonly="1"/>
+                                    <field name="weight" readonly="1"/>
+                                    <field name="weighted_score" readonly="1"/>
+                                    <field name="manager_comment"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Shared Inputs">
+                            <group col="4">
+                                <field name="institutional_score" readonly="1"/>
+                                <field name="discipline_score_id" readonly="1" invisible="evaluation_category == 'manager'"/>
+                                <field name="events_score" readonly="1"/>
+                                <field name="goal_score" readonly="1"/>
+                            </group>
+                        </page>
+                        <page string="Manager Notes">
+                            <group>
+                                <field name="manager_comment" placeholder="Capture evaluation context, notable outcomes, and next-step expectations."/>
+                                <field name="hr_comment" placeholder="HR notes, publication observations, or appeal guidance."/>
+                            </group>
+                        </page>
+                        <page string="Appeals">
+                            <field name="appeal_ids" readonly="1">
+                                <list decoration-warning="state in ('submitted', 'hr_review', 'waiting_manager_response', 'committee_review')" decoration-success="state in ('decision_issued', 'closed')">
+                                    <field name="appeal_reason"/>
+                                    <field name="submission_date"/>
+                                    <field name="state"/>
+                                    <field name="decision_date"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Development Plans">
+                            <field name="development_plan_ids" readonly="1">
+                                <list decoration-warning="state in ('draft', 'manager_prepared', 'hr_reviewed')" decoration-success="state in ('completed', 'closed')">
+                                    <field name="deadline"/>
+                                    <field name="progress"/>
+                                    <field name="state"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_performance_my_evaluation" model="ir.actions.act_window">
+        <field name="name">My Evaluation</field>
+        <field name="res_model">performance.evaluation</field>
+        <field name="view_mode">list,form,graph,pivot,kanban</field>
+        <field name="domain">[('employee_id.user_id', '=', uid)]</field>
+        <field name="search_view_id" ref="view_performance_evaluation_search"/>
+        <field name="context">{'create': False}</field>
+    </record>
+
+    <record id="action_performance_team_evaluations" model="ir.actions.act_window">
+        <field name="name">Team Evaluations</field>
+        <field name="res_model">performance.evaluation</field>
+        <field name="view_mode">list,form,graph,pivot,kanban</field>
+        <field name="domain">[('manager_id.user_id', '=', uid)]</field>
+        <field name="search_view_id" ref="view_performance_evaluation_search"/>
+        <field name="context">{}</field>
+    </record>
+
+    <record id="action_performance_section_evaluations" model="ir.actions.act_window">
+        <field name="name">Section Evaluations</field>
+        <field name="res_model">performance.evaluation</field>
+        <field name="view_mode">list,form,graph,pivot,kanban</field>
+        <field name="domain">[('employee_id.evaluation_section_id.manager_id.user_id', '=', uid)]</field>
+        <field name="search_view_id" ref="view_performance_evaluation_search"/>
+        <field name="context">{}</field>
+    </record>
+
+    <record id="action_performance_hr_evaluations" model="ir.actions.act_window">
+        <field name="name">HR Evaluations</field>
+        <field name="res_model">performance.evaluation</field>
+        <field name="view_mode">list,form,graph,pivot,kanban</field>
+        <field name="search_view_id" ref="view_performance_evaluation_search"/>
+        <field name="context">{}</field>
+    </record>
+
+    <record id="action_performance_reward_approvals" model="ir.actions.act_window">
+        <field name="name">Staff Rewards Approval</field>
+        <field name="res_model">performance.evaluation</field>
+        <field name="view_mode">list,pivot,graph,form</field>
+        <field name="domain">[('reward_amount', '&gt;', 0), ('state', 'in', ('hr_confirmed', 'published', 'appealed', 'closed'))]</field>
+        <field name="search_view_id" ref="view_performance_evaluation_search"/>
+        <field name="context">{'search_default_payable_rewards': 1, 'search_default_group_reward_status': 1, 'create': False}</field>
+    </record>
+
+    <record id="action_performance_dashboard_employee" model="ir.actions.act_window">
+        <field name="name">My Dashboard</field>
+        <field name="res_model">performance.evaluation</field>
+        <field name="view_mode">list,graph,pivot,form,kanban</field>
+        <field name="domain">[('employee_id.user_id', '=', uid)]</field>
+        <field name="search_view_id" ref="view_performance_evaluation_search"/>
+        <field name="context">{'create': False}</field>
+    </record>
+
+    <record id="action_performance_dashboard_manager" model="ir.actions.act_window">
+        <field name="name">Team Dashboard</field>
+        <field name="res_model">performance.evaluation</field>
+        <field name="view_mode">list,graph,pivot,form,kanban</field>
+        <field name="domain">[('manager_id.user_id', '=', uid)]</field>
+        <field name="search_view_id" ref="view_performance_evaluation_search"/>
+        <field name="context">{'create': False}</field>
+    </record>
+
+    <record id="action_performance_dashboard_section" model="ir.actions.act_window">
+        <field name="name">Section Dashboard</field>
+        <field name="res_model">performance.evaluation</field>
+        <field name="view_mode">list,graph,pivot,form,kanban</field>
+        <field name="domain">[('employee_id.evaluation_section_id.manager_id.user_id', '=', uid)]</field>
+        <field name="search_view_id" ref="view_performance_evaluation_search"/>
+        <field name="context">{'create': False}</field>
+    </record>
+
+    <record id="action_performance_dashboard_hr" model="ir.actions.act_window">
+        <field name="name">HR Dashboard</field>
+        <field name="res_model">performance.cycle</field>
+        <field name="view_mode">list,form,graph,pivot,kanban</field>
+        <field name="search_view_id" ref="view_performance_cycle_search"/>
+        <field name="context">{'create': False}</field>
+    </record>
+
+    <record id="action_performance_dashboard_executive" model="ir.actions.act_window">
+        <field name="name">Executive Dashboard</field>
+        <field name="res_model">performance.cycle</field>
+        <field name="view_mode">list,form,graph,pivot,kanban</field>
+        <field name="search_view_id" ref="view_performance_cycle_search"/>
+        <field name="context">{'create': False}</field>
+    </record>
+</odoo>

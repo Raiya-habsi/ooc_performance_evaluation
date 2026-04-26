@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="performance_config_default" model="performance.config.settings">
+        <field name="name">Performance Evaluation Settings</field>
+        <field name="minimum_goals">3</field>
+        <field name="maximum_goals">5</field>
+        <field name="goal_total_weight">100.0</field>
+        <field name="score_cap">True</field>
+        <field name="appeal_working_days">10</field>
+        <field name="development_plan_working_days">30</field>
+        <field name="low_performance_threshold">70.0</field>
+        <field name="employee_individual_weight">0.9</field>
+        <field name="employee_institutional_weight">0.1</field>
+        <field name="goal_component_weight">0.6</field>
+        <field name="discipline_component_weight">0.3</field>
+        <field name="events_component_weight">0.1</field>
+        <field name="manager_goal_component_weight">0.9</field>
+        <field name="manager_events_component_weight">0.1</field>
+    </record>
+</odoo>

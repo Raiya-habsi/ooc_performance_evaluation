@@ -1,0 +1,684 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * ooc_performance_evaluation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"POT-Creation-Date: 2026-04-25 00:00+0000\n"
+"PO-Revision-Date: 2026-04-25 00:00+0000\n"
+"Last-Translator: OpenAI\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: ooc_performance_evaluation
+msgid "Performance Evaluation"
+msgstr "تقييم الأداء"
+
+#. module: ooc_performance_evaluation
+msgid "Dashboard"
+msgstr "لوحة المعلومات"
+
+#. module: ooc_performance_evaluation
+msgid "Evaluation Cycles"
+msgstr "دورات التقييم"
+
+#. module: ooc_performance_evaluation
+msgid "Goals"
+msgstr "الأهداف"
+
+#. module: ooc_performance_evaluation
+msgid "Goal Bank"
+msgstr "بنك الأهداف"
+
+#. module: ooc_performance_evaluation
+msgid "Goal Approvals"
+msgstr "اعتمادات الأهداف"
+
+#. module: ooc_performance_evaluation
+msgid "Evaluations"
+msgstr "التقييمات"
+
+#. module: ooc_performance_evaluation
+msgid "My Evaluation"
+msgstr "تقييمي"
+
+#. module: ooc_performance_evaluation
+msgid "Team Evaluations"
+msgstr "تقييمات الفريق"
+
+#. module: ooc_performance_evaluation
+msgid "Section Evaluations"
+msgstr "تقييمات القسم"
+
+#. module: ooc_performance_evaluation
+msgid "HR Evaluations"
+msgstr "تقييمات الموارد البشرية"
+
+#. module: ooc_performance_evaluation
+msgid "Discipline"
+msgstr "الانضباط"
+
+#. module: ooc_performance_evaluation
+msgid "Events"
+msgstr "الفعاليات"
+
+#. module: ooc_performance_evaluation
+msgid "Appeals"
+msgstr "التظلمات"
+
+#. module: ooc_performance_evaluation
+msgid "Development Plans"
+msgstr "خطط التطوير"
+
+#. module: ooc_performance_evaluation
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: ooc_performance_evaluation
+msgid "Configuration"
+msgstr "الإعدادات"
+
+#. module: ooc_performance_evaluation
+msgid "Settings"
+msgstr "الضبط"
+
+#. module: ooc_performance_evaluation
+msgid "Reward Rules"
+msgstr "قواعد المكافآت"
+
+#. module: ooc_performance_evaluation
+msgid "Employee Evaluation Report"
+msgstr "تقرير تقييم الموظف"
+
+#. module: ooc_performance_evaluation
+msgid "Staff Rewards Approval"
+msgstr "اعتماد مكافآت الموظفين"
+
+#. module: ooc_performance_evaluation
+msgid "Staff Rewards"
+msgstr "مكافآت الموظفين"
+
+#. module: ooc_performance_evaluation
+msgid "Rewards"
+msgstr "المكافآت"
+
+#. module: ooc_performance_evaluation
+msgid "Reward Batch"
+msgstr "دفعة المكافآت"
+
+#. module: ooc_performance_evaluation
+msgid "Reward Batch - %s"
+msgstr "دفعة المكافآت - %s"
+
+#. module: ooc_performance_evaluation
+msgid "Dashboard Filters"
+msgstr "مرشحات اللوحة"
+
+#. module: ooc_performance_evaluation
+msgid "Refine the KPI, evaluation, and reward insights shown below."
+msgstr "قم بتضييق مؤشرات الأداء والتقييمات ورؤى المكافآت المعروضة أدناه."
+
+#. module: ooc_performance_evaluation
+msgid "BI Shortcuts"
+msgstr "اختصارات التحليل"
+
+#. module: ooc_performance_evaluation
+msgid "Analysis Views"
+msgstr "عروض التحليل"
+
+#. module: ooc_performance_evaluation
+msgid "Live Metrics"
+msgstr "المؤشرات الحية"
+
+#. module: ooc_performance_evaluation
+msgid "Operational Snapshot"
+msgstr "لقطة تشغيلية"
+
+#. module: ooc_performance_evaluation
+msgid "Click any card to drill into the underlying records."
+msgstr "اضغط أي بطاقة للانتقال إلى السجلات الأساسية."
+
+#. module: ooc_performance_evaluation
+msgid "Operational Alerts"
+msgstr "التنبيهات التشغيلية"
+
+#. module: ooc_performance_evaluation
+msgid "Exceptions & Reminders"
+msgstr "الاستثناءات والتذكيرات"
+
+#. module: ooc_performance_evaluation
+msgid "No exception records are visible in this scope."
+msgstr "لا توجد سجلات استثنائية ظاهرة في هذا النطاق."
+
+#. module: ooc_performance_evaluation
+msgid "The current performance workflow is clear."
+msgstr "مسار عمل الأداء الحالي واضح."
+
+#. module: ooc_performance_evaluation
+msgid "No records in this panel yet."
+msgstr "لا توجد سجلات في هذه اللوحة حتى الآن."
+
+#. module: ooc_performance_evaluation
+msgid "Once the workflow starts producing data, this feed will update automatically."
+msgstr "عند بدء تدفق البيانات في مسار العمل، سيتم تحديث هذه القائمة تلقائياً."
+
+#. module: ooc_performance_evaluation
+msgid "Once related actions appear, they will surface here."
+msgstr "عند ظهور الإجراءات المرتبطة ستظهر هنا."
+
+#. module: ooc_performance_evaluation
+msgid "Open pivot, graph, and approval queues already scoped to the current filters."
+msgstr "افتح التحليل المحوري والرسومي وصفوف الاعتماد بحسب المرشحات الحالية."
+
+#. module: ooc_performance_evaluation
+msgid "Cycle"
+msgstr "الدورة"
+
+#. module: ooc_performance_evaluation
+msgid "All Cycles"
+msgstr "كل الدورات"
+
+#. module: ooc_performance_evaluation
+msgid "Evaluation State"
+msgstr "حالة التقييم"
+
+#. module: ooc_performance_evaluation
+msgid "All States"
+msgstr "كل الحالات"
+
+#. module: ooc_performance_evaluation
+msgid "All Ratings"
+msgstr "كل التقديرات"
+
+#. module: ooc_performance_evaluation
+msgid "All Reward States"
+msgstr "كل حالات المكافأة"
+
+#. module: ooc_performance_evaluation
+msgid "Reset Filters"
+msgstr "إعادة تعيين المرشحات"
+
+#. module: ooc_performance_evaluation
+msgid "Evaluation Pivot"
+msgstr "تحليل التقييمات المحوري"
+
+#. module: ooc_performance_evaluation
+msgid "Analyze scores by cycle, department, rating, and reward state."
+msgstr "حلل الدرجات حسب الدورة والإدارة والتقدير وحالة المكافأة."
+
+#. module: ooc_performance_evaluation
+msgid "Reward Approval Queue"
+msgstr "صف اعتماد المكافآت"
+
+#. module: ooc_performance_evaluation
+msgid "Review payable staff rewards and their approval stage."
+msgstr "راجع مكافآت الموظفين المستحقة ومرحلة اعتمادها."
+
+#. module: ooc_performance_evaluation
+msgid "Cycle BI"
+msgstr "تحليل الدورة"
+
+#. module: ooc_performance_evaluation
+msgid "Open cycle-level progress, completion, and publication analysis."
+msgstr "افتح تحليل التقدم والاكتمال والنشر على مستوى الدورة."
+
+#. module: ooc_performance_evaluation
+msgid "Ready"
+msgstr "جاهز"
+
+#. module: ooc_performance_evaluation
+msgid "Budget Review"
+msgstr "مراجعة الميزانية"
+
+#. module: ooc_performance_evaluation
+msgid "Board Review"
+msgstr "مراجعة المجلس"
+
+#. module: ooc_performance_evaluation
+msgid "Refresh Batch"
+msgstr "تحديث الدفعة"
+
+#. module: ooc_performance_evaluation
+msgid "Submit For Budget Review"
+msgstr "إرسال لمراجعة الميزانية"
+
+#. module: ooc_performance_evaluation
+msgid "Approve Budget For All"
+msgstr "اعتماد الميزانية للجميع"
+
+#. module: ooc_performance_evaluation
+msgid "Approve Board For All"
+msgstr "اعتماد المجلس للجميع"
+
+#. module: ooc_performance_evaluation
+msgid "Reject Batch"
+msgstr "رفض الدفعة"
+
+#. module: ooc_performance_evaluation
+msgid "Reset Batch"
+msgstr "إعادة ضبط الدفعة"
+
+#. module: ooc_performance_evaluation
+msgid "Batch Summary"
+msgstr "ملخص الدفعة"
+
+#. module: ooc_performance_evaluation
+msgid "Approval Notes"
+msgstr "ملاحظات الاعتماد"
+
+#. module: ooc_performance_evaluation
+msgid "Staff Reward Queue"
+msgstr "صف مكافآت الموظفين"
+
+#. module: ooc_performance_evaluation
+msgid "There are no staff rewards to submit in this cycle."
+msgstr "لا توجد مكافآت موظفين لإرسالها في هذه الدورة."
+
+#. module: ooc_performance_evaluation
+msgid "There are no reward records waiting for budget approval."
+msgstr "لا توجد سجلات مكافآت بانتظار اعتماد الميزانية."
+
+#. module: ooc_performance_evaluation
+msgid "There are no reward records waiting for board approval."
+msgstr "لا توجد سجلات مكافآت بانتظار اعتماد المجلس."
+
+#. module: ooc_performance_evaluation
+msgid "There are no reward records available to reject in this batch."
+msgstr "لا توجد سجلات مكافآت متاحة للرفض في هذه الدفعة."
+
+#. module: ooc_performance_evaluation
+msgid "Provide a rejection reason before rejecting the batch."
+msgstr "أدخل سبب الرفض قبل رفض الدفعة."
+
+#. module: ooc_performance_evaluation
+msgid "Payable Rewards"
+msgstr "المكافآت المستحقة"
+
+#. module: ooc_performance_evaluation
+msgid "Reward Approved"
+msgstr "المكافأة معتمدة"
+
+#. module: ooc_performance_evaluation
+msgid "Reward Rejected"
+msgstr "المكافأة مرفوضة"
+
+#. module: ooc_performance_evaluation
+msgid "Employee"
+msgstr "موظف"
+
+#. module: ooc_performance_evaluation
+msgid "Section Head"
+msgstr "رئيس القسم"
+
+#. module: ooc_performance_evaluation
+msgid "Manager"
+msgstr "مدير"
+
+#. module: ooc_performance_evaluation
+msgid "Start Evaluation"
+msgstr "بدء التقييم"
+
+#. module: ooc_performance_evaluation
+msgid "Submit Manager Evaluation"
+msgstr "إرسال تقييم المدير"
+
+#. module: ooc_performance_evaluation
+msgid "Send to HR"
+msgstr "إرسال إلى الموارد البشرية"
+
+#. module: ooc_performance_evaluation
+msgid "HR Confirm"
+msgstr "اعتماد الموارد البشرية"
+
+#. module: ooc_performance_evaluation
+msgid "Publish"
+msgstr "نشر"
+
+#. module: ooc_performance_evaluation
+msgid "Print Evaluation"
+msgstr "طباعة التقييم"
+
+#. module: ooc_performance_evaluation
+msgid "Approve Budget"
+msgstr "اعتماد الميزانية"
+
+#. module: ooc_performance_evaluation
+msgid "Approve Board"
+msgstr "اعتماد المجلس"
+
+#. module: ooc_performance_evaluation
+msgid "Reject Reward"
+msgstr "رفض المكافأة"
+
+#. module: ooc_performance_evaluation
+msgid "Reset Reward Approval"
+msgstr "إعادة ضبط اعتماد المكافأة"
+
+#. module: ooc_performance_evaluation
+msgid "Employee Context"
+msgstr "بيانات الموظف"
+
+#. module: ooc_performance_evaluation
+msgid "Score Summary"
+msgstr "ملخص الدرجات"
+
+#. module: ooc_performance_evaluation
+msgid "Reward Logic"
+msgstr "منطق المكافأة"
+
+#. module: ooc_performance_evaluation
+msgid "Applied Reward Rule"
+msgstr "قاعدة المكافأة المطبقة"
+
+#. module: ooc_performance_evaluation
+msgid "Approval Trail"
+msgstr "مسار الاعتماد"
+
+#. module: ooc_performance_evaluation
+msgid "Goal Evaluation"
+msgstr "تقييم الأهداف"
+
+#. module: ooc_performance_evaluation
+msgid "Shared Inputs"
+msgstr "المدخلات المشتركة"
+
+#. module: ooc_performance_evaluation
+msgid "Manager Notes"
+msgstr "ملاحظات المدير"
+
+#. module: ooc_performance_evaluation
+msgid "Institutional Score"
+msgstr "الدرجة المؤسسية"
+
+#. module: ooc_performance_evaluation
+msgid "Goal Score"
+msgstr "درجة الأهداف"
+
+#. module: ooc_performance_evaluation
+msgid "Discipline Score"
+msgstr "درجة الانضباط"
+
+#. module: ooc_performance_evaluation
+msgid "Events Score"
+msgstr "درجة الفعاليات"
+
+#. module: ooc_performance_evaluation
+msgid "Final Score"
+msgstr "الدرجة النهائية"
+
+#. module: ooc_performance_evaluation
+msgid "Rating"
+msgstr "التقدير"
+
+#. module: ooc_performance_evaluation
+msgid "Reward Description"
+msgstr "وصف المكافأة"
+
+#. module: ooc_performance_evaluation
+msgid "Reward Status"
+msgstr "حالة المكافأة"
+
+#. module: ooc_performance_evaluation
+msgid "Fallback Basic Salary"
+msgstr "الراتب الأساسي الاحتياطي"
+
+#. module: ooc_performance_evaluation
+msgid "Active Contract"
+msgstr "العقد النشط"
+
+#. module: ooc_performance_evaluation
+msgid "Fallback Salary"
+msgstr "الراتب الاحتياطي"
+
+#. module: ooc_performance_evaluation
+msgid "No Salary Source"
+msgstr "لا يوجد مصدر للراتب"
+
+#. module: ooc_performance_evaluation
+msgid "All Categories"
+msgstr "كل الفئات"
+
+#. module: ooc_performance_evaluation
+msgid "All Departments"
+msgstr "كل الإدارات"
+
+#. module: ooc_performance_evaluation
+msgid "Analysis Views"
+msgstr "واجهات التحليل"
+
+#. module: ooc_performance_evaluation
+msgid "Analytics"
+msgstr "التحليلات"
+
+#. module: ooc_performance_evaluation
+msgid "Category"
+msgstr "الفئة"
+
+#. module: ooc_performance_evaluation
+msgid "Department Leaders"
+msgstr "أفضل الإدارات"
+
+#. module: ooc_performance_evaluation
+msgid "Distribution panels adapt to the active dashboard filters."
+msgstr "تتكيّف لوحات التوزيع مع فلاتر لوحة المعلومات النشطة."
+
+#. module: ooc_performance_evaluation
+msgid "How the current evaluation population is distributed across the final ratings."
+msgstr "يوضح هذا توزيع التقييمات الحالية عبر التقديرات النهائية."
+
+#. module: ooc_performance_evaluation
+msgid "Open pivot, graph, and approval queues already scoped to the current filters."
+msgstr "افتح الجداول المحورية والرسوم البيانية وقوائم الاعتماد وفق الفلاتر الحالية."
+
+#. module: ooc_performance_evaluation
+msgid "Operating Posture"
+msgstr "وضع التشغيل"
+
+#. module: ooc_performance_evaluation
+msgid "Reward Pipeline"
+msgstr "مسار المكافآت"
+
+#. module: ooc_performance_evaluation
+msgid "Reward exposure by approval status for the current filters."
+msgstr "يعرض قيمة المكافآت حسب حالة الاعتماد وفق الفلاتر الحالية."
+
+#. module: ooc_performance_evaluation
+msgid "Submit Approval Batch"
+msgstr "إرسال دفعة الاعتماد"
+
+#. module: ooc_performance_evaluation
+msgid "The current performance workflow is clear."
+msgstr "مسار العمل الحالي للتقييم واضح ولا توجد حالات معلقة."
+
+#. module: ooc_performance_evaluation
+msgid "Total Reward Exposure"
+msgstr "إجمالي قيمة المكافآت"
+
+#. module: ooc_performance_evaluation
+msgid "Visual BI"
+msgstr "الذكاء التحليلي المرئي"
+
+#. module: ooc_performance_evaluation
+msgid "No exception records are visible in this scope."
+msgstr "لا توجد سجلات استثناء ظاهرة ضمن هذا النطاق."
+
+#. module: ooc_performance_evaluation
+msgid "No records in this panel yet."
+msgstr "لا توجد سجلات في هذه اللوحة حتى الآن."
+
+#. module: ooc_performance_evaluation
+msgid "Once related actions appear, they will surface here."
+msgstr "عند ظهور الإجراءات المرتبطة ستظهر هنا تلقائيًا."
+
+#. module: ooc_performance_evaluation
+msgid "Refine the KPI, evaluation, and reward insights shown below."
+msgstr "قم بتضييق مؤشرات الأداء والتقييمات ورؤى المكافآت المعروضة أدناه."
+
+#. module: ooc_performance_evaluation
+msgid "Rating Distribution"
+msgstr "توزيع التقديرات"
+
+#. module: ooc_performance_evaluation
+msgid "Action Blocks"
+msgstr "كتل العمل"
+
+#. module: ooc_performance_evaluation
+msgid "Priority View"
+msgstr "عرض الأولويات"
+
+#. module: ooc_performance_evaluation
+msgid "Organized operational blocks tuned to the current dashboard role and filters."
+msgstr "كتل تشغيلية منظمة ومهيأة حسب دور لوحة المعلومات والفلاتر الحالية."
+
+#. module: ooc_performance_evaluation
+msgid "Current Cycle"
+msgstr "الدورة الحالية"
+
+#. module: ooc_performance_evaluation
+msgid "My Standing"
+msgstr "موقفي الحالي"
+
+#. module: ooc_performance_evaluation
+msgid "Employee Follow Up"
+msgstr "متابعة الموظف"
+
+#. module: ooc_performance_evaluation
+msgid "Action Priority"
+msgstr "أولوية العمل"
+
+#. module: ooc_performance_evaluation
+msgid "Approval Pressure"
+msgstr "ضغط الاعتمادات"
+
+#. module: ooc_performance_evaluation
+msgid "Team Health"
+msgstr "صحة الفريق"
+
+#. module: ooc_performance_evaluation
+msgid "Delivery Signals"
+msgstr "مؤشرات الإنجاز"
+
+#. module: ooc_performance_evaluation
+msgid "Cycle Control"
+msgstr "التحكم في الدورة"
+
+#. module: ooc_performance_evaluation
+msgid "Data Readiness"
+msgstr "جاهزية البيانات"
+
+#. module: ooc_performance_evaluation
+msgid "Reward Governance"
+msgstr "حوكمة المكافآت"
+
+#. module: ooc_performance_evaluation
+msgid "Executive Signals"
+msgstr "مؤشرات الإدارة العليا"
+
+#. module: ooc_performance_evaluation
+msgid "Portfolio Health"
+msgstr "صحة المحفظة"
+
+#. module: ooc_performance_evaluation
+msgid "Not Applicable"
+msgstr "غير منطبق"
+
+#. module: ooc_performance_evaluation
+msgid "Eligible"
+msgstr "مستحق"
+
+#. module: ooc_performance_evaluation
+msgid "Pending Budget Approval"
+msgstr "بانتظار اعتماد الميزانية"
+
+#. module: ooc_performance_evaluation
+msgid "Pending Board Approval"
+msgstr "بانتظار اعتماد المجلس"
+
+#. module: ooc_performance_evaluation
+msgid "Approved"
+msgstr "معتمد"
+
+#. module: ooc_performance_evaluation
+msgid "Rejected"
+msgstr "مرفوض"
+
+#. module: ooc_performance_evaluation
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: ooc_performance_evaluation
+msgid "Waiting Inputs"
+msgstr "بانتظار المدخلات"
+
+#. module: ooc_performance_evaluation
+msgid "Manager Evaluation"
+msgstr "تقييم المدير"
+
+#. module: ooc_performance_evaluation
+msgid "Manager Submitted"
+msgstr "أرسله المدير"
+
+#. module: ooc_performance_evaluation
+msgid "HR Review"
+msgstr "مراجعة الموارد البشرية"
+
+#. module: ooc_performance_evaluation
+msgid "HR Confirmed"
+msgstr "معتمد من الموارد البشرية"
+
+#. module: ooc_performance_evaluation
+msgid "Published"
+msgstr "منشور"
+
+#. module: ooc_performance_evaluation
+msgid "Appealed"
+msgstr "تم التظلم"
+
+#. module: ooc_performance_evaluation
+msgid "Closed"
+msgstr "مغلق"
+
+#. module: ooc_performance_evaluation
+msgid "Excellent"
+msgstr "ممتاز"
+
+#. module: ooc_performance_evaluation
+msgid "Very Good"
+msgstr "جيد جداً"
+
+#. module: ooc_performance_evaluation
+msgid "Good"
+msgstr "جيد"
+
+#. module: ooc_performance_evaluation
+msgid "Acceptable"
+msgstr "مقبول"
+
+#. module: ooc_performance_evaluation
+msgid "Weak"
+msgstr "ضعيف"
+
+#. module: ooc_performance_evaluation
+msgid "Two basic salaries"
+msgstr "راتبان أساسيان"
+
+#. module: ooc_performance_evaluation
+msgid "One basic salary"
+msgstr "راتب أساسي واحد"
+
+#. module: ooc_performance_evaluation
+msgid "Half salary"
+msgstr "نصف راتب"
+
+#. module: ooc_performance_evaluation
+msgid "Quarter salary"
+msgstr "ربع راتب"
+
+#. module: ooc_performance_evaluation
+msgid "No reward"
+msgstr "لا توجد مكافأة"

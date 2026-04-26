@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <function model="performance.reward.rule" name="write">
+        <value model="performance.reward.rule" search="[('id', '=', ref('ooc_performance_evaluation.reward_rule_excellent'))]"/>
+        <value eval="{'reward_multiplier': 2.0}"/>
+    </function>
+
+    <function model="performance.reward.rule" name="write">
+        <value model="performance.reward.rule" search="[('id', '=', ref('ooc_performance_evaluation.reward_rule_very_good'))]"/>
+        <value eval="{'reward_multiplier': 1.0}"/>
+    </function>
+
+    <function model="performance.reward.rule" name="write">
+        <value model="performance.reward.rule" search="[('id', '=', ref('ooc_performance_evaluation.reward_rule_good'))]"/>
+        <value eval="{'reward_multiplier': 0.5}"/>
+    </function>
+
+    <function model="performance.reward.rule" name="write">
+        <value model="performance.reward.rule" search="[('id', '=', ref('ooc_performance_evaluation.reward_rule_acceptable'))]"/>
+        <value eval="{'reward_multiplier': 0.25}"/>
+    </function>
+
+    <function model="performance.reward.rule" name="write">
+        <value model="performance.reward.rule" search="[('id', '=', ref('ooc_performance_evaluation.reward_rule_weak'))]"/>
+        <value eval="{'reward_multiplier': 0.0}"/>
+    </function>
+</odoo>

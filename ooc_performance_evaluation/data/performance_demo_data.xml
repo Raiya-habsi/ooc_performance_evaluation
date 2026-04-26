@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="dept_perf_hr" model="hr.department">
+            <field name="name">OOC HR</field>
+        </record>
+
+        <record id="dept_perf_technical_affairs" model="hr.department">
+            <field name="name">OOC Technical Affairs</field>
+        </record>
+
+        <record id="dept_perf_software_section" model="hr.department">
+            <field name="name">Software Delivery Section</field>
+            <field name="parent_id" ref="ooc_performance_evaluation.dept_perf_technical_affairs"/>
+        </record>
+
+        <record id="dept_perf_finance" model="hr.department">
+            <field name="name">OOC Finance</field>
+        </record>
+
+        <record id="dept_perf_olympic_academy" model="hr.department">
+            <field name="name">OOC Olympic Academy</field>
+        </record>
+
+        <record id="dept_perf_media" model="hr.department">
+            <field name="name">OOC Media</field>
+        </record>
+
+        <record id="dept_perf_it" model="hr.department">
+            <field name="name">OOC IT</field>
+        </record>
+
+        <record id="user_perf_employee" model="res.users">
+            <field name="name">Fatima Systems Analyst</field>
+            <field name="login">perf.employee</field>
+            <field name="password">perf.employee</field>
+            <field name="email">perf.employee@example.com</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="company_ids" eval="[(6, 0, [ref('base.main_company')])]"/>
+            <field name="group_ids" eval="[(6, 0, [ref('base.group_user'), ref('ooc_performance_evaluation.group_performance_employee')])]"/>
+        </record>
+
+        <record id="user_perf_section_head" model="res.users">
+            <field name="name">Salim Software Section Head</field>
+            <field name="login">perf.section_head</field>
+            <field name="password">perf.section_head</field>
+            <field name="email">perf.section_head@example.com</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="company_ids" eval="[(6, 0, [ref('base.main_company')])]"/>
+            <field name="group_ids" eval="[(6, 0, [ref('base.group_user'), ref('ooc_performance_evaluation.group_performance_section_head')])]"/>
+        </record>
+
+        <record id="user_perf_manager" model="res.users">
+            <field name="name">Aisha Technical Affairs Director</field>
+            <field name="login">perf.manager</field>
+            <field name="password">perf.manager</field>
+            <field name="email">perf.manager@example.com</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="company_ids" eval="[(6, 0, [ref('base.main_company')])]"/>
+            <field name="group_ids" eval="[(6, 0, [ref('base.group_user'), ref('ooc_performance_evaluation.group_performance_direct_manager')])]"/>
+        </record>
+
+        <record id="user_perf_hr_officer" model="res.users">
+            <field name="name">Huda HR Officer</field>
+            <field name="login">perf.hr_officer</field>
+            <field name="password">perf.hr_officer</field>
+            <field name="email">perf.hr_officer@example.com</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="company_ids" eval="[(6, 0, [ref('base.main_company')])]"/>
+            <field name="group_ids" eval="[(6, 0, [ref('base.group_user'), ref('ooc_performance_evaluation.group_performance_hr_officer')])]"/>
+        </record>
+
+        <record id="user_perf_hr_manager" model="res.users">
+            <field name="name">Mariam HR Director</field>
+            <field name="login">perf.hr_manager</field>
+            <field name="password">perf.hr_manager</field>
+            <field name="email">perf.hr_manager@example.com</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="company_ids" eval="[(6, 0, [ref('base.main_company')])]"/>
+            <field name="group_ids" eval="[(6, 0, [ref('base.group_user'), ref('ooc_performance_evaluation.group_performance_hr_manager')])]"/>
+        </record>
+
+        <record id="user_perf_executive" model="res.users">
+            <field name="name">Khalid Executive Viewer</field>
+            <field name="login">perf.executive</field>
+            <field name="password">perf.executive</field>
+            <field name="email">perf.executive@example.com</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="company_ids" eval="[(6, 0, [ref('base.main_company')])]"/>
+            <field name="group_ids" eval="[(6, 0, [ref('base.group_user'), ref('ooc_performance_evaluation.group_performance_executive_viewer')])]"/>
+        </record>
+
+        <record id="employee_perf_hr_manager" model="hr.employee">
+            <field name="name">Mariam HR Director</field>
+            <field name="user_id" ref="ooc_performance_evaluation.user_perf_hr_manager"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="department_id" ref="ooc_performance_evaluation.dept_perf_hr"/>
+            <field name="work_email">perf.hr_manager@example.com</field>
+            <field name="evaluation_category">manager</field>
+            <field name="evaluation_service_start_date">2021-01-03</field>
+            <field name="performance_manual_basic_salary">4200</field>
+        </record>
+
+        <record id="employee_perf_manager" model="hr.employee">
+            <field name="name">Aisha Technical Affairs Director</field>
+            <field name="user_id" ref="ooc_performance_evaluation.user_perf_manager"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="department_id" ref="ooc_performance_evaluation.dept_perf_technical_affairs"/>
+            <field name="parent_id" ref="ooc_performance_evaluation.employee_perf_hr_manager"/>
+            <field name="work_email">perf.manager@example.com</field>
+            <field name="evaluation_category">manager</field>
+            <field name="evaluation_service_start_date">2021-03-15</field>
+            <field name="performance_manual_basic_salary">3600</field>
+        </record>
+
+        <record id="employee_perf_section_head" model="hr.employee">
+            <field name="name">Salim Software Section Head</field>
+            <field name="user_id" ref="ooc_performance_evaluation.user_perf_section_head"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="department_id" ref="ooc_performance_evaluation.dept_perf_technical_affairs"/>
+            <field name="evaluation_section_id" ref="ooc_performance_evaluation.dept_perf_software_section"/>
+            <field name="parent_id" ref="ooc_performance_evaluation.employee_perf_manager"/>
+            <field name="work_email">perf.section_head@example.com</field>
+            <field name="evaluation_category">section_head</field>
+            <field name="evaluation_service_start_date">2022-01-10</field>
+            <field name="performance_manual_basic_salary">2400</field>
+        </record>
+
+        <record id="employee_perf_employee" model="hr.employee">
+            <field name="name">Fatima Systems Analyst</field>
+            <field name="user_id" ref="ooc_performance_evaluation.user_perf_employee"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="department_id" ref="ooc_performance_evaluation.dept_perf_technical_affairs"/>
+            <field name="evaluation_section_id" ref="ooc_performance_evaluation.dept_perf_software_section"/>
+            <field name="parent_id" ref="ooc_performance_evaluation.employee_perf_section_head"/>
+            <field name="work_email">perf.employee@example.com</field>
+            <field name="evaluation_category">employee</field>
+            <field name="evaluation_service_start_date">2023-04-08</field>
+            <field name="performance_manual_basic_salary">1300</field>
+        </record>
+
+        <record id="employee_perf_hr_officer" model="hr.employee">
+            <field name="name">Huda HR Officer</field>
+            <field name="user_id" ref="ooc_performance_evaluation.user_perf_hr_officer"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="department_id" ref="ooc_performance_evaluation.dept_perf_hr"/>
+            <field name="parent_id" ref="ooc_performance_evaluation.employee_perf_hr_manager"/>
+            <field name="work_email">perf.hr_officer@example.com</field>
+            <field name="evaluation_category">employee</field>
+            <field name="evaluation_service_start_date">2022-07-01</field>
+            <field name="performance_manual_basic_salary">1600</field>
+        </record>
+
+        <record id="employee_perf_executive" model="hr.employee">
+            <field name="name">Khalid Executive Viewer</field>
+            <field name="user_id" ref="ooc_performance_evaluation.user_perf_executive"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="department_id" ref="ooc_performance_evaluation.dept_perf_olympic_academy"/>
+            <field name="parent_id" ref="ooc_performance_evaluation.employee_perf_hr_manager"/>
+            <field name="work_email">perf.executive@example.com</field>
+            <field name="evaluation_category">manager</field>
+            <field name="evaluation_service_start_date">2020-09-12</field>
+            <field name="performance_manual_basic_salary">5000</field>
+        </record>
+
+        <record id="employee_perf_new_joiner" model="hr.employee">
+            <field name="name">Nour New Joiner</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="department_id" ref="ooc_performance_evaluation.dept_perf_technical_affairs"/>
+            <field name="evaluation_section_id" ref="ooc_performance_evaluation.dept_perf_software_section"/>
+            <field name="parent_id" ref="ooc_performance_evaluation.employee_perf_section_head"/>
+            <field name="evaluation_category">employee</field>
+            <field name="evaluation_service_start_date">2026-03-01</field>
+            <field name="performance_manual_basic_salary">900</field>
+        </record>
+
+        <record id="dept_perf_hr" model="hr.department">
+            <field name="manager_id" ref="ooc_performance_evaluation.employee_perf_hr_manager"/>
+        </record>
+
+        <record id="dept_perf_technical_affairs" model="hr.department">
+            <field name="manager_id" ref="ooc_performance_evaluation.employee_perf_manager"/>
+        </record>
+
+        <record id="dept_perf_software_section" model="hr.department">
+            <field name="manager_id" ref="ooc_performance_evaluation.employee_perf_section_head"/>
+        </record>
+
+        <record id="performance_cycle_demo_2027" model="performance.cycle">
+            <field name="name">2027 OOC Annual Performance Cycle</field>
+            <field name="year">2027</field>
+            <field name="start_date">2027-01-01</field>
+            <field name="goal_setting_start_date">2027-01-05</field>
+            <field name="goal_submission_deadline">2027-01-31</field>
+            <field name="manager_approval_deadline">2027-02-07</field>
+            <field name="hr_approval_deadline">2027-02-14</field>
+            <field name="goals_lock_date">2027-02-15</field>
+            <field name="mid_year_review_start">2027-06-01</field>
+            <field name="mid_year_review_end">2027-06-15</field>
+            <field name="final_evaluation_start">2027-11-01</field>
+            <field name="final_evaluation_end">2027-11-30</field>
+            <field name="result_publish_date">2027-12-05</field>
+            <field name="appeal_deadline">2027-12-19</field>
+            <field name="development_plan_deadline">2028-01-15</field>
+            <field name="state">appeal_period</field>
+        </record>
+
+        <record id="kpi_org_service_excellence" model="performance.kpi">
+            <field name="name">Improve Organization Service Excellence</field>
+            <field name="code">ORG-2027-01</field>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="kpi_level">organization</field>
+            <field name="target_value">100</field>
+            <field name="measure_unit">Percent</field>
+            <field name="weight">100</field>
+            <field name="description">Top-level KPI feeding all departmental and section-level objectives.</field>
+            <field name="state">locked</field>
+        </record>
+
+        <record id="kpi_dept_technical_delivery" model="performance.kpi">
+            <field name="name">Deliver Technical Transformation Roadmap</field>
+            <field name="code">DEPT-TECH-2027-01</field>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="kpi_level">department</field>
+            <field name="parent_id" ref="ooc_performance_evaluation.kpi_org_service_excellence"/>
+            <field name="department_id" ref="ooc_performance_evaluation.dept_perf_technical_affairs"/>
+            <field name="target_value">100</field>
+            <field name="measure_unit">Percent</field>
+            <field name="weight">100</field>
+            <field name="description">Department-level transformation KPI owned by Technical Affairs.</field>
+            <field name="state">locked</field>
+        </record>
+
+        <record id="kpi_section_platform_reliability" model="performance.kpi">
+            <field name="name">Improve Software Platform Reliability</field>
+            <field name="code">SEC-SW-2027-01</field>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="kpi_level">section</field>
+            <field name="parent_id" ref="ooc_performance_evaluation.kpi_dept_technical_delivery"/>
+            <field name="department_id" ref="ooc_performance_evaluation.dept_perf_technical_affairs"/>
+            <field name="section_id" ref="ooc_performance_evaluation.dept_perf_software_section"/>
+            <field name="target_value">100</field>
+            <field name="measure_unit">Percent</field>
+            <field name="weight">100</field>
+            <field name="description">Section KPI used centrally for employees and the section head.</field>
+            <field name="state">locked</field>
+        </record>
+
+        <record id="kpi_score_org_service_excellence" model="performance.kpi.score">
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="kpi_id" ref="ooc_performance_evaluation.kpi_org_service_excellence"/>
+            <field name="target_value">100</field>
+            <field name="actual_value">92</field>
+            <field name="remarks">Central institutional score for executive and manager evaluations.</field>
+            <field name="state">locked</field>
+            <field name="confirmed_by" ref="base.user_admin"/>
+            <field name="confirmed_date">2027-12-01 10:00:00</field>
+        </record>
+
+        <record id="kpi_score_dept_technical_delivery" model="performance.kpi.score">
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="kpi_id" ref="ooc_performance_evaluation.kpi_dept_technical_delivery"/>
+            <field name="target_value">100</field>
+            <field name="actual_value">88</field>
+            <field name="remarks">Department score shared across Technical Affairs where no section score exists.</field>
+            <field name="state">locked</field>
+            <field name="confirmed_by" ref="base.user_admin"/>
+            <field name="confirmed_date">2027-12-01 10:15:00</field>
+        </record>
+
+        <record id="kpi_score_section_platform_reliability" model="performance.kpi.score">
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="kpi_id" ref="ooc_performance_evaluation.kpi_section_platform_reliability"/>
+            <field name="target_value">100</field>
+            <field name="actual_value">91</field>
+            <field name="remarks">Section score shared by the employee and section head evaluations.</field>
+            <field name="state">locked</field>
+            <field name="confirmed_by" ref="base.user_admin"/>
+            <field name="confirmed_date">2027-12-01 10:30:00</field>
+        </record>
+
+        <record id="discipline_score_fatima" model="performance.discipline.score">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_employee"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="late_count">2</field>
+            <field name="early_leave_count">1</field>
+            <field name="absence_count">0</field>
+            <field name="approved_leave_count">4</field>
+            <field name="official_mission_count">1</field>
+            <field name="state">confirmed</field>
+        </record>
+
+        <record id="discipline_score_salim" model="performance.discipline.score">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_section_head"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="late_count">3</field>
+            <field name="early_leave_count">1</field>
+            <field name="absence_count">0</field>
+            <field name="approved_leave_count">3</field>
+            <field name="official_mission_count">2</field>
+            <field name="state">confirmed</field>
+        </record>
+
+        <record id="evaluation_fatima_2027" model="performance.evaluation">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_employee"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="department_id" ref="ooc_performance_evaluation.dept_perf_technical_affairs"/>
+            <field name="section_id" ref="ooc_performance_evaluation.dept_perf_software_section"/>
+            <field name="manager_id" ref="ooc_performance_evaluation.employee_perf_section_head"/>
+            <field name="evaluation_category">employee</field>
+            <field name="discipline_score_id" ref="ooc_performance_evaluation.discipline_score_fatima"/>
+            <field name="manager_comment">Strong delivery on execution quality and documentation; appeal opened to review one goal commentary.</field>
+            <field name="hr_comment">Institutional score centralized and published during the appeal window.</field>
+            <field name="state">appealed</field>
+        </record>
+
+        <record id="evaluation_salim_2027" model="performance.evaluation">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_section_head"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="department_id" ref="ooc_performance_evaluation.dept_perf_technical_affairs"/>
+            <field name="section_id" ref="ooc_performance_evaluation.dept_perf_software_section"/>
+            <field name="manager_id" ref="ooc_performance_evaluation.employee_perf_manager"/>
+            <field name="evaluation_category">section_head</field>
+            <field name="discipline_score_id" ref="ooc_performance_evaluation.discipline_score_salim"/>
+            <field name="manager_comment">Reliable section leadership with strong KPI control and high team engagement.</field>
+            <field name="hr_comment">Ready for publication and leadership development follow-up.</field>
+            <field name="reward_budget_approved_by" ref="base.user_admin"/>
+            <field name="reward_budget_approved_date">2027-12-08 09:30:00</field>
+            <field name="state">published</field>
+        </record>
+
+        <record id="evaluation_aisha_2027" model="performance.evaluation">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_manager"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="department_id" ref="ooc_performance_evaluation.dept_perf_technical_affairs"/>
+            <field name="manager_id" ref="ooc_performance_evaluation.employee_perf_hr_manager"/>
+            <field name="evaluation_category">manager</field>
+            <field name="manager_comment">Department results remained stable and aligned with organizational delivery goals.</field>
+            <field name="hr_comment">Confirmed using the centralized organization KPI score and event contribution data.</field>
+            <field name="reward_budget_approved_by" ref="base.user_admin"/>
+            <field name="reward_budget_approved_date">2027-12-06 10:00:00</field>
+            <field name="state">published</field>
+        </record>
+
+        <record id="reward_batch_demo_2027" model="performance.reward.batch">
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="state">board_review</field>
+        </record>
+
+        <record id="goal_fatima_backlog" model="performance.goal">
+            <field name="name">Deliver sprint backlog commitments</field>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="department_id" ref="ooc_performance_evaluation.dept_perf_technical_affairs"/>
+            <field name="section_id" ref="ooc_performance_evaluation.dept_perf_software_section"/>
+            <field name="manager_id" ref="ooc_performance_evaluation.employee_perf_section_head"/>
+            <field name="parent_kpi_id" ref="ooc_performance_evaluation.kpi_section_platform_reliability"/>
+            <field name="target_value">100</field>
+            <field name="measure_unit">Percent</field>
+            <field name="weight">35</field>
+            <field name="priority">1</field>
+            <field name="description">Deliver committed sprint scope with minimal roll-over.</field>
+            <field name="state">locked</field>
+        </record>
+
+        <record id="goal_fatima_incident_resolution" model="performance.goal">
+            <field name="name">Resolve priority incidents within SLA</field>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="department_id" ref="ooc_performance_evaluation.dept_perf_technical_affairs"/>
+            <field name="section_id" ref="ooc_performance_evaluation.dept_perf_software_section"/>
+            <field name="manager_id" ref="ooc_performance_evaluation.employee_perf_section_head"/>
+            <field name="parent_kpi_id" ref="ooc_performance_evaluation.kpi_section_platform_reliability"/>
+            <field name="target_value">100</field>
+            <field name="measure_unit">Percent</field>
+            <field name="weight">35</field>
+            <field name="priority">1</field>
+            <field name="description">Maintain responsive support handling for priority incidents.</field>
+            <field name="state">locked</field>
+        </record>
+
+        <record id="goal_fatima_runbooks" model="performance.goal">
+            <field name="name">Publish service runbooks and recovery notes</field>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="department_id" ref="ooc_performance_evaluation.dept_perf_technical_affairs"/>
+            <field name="section_id" ref="ooc_performance_evaluation.dept_perf_software_section"/>
+            <field name="manager_id" ref="ooc_performance_evaluation.employee_perf_section_head"/>
+            <field name="parent_kpi_id" ref="ooc_performance_evaluation.kpi_section_platform_reliability"/>
+            <field name="target_value">100</field>
+            <field name="measure_unit">Percent</field>
+            <field name="weight">30</field>
+            <field name="priority">2</field>
+            <field name="description">Document release, rollback, and recovery steps for core services.</field>
+            <field name="state">locked</field>
+        </record>
+
+        <record id="goal_selection_fatima_2027" model="performance.goal.selection">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_employee"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="goal_ids" eval="[(6, 0, [ref('ooc_performance_evaluation.goal_fatima_backlog'), ref('ooc_performance_evaluation.goal_fatima_incident_resolution'), ref('ooc_performance_evaluation.goal_fatima_runbooks')])]"/>
+            <field name="manager_comment">Goals align with section delivery and support quality expectations.</field>
+            <field name="hr_comment">Validated and locked for the cycle.</field>
+            <field name="submitted_date">2027-01-28 09:00:00</field>
+            <field name="manager_approved_date">2027-02-03 11:00:00</field>
+            <field name="hr_approved_date">2027-02-08 14:00:00</field>
+            <field name="state">locked</field>
+        </record>
+
+        <record id="evaluation_line_fatima_backlog" model="performance.evaluation.line">
+            <field name="evaluation_id" ref="ooc_performance_evaluation.evaluation_fatima_2027"/>
+            <field name="goal_id" ref="ooc_performance_evaluation.goal_fatima_backlog"/>
+            <field name="target_value">100</field>
+            <field name="actual_value">95</field>
+            <field name="weight">35</field>
+            <field name="manager_comment">Consistent sprint closure with only minor spillover in peak weeks.</field>
+        </record>
+
+        <record id="evaluation_line_fatima_incident_resolution" model="performance.evaluation.line">
+            <field name="evaluation_id" ref="ooc_performance_evaluation.evaluation_fatima_2027"/>
+            <field name="goal_id" ref="ooc_performance_evaluation.goal_fatima_incident_resolution"/>
+            <field name="target_value">100</field>
+            <field name="actual_value">90</field>
+            <field name="weight">35</field>
+            <field name="manager_comment">Handled major incidents well and met the majority of agreed response targets.</field>
+        </record>
+
+        <record id="evaluation_line_fatima_runbooks" model="performance.evaluation.line">
+            <field name="evaluation_id" ref="ooc_performance_evaluation.evaluation_fatima_2027"/>
+            <field name="goal_id" ref="ooc_performance_evaluation.goal_fatima_runbooks"/>
+            <field name="target_value">100</field>
+            <field name="actual_value">100</field>
+            <field name="weight">30</field>
+            <field name="manager_comment">Delivered complete and reusable runbook documentation for shared services.</field>
+        </record>
+
+        <record id="event_fatima_demo_1" model="performance.event.participation">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_employee"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="event_name">Digital Service Readiness Workshop</field>
+            <field name="event_date">2027-03-14</field>
+            <field name="event_type">Workshop</field>
+            <field name="participation_role">Presenter</field>
+            <field name="quality_rating">4.5</field>
+            <field name="manager_quality_comment">Delivered a clear technical session.</field>
+            <field name="created_by_hr">1</field>
+        </record>
+
+        <record id="event_fatima_demo_2" model="performance.event.participation">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_employee"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="event_name">Federation System Onboarding Day</field>
+            <field name="event_date">2027-06-09</field>
+            <field name="event_type">Training</field>
+            <field name="participation_role">Facilitator</field>
+            <field name="quality_rating">4.2</field>
+            <field name="manager_quality_comment">Strong participant support during onboarding.</field>
+            <field name="created_by_hr">1</field>
+        </record>
+
+        <record id="event_fatima_demo_3" model="performance.event.participation">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_employee"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="event_name">Innovation Demo Week</field>
+            <field name="event_date">2027-10-21</field>
+            <field name="event_type">Demo Day</field>
+            <field name="participation_role">Coordinator</field>
+            <field name="quality_rating">4.8</field>
+            <field name="manager_quality_comment">Coordinated the demo environment smoothly.</field>
+            <field name="created_by_hr">1</field>
+        </record>
+
+        <record id="event_salim_demo_1" model="performance.event.participation">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_section_head"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="event_name">Section Delivery Kickoff</field>
+            <field name="event_date">2027-01-12</field>
+            <field name="event_type">Kickoff</field>
+            <field name="participation_role">Lead</field>
+            <field name="quality_rating">4.6</field>
+            <field name="created_by_hr">1</field>
+        </record>
+
+        <record id="event_salim_demo_2" model="performance.event.participation">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_section_head"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="event_name">Architecture Review Forum</field>
+            <field name="event_date">2027-03-03</field>
+            <field name="event_type">Forum</field>
+            <field name="participation_role">Panelist</field>
+            <field name="quality_rating">4.4</field>
+            <field name="created_by_hr">1</field>
+        </record>
+
+        <record id="event_salim_demo_3" model="performance.event.participation">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_section_head"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="event_name">Midyear Delivery Clinic</field>
+            <field name="event_date">2027-06-12</field>
+            <field name="event_type">Clinic</field>
+            <field name="participation_role">Host</field>
+            <field name="quality_rating">4.7</field>
+            <field name="created_by_hr">1</field>
+        </record>
+
+        <record id="event_salim_demo_4" model="performance.event.participation">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_section_head"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="event_name">Release Governance Review</field>
+            <field name="event_date">2027-08-19</field>
+            <field name="event_type">Review</field>
+            <field name="participation_role">Lead Reviewer</field>
+            <field name="quality_rating">4.9</field>
+            <field name="created_by_hr">1</field>
+        </record>
+
+        <record id="event_salim_demo_5" model="performance.event.participation">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_section_head"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="event_name">Year-End Capability Showcase</field>
+            <field name="event_date">2027-11-18</field>
+            <field name="event_type">Showcase</field>
+            <field name="participation_role">Speaker</field>
+            <field name="quality_rating">5.0</field>
+            <field name="created_by_hr">1</field>
+        </record>
+
+        <record id="event_aisha_demo_1" model="performance.event.participation">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_manager"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="event_name">Leadership Strategy Roundtable</field>
+            <field name="event_date">2027-02-22</field>
+            <field name="event_type">Roundtable</field>
+            <field name="participation_role">Department Lead</field>
+            <field name="quality_rating">4.3</field>
+            <field name="created_by_hr">1</field>
+        </record>
+
+        <record id="event_aisha_demo_2" model="performance.event.participation">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_manager"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="event_name">Executive Results Review</field>
+            <field name="event_date">2027-09-08</field>
+            <field name="event_type">Review</field>
+            <field name="participation_role">Presenter</field>
+            <field name="quality_rating">4.6</field>
+            <field name="created_by_hr">1</field>
+        </record>
+
+        <record id="midyear_review_fatima_2027" model="performance.midyear.review">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_employee"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="manager_id" ref="ooc_performance_evaluation.employee_perf_section_head"/>
+            <field name="review_date">2027-06-11</field>
+            <field name="progress_summary">Most commitments were on track and the employee was taking a bigger share of runbook ownership.</field>
+            <field name="challenges">Peak workload during incident weeks reduced time for documentation deep-dives.</field>
+            <field name="support_required">Additional release automation and clearer incident rotation planning.</field>
+            <field name="priority_changes">Shift more effort to operational resilience in the second half.</field>
+            <field name="employee_comments">Would like more time reserved for preventive maintenance and tooling.</field>
+            <field name="manager_comments">Good momentum; focus on consistent SLA performance and knowledge transfer.</field>
+            <field name="state">done</field>
+        </record>
+
+        <record id="appeal_fatima_2027" model="performance.appeal">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_employee"/>
+            <field name="evaluation_id" ref="ooc_performance_evaluation.evaluation_fatima_2027"/>
+            <field name="appeal_reason">Review comment for incident-resolution goal</field>
+            <field name="appeal_description">The employee requested clarification on the narrative comment attached to the incident resolution objective.</field>
+            <field name="requested_change">Clarify that the score reflects one high-severity incident outside the employee's shift ownership.</field>
+            <field name="manager_response">Manager agreed to expand the narrative context but not to change the quantitative score.</field>
+            <field name="manager_recommendation">Retain the final score and update the publication note.</field>
+            <field name="hr_decision">HR accepted the clarification request and escalated the wording to committee review.</field>
+            <field name="committee_notes">Committee is reviewing the wording to keep the result transparent while preserving the evidence trail.</field>
+            <field name="submission_date">2027-12-10</field>
+            <field name="state">waiting_manager_response</field>
+        </record>
+
+        <record id="development_plan_salim_2027" model="performance.development.plan">
+            <field name="employee_id" ref="ooc_performance_evaluation.employee_perf_section_head"/>
+            <field name="evaluation_id" ref="ooc_performance_evaluation.evaluation_salim_2027"/>
+            <field name="cycle_id" ref="ooc_performance_evaluation.performance_cycle_demo_2027"/>
+            <field name="manager_id" ref="ooc_performance_evaluation.employee_perf_manager"/>
+            <field name="hr_reviewer_id" ref="ooc_performance_evaluation.employee_perf_hr_officer"/>
+            <field name="deadline">2028-01-12</field>
+            <field name="weakness_points">Needs deeper succession planning and cross-team delegation routines.</field>
+            <field name="training_programs">Leadership coaching, service portfolio management, and stakeholder communication workshops.</field>
+            <field name="professional_skills">Broaden governance reporting and release-planning consistency.</field>
+            <field name="leadership_skills">Improve coaching structure for senior specialists and deputies.</field>
+            <field name="planned_activities">Monthly mentoring, quarterly leadership workshop, and a delegation playbook rollout.</field>
+            <field name="progress">35</field>
+            <field name="state">in_progress</field>
+        </record>
+    </data>
+</odoo>

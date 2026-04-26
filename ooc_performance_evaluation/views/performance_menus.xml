@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_performance_root"
+        name="Performance Evaluation"
+        sequence="20"
+        web_icon="ooc_performance_evaluation,static/description/icon.png"
+        groups="ooc_performance_evaluation.group_performance_employee,ooc_performance_evaluation.group_performance_direct_manager,ooc_performance_evaluation.group_performance_section_head,ooc_performance_evaluation.group_performance_hr_officer,ooc_performance_evaluation.group_performance_hr_manager,ooc_performance_evaluation.group_performance_executive_viewer,ooc_performance_evaluation.group_performance_administrator"/>
+
+    <menuitem id="menu_performance_dashboard_root" name="Dashboard" parent="menu_performance_root" sequence="1"/>
+    <menuitem id="menu_performance_dashboard_employee" name="My Dashboard" parent="menu_performance_dashboard_root" action="action_performance_dashboard_employee_client" groups="ooc_performance_evaluation.group_performance_employee" sequence="1"/>
+    <menuitem id="menu_performance_dashboard_manager" name="Team Dashboard" parent="menu_performance_dashboard_root" action="action_performance_dashboard_manager_client" groups="ooc_performance_evaluation.group_performance_direct_manager" sequence="2"/>
+    <menuitem id="menu_performance_dashboard_section_head" name="Section Dashboard" parent="menu_performance_dashboard_root" action="action_performance_dashboard_section_client" groups="ooc_performance_evaluation.group_performance_section_head" sequence="3"/>
+    <menuitem id="menu_performance_dashboard_hr" name="HR Dashboard" parent="menu_performance_dashboard_root" action="action_performance_dashboard_hr_client" groups="ooc_performance_evaluation.group_performance_hr_officer,ooc_performance_evaluation.group_performance_hr_manager,ooc_performance_evaluation.group_performance_administrator" sequence="4"/>
+    <menuitem id="menu_performance_dashboard_executive" name="Executive Dashboard" parent="menu_performance_dashboard_root" action="action_performance_dashboard_executive_client" groups="ooc_performance_evaluation.group_performance_executive_viewer" sequence="5"/>
+
+    <menuitem id="menu_performance_cycles" name="Evaluation Cycles" parent="menu_performance_root" action="action_performance_cycles" sequence="2" groups="ooc_performance_evaluation.group_performance_hr_officer,ooc_performance_evaluation.group_performance_hr_manager,ooc_performance_evaluation.group_performance_administrator,ooc_performance_evaluation.group_performance_executive_viewer"/>
+
+    <menuitem id="menu_performance_kpis_root" name="KPIs" parent="menu_performance_root" sequence="3"/>
+    <menuitem id="menu_performance_kpis" name="KPI Structure" parent="menu_performance_kpis_root" action="action_performance_kpis" sequence="1"/>
+    <menuitem id="menu_performance_score_sheet" name="KPI Score Sheet" parent="menu_performance_kpis_root" action="action_performance_kpi_scores" sequence="2" groups="ooc_performance_evaluation.group_performance_hr_officer,ooc_performance_evaluation.group_performance_hr_manager,ooc_performance_evaluation.group_performance_executive_viewer,ooc_performance_evaluation.group_performance_administrator"/>
+
+    <menuitem id="menu_performance_goals_root" name="Goals" parent="menu_performance_root" sequence="4"/>
+    <menuitem id="menu_performance_goal_bank" name="Goal Bank" parent="menu_performance_goals_root" action="action_performance_goals" sequence="1"/>
+    <menuitem id="menu_performance_my_goals" name="My Goals" parent="menu_performance_goals_root" action="action_performance_my_goal_selection" sequence="2" groups="ooc_performance_evaluation.group_performance_employee"/>
+    <menuitem id="menu_performance_goal_approvals" name="Goal Approvals" parent="menu_performance_goals_root" action="action_performance_goal_selections" sequence="3" groups="ooc_performance_evaluation.group_performance_direct_manager,ooc_performance_evaluation.group_performance_section_head,ooc_performance_evaluation.group_performance_hr_officer,ooc_performance_evaluation.group_performance_hr_manager,ooc_performance_evaluation.group_performance_administrator"/>
+
+    <menuitem id="menu_performance_midyear" name="Mid-Year Reviews" parent="menu_performance_root" action="action_performance_midyear_reviews" sequence="5"/>
+
+    <menuitem id="menu_performance_evaluations_root" name="Evaluations" parent="menu_performance_root" sequence="6"/>
+    <menuitem id="menu_performance_my_evaluation" name="My Evaluation" parent="menu_performance_evaluations_root" action="action_performance_my_evaluation" sequence="1" groups="ooc_performance_evaluation.group_performance_employee"/>
+    <menuitem id="menu_performance_team_evaluations" name="Team Evaluations" parent="menu_performance_evaluations_root" action="action_performance_team_evaluations" sequence="2" groups="ooc_performance_evaluation.group_performance_direct_manager"/>
+    <menuitem id="menu_performance_section_evaluations" name="Section Evaluations" parent="menu_performance_evaluations_root" action="action_performance_section_evaluations" sequence="3" groups="ooc_performance_evaluation.group_performance_section_head"/>
+    <menuitem id="menu_performance_hr_evaluations" name="HR Evaluations" parent="menu_performance_evaluations_root" action="action_performance_hr_evaluations" sequence="4" groups="ooc_performance_evaluation.group_performance_hr_officer,ooc_performance_evaluation.group_performance_hr_manager,ooc_performance_evaluation.group_performance_administrator,ooc_performance_evaluation.group_performance_executive_viewer"/>
+
+    <menuitem id="menu_performance_discipline" name="Discipline" parent="menu_performance_root" action="action_performance_discipline" sequence="7"/>
+    <menuitem id="menu_performance_events" name="Events" parent="menu_performance_root" action="action_performance_events" sequence="8"/>
+    <menuitem id="menu_performance_appeals" name="Appeals" parent="menu_performance_root" action="action_performance_appeals" sequence="9"/>
+    <menuitem id="menu_performance_development_plans" name="Development Plans" parent="menu_performance_root" action="action_performance_development_plans" sequence="10"/>
+
+    <menuitem id="menu_performance_reports_root" name="Reports" parent="menu_performance_root" sequence="11"/>
+    <menuitem id="menu_performance_report_employee" name="Employee Evaluation Report" parent="menu_performance_reports_root" action="action_performance_hr_evaluations" sequence="1"/>
+    <menuitem id="menu_performance_report_reward_approvals" name="Staff Rewards Approval" parent="menu_performance_reports_root" action="action_performance_reward_batches" sequence="2" groups="ooc_performance_evaluation.group_performance_hr_officer,ooc_performance_evaluation.group_performance_hr_manager,ooc_performance_evaluation.group_performance_administrator,ooc_performance_evaluation.group_performance_executive_viewer"/>
+
+    <menuitem id="menu_performance_configuration_root" name="Configuration" parent="menu_performance_root" sequence="12" groups="ooc_performance_evaluation.group_performance_hr_officer,ooc_performance_evaluation.group_performance_hr_manager,ooc_performance_evaluation.group_performance_administrator"/>
+    <menuitem id="menu_performance_reward_rules" name="Reward Rules" parent="menu_performance_configuration_root" action="action_performance_reward_rules" sequence="1" groups="ooc_performance_evaluation.group_performance_hr_officer,ooc_performance_evaluation.group_performance_hr_manager,ooc_performance_evaluation.group_performance_administrator"/>
+    <menuitem id="menu_performance_settings" name="Settings" parent="menu_performance_configuration_root" action="action_performance_config" sequence="2" groups="ooc_performance_evaluation.group_performance_hr_officer,ooc_performance_evaluation.group_performance_hr_manager,ooc_performance_evaluation.group_performance_administrator"/>
+</odoo>

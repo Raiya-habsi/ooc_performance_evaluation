@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_performance_cycle_kanban" model="ir.ui.view">
+        <field name="name">performance.cycle.kanban</field>
+        <field name="model">performance.cycle</field>
+        <field name="arch" type="xml">
+            <kanban class="o_perf_cycle_kanban">
+                <field name="name"/>
+                <field name="year"/>
+                <field name="state"/>
+                <field name="eligible_employee_count"/>
+                <field name="excluded_employee_count"/>
+                <field name="evaluation_count"/>
+                <field name="completed_evaluation_count"/>
+                <field name="published_evaluation_count"/>
+                <field name="appeal_count"/>
+                <field name="average_final_score"/>
+                <field name="completion_rate"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click o_perf_card o_perf_cycle_card">
+                            <div class="o_perf_card_header">
+                                <div>
+                                    <div class="o_perf_eyebrow">Evaluation Cycle</div>
+                                    <strong class="o_perf_title" t-out="record.name.value"/>
+                                </div>
+                                <span class="badge text-bg-primary" t-out="record.state.value"/>
+                            </div>
+                            <div class="o_perf_cycle_year">
+                                <span t-out="record.year.value"/>
+                            </div>
+                            <div class="o_perf_metric_grid">
+                                <div class="o_perf_metric">
+                                    <span class="o_perf_metric_value" t-out="record.eligible_employee_count.value"/>
+                                    <span class="o_perf_metric_label">Eligible</span>
+                                </div>
+                                <div class="o_perf_metric">
+                                    <span class="o_perf_metric_value" t-out="record.excluded_employee_count.value"/>
+                                    <span class="o_perf_metric_label">Excluded</span>
+                                </div>
+                                <div class="o_perf_metric">
+                                    <span class="o_perf_metric_value" t-out="record.completed_evaluation_count.value"/>
+                                    <span class="o_perf_metric_label">Completed</span>
+                                </div>
+                                <div class="o_perf_metric">
+                                    <span class="o_perf_metric_value" t-out="record.appeal_count.value"/>
+                                    <span class="o_perf_metric_label">Appeals</span>
+                                </div>
+                            </div>
+                            <div class="o_perf_progress_block">
+                                <div class="o_perf_progress_top">
+                                    <span>Completion</span>
+                                    <strong t-out="record.completion_rate.value"/>
+                                </div>
+                                <progress max="100" t-att-value="record.completion_rate.raw_value or 0"/>
+                            </div>
+                            <div class="o_perf_card_footer">
+                                <span>
+                                    Avg Score:
+                                    <strong t-out="record.average_final_score.value"/>
+                                </span>
+                                <span>
+                                    Published:
+                                    <strong t-out="record.published_evaluation_count.value"/>
+                                </span>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_performance_cycle_list" model="ir.ui.view">
+        <field name="name">performance.cycle.list</field>
+        <field name="model">performance.cycle</field>
+        <field name="arch" type="xml">
+            <list decoration-success="state in ('published', 'appeal_period')" decoration-warning="state == 'final_evaluation'" decoration-muted="state == 'closed'">
+                <field name="name"/>
+                <field name="year"/>
+                <field name="start_date"/>
+                <field name="result_publish_date"/>
+                <field name="eligible_employee_count"/>
+                <field name="evaluation_count"/>
+                <field name="completion_rate"/>
+                <field name="average_final_score"/>
+                <field name="appeal_count"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_performance_cycle_search" model="ir.ui.view">
+        <field name="name">performance.cycle.search</field>
+        <field name="model">performance.cycle</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="year"/>
+                <filter name="state_draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="state_progress" string="In Progress" domain="[('state', 'in', ('goal_setting', 'manager_approval', 'hr_approval', 'goals_locked', 'mid_year_review', 'final_evaluation'))]"/>
+                <filter name="state_published" string="Published" domain="[('state', 'in', ('published', 'appeal_period'))]"/>
+                <filter name="state_closed" string="Closed" domain="[('state', '=', 'closed')]"/>
+                <separator/>
+                <filter name="group_state" string="State" context="{'group_by': 'state'}"/>
+                <filter name="group_year" string="Year" context="{'group_by': 'year'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_performance_cycle_form" model="ir.ui.view">
+        <field name="name">performance.cycle.form</field>
+        <field name="model">performance.cycle</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_start_goal_setting" string="Start Goal Setting" type="object" class="btn-primary" invisible="state != 'draft'"/>
+                    <button name="action_generate_evaluations" string="Generate Evaluation Records" type="object" invisible="state == 'closed'"/>
+                    <button name="action_start_manager_approval" string="Start Manager Approval" type="object" invisible="state != 'goal_setting'"/>
+                    <button name="action_start_hr_approval" string="Start HR Approval" type="object" invisible="state != 'manager_approval'"/>
+                    <button name="action_lock_goals" string="Lock Goals" type="object" invisible="state != 'hr_approval'"/>
+                    <button name="action_open_mid_year_review" string="Open Mid-Year Review" type="object" invisible="state not in ('goals_locked', 'mid_year_review')"/>
+                    <button name="action_start_final_evaluation" string="Start Final Evaluation" type="object" invisible="state not in ('goals_locked', 'mid_year_review')"/>
+                    <button name="action_confirm_evaluations" string="Confirm Evaluations" type="object" invisible="state != 'final_evaluation'"/>
+                    <button name="action_publish_results" string="Publish Results" type="object" invisible="state != 'hr_confirmation'"/>
+                    <button name="action_open_appeal_period" string="Open Appeal Period" type="object" invisible="state != 'published'"/>
+                    <button name="action_close_cycle" string="Close Cycle" type="object" invisible="state == 'closed'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,goal_setting,manager_approval,hr_approval,goals_locked,mid_year_review,final_evaluation,hr_confirmation,published,appeal_period,closed"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="action_view_evaluations" icon="fa-users">
+                            <field name="evaluation_count" string="Evaluations" widget="statinfo"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="action_view_kpis" icon="fa-sitemap">
+                            <field name="kpi_count" string="KPIs" widget="statinfo"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="action_view_score_sheets" icon="fa-line-chart">
+                            <field name="score_sheet_count" string="Score Sheets" widget="statinfo"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="action_view_goals" icon="fa-bullseye">
+                            <field name="goal_count" string="Goals" widget="statinfo"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="action_view_appeals" icon="fa-gavel">
+                            <field name="appeal_count" string="Appeals" widget="statinfo"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="action_view_development_plans" icon="fa-road">
+                            <field name="development_plan_count" string="Plans" widget="statinfo"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="action_view_rewards" icon="fa-money">
+                            <field name="reward_count" string="Rewards" widget="statinfo"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="action_view_midyear_reviews" icon="fa-comments-o">
+                            <field name="midyear_review_count" string="Mid-Year Reviews" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group string="Overview" col="4">
+                        <field name="year"/>
+                        <field name="start_date"/>
+                        <field name="result_publish_date"/>
+                        <field name="appeal_deadline"/>
+                        <field name="eligible_employee_count" readonly="1"/>
+                        <field name="evaluation_count" readonly="1"/>
+                        <field name="completion_rate" readonly="1"/>
+                        <field name="average_final_score" readonly="1"/>
+                        <field name="reward_batch_id" readonly="1"/>
+                    </group>
+                    <group string="Timeline">
+                        <group>
+                            <field name="goal_setting_start_date"/>
+                            <field name="goal_submission_deadline"/>
+                            <field name="manager_approval_deadline"/>
+                            <field name="hr_approval_deadline"/>
+                        </group>
+                        <group>
+                            <field name="goals_lock_date"/>
+                            <field name="mid_year_review_start"/>
+                            <field name="mid_year_review_end"/>
+                            <field name="final_evaluation_start"/>
+                            <field name="final_evaluation_end"/>
+                            <field name="development_plan_deadline"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Evaluation Progress">
+                            <group col="4">
+                                <field name="completed_evaluation_count" readonly="1"/>
+                                <field name="published_evaluation_count" readonly="1"/>
+                                <field name="appeal_count" readonly="1"/>
+                                <field name="excluded_employee_count" readonly="1"/>
+                            </group>
+                            <field name="evaluation_ids" readonly="1">
+                                <list decoration-success="state in ('published', 'appealed', 'closed')" decoration-warning="state in ('waiting_inputs', 'manager_evaluation', 'manager_submitted', 'hr_review')">
+                                    <field name="employee_id"/>
+                                    <field name="department_id"/>
+                                    <field name="evaluation_category"/>
+                                    <field name="manager_id"/>
+                                    <field name="final_score"/>
+                                    <field name="rating"/>
+                                    <field name="reward_amount"/>
+                                    <field name="reward_status"/>
+                                    <field name="state"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="KPI Structure">
+                            <field name="kpi_ids">
+                                <list decoration-info="kpi_level == 'organization'" decoration-primary="kpi_level == 'department'" decoration-success="kpi_level == 'section'" decoration-warning="kpi_level == 'employee'">
+                                    <field name="name"/>
+                                    <field name="kpi_level"/>
+                                    <field name="parent_id"/>
+                                    <field name="department_id"/>
+                                    <field name="section_id"/>
+                                    <field name="target_value"/>
+                                    <field name="weight"/>
+                                    <field name="state"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_performance_cycles" model="ir.actions.act_window">
+        <field name="name">Evaluation Cycles</field>
+        <field name="res_model">performance.cycle</field>
+        <field name="view_mode">list,form,graph,pivot,kanban</field>
+        <field name="search_view_id" ref="view_performance_cycle_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create an annual performance cycle to drive goal setting, evaluations, publication, appeals, and development plans.
+            </p>
+        </field>
+    </record>
+</odoo>

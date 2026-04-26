@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_performance_dashboard_employee_client" model="ir.actions.client">
+        <field name="name">My Dashboard</field>
+        <field name="tag">ooc_performance_dashboard</field>
+        <field name="context">{'dashboard_scope': 'employee'}</field>
+    </record>
+
+    <record id="action_performance_dashboard_manager_client" model="ir.actions.client">
+        <field name="name">Team Dashboard</field>
+        <field name="tag">ooc_performance_dashboard</field>
+        <field name="context">{'dashboard_scope': 'manager'}</field>
+    </record>
+
+    <record id="action_performance_dashboard_section_client" model="ir.actions.client">
+        <field name="name">Section Dashboard</field>
+        <field name="tag">ooc_performance_dashboard</field>
+        <field name="context">{'dashboard_scope': 'section'}</field>
+    </record>
+
+    <record id="action_performance_dashboard_hr_client" model="ir.actions.client">
+        <field name="name">HR Dashboard</field>
+        <field name="tag">ooc_performance_dashboard</field>
+        <field name="context">{'dashboard_scope': 'hr'}</field>
+    </record>
+
+    <record id="action_performance_dashboard_executive_client" model="ir.actions.client">
+        <field name="name">Executive Dashboard</field>
+        <field name="tag">ooc_performance_dashboard</field>
+        <field name="context">{'dashboard_scope': 'executive'}</field>
+    </record>
+</odoo>

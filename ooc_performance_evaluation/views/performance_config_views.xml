@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_performance" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.performance</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app string="Performance Evaluation" name="performance_evaluation">
+                    <block title="Performance Evaluation Settings">
+                        <setting string="Goal Selection">
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <div class="col-12 col-lg-6">
+                                        <field name="performance_minimum_goals"/>
+                                        <field name="performance_maximum_goals"/>
+                                        <field name="performance_goal_total_weight"/>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <field name="performance_score_cap"/>
+                                        <field name="performance_appeal_working_days"/>
+                                        <field name="performance_development_plan_working_days"/>
+                                        <field name="performance_low_threshold"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </setting>
+                        <setting string="Formula Weights">
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <div class="col-12 col-lg-6">
+                                        <field name="performance_employee_individual_weight"/>
+                                        <field name="performance_employee_institutional_weight"/>
+                                        <field name="performance_goal_component_weight"/>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <field name="performance_discipline_component_weight"/>
+                                        <field name="performance_events_component_weight"/>
+                                        <field name="performance_manager_goal_component_weight"/>
+                                        <field name="performance_manager_events_component_weight"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_performance_config_settings_form" model="ir.ui.view">
+        <field name="name">performance.config.settings.form</field>
+        <field name="model">performance.config.settings</field>
+        <field name="arch" type="xml">
+            <form string="Performance Settings">
+                <sheet>
+                    <group string="Goal Selection">
+                        <group>
+                            <field name="name" invisible="1"/>
+                            <field name="minimum_goals"/>
+                            <field name="maximum_goals"/>
+                            <field name="goal_total_weight"/>
+                            <field name="score_cap"/>
+                        </group>
+                        <group>
+                            <field name="appeal_working_days"/>
+                            <field name="development_plan_working_days"/>
+                            <field name="low_performance_threshold"/>
+                        </group>
+                    </group>
+                    <group string="Formula Weights">
+                        <group>
+                            <field name="employee_individual_weight"/>
+                            <field name="employee_institutional_weight"/>
+                            <field name="goal_component_weight"/>
+                            <field name="discipline_component_weight"/>
+                        </group>
+                        <group>
+                            <field name="events_component_weight"/>
+                            <field name="manager_goal_component_weight"/>
+                            <field name="manager_events_component_weight"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_performance_config" model="ir.actions.act_window">
+        <field name="name">Performance Settings</field>
+        <field name="res_model">performance.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_performance_config_settings_form"/>
+        <field name="res_id" ref="ooc_performance_evaluation.performance_config_default"/>
+        <field name="target">current</field>
+    </record>
+</odoo>

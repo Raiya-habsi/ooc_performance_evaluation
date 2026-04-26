@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="reward_rule_excellent" model="performance.reward.rule">
+        <field name="min_score">90</field>
+        <field name="max_score">100</field>
+        <field name="rating">Excellent</field>
+        <field name="reward_description">Two basic salaries</field>
+        <field name="reward_multiplier">2</field>
+        <field name="requires_budget_approval">True</field>
+        <field name="requires_board_approval">True</field>
+    </record>
+
+    <record id="reward_rule_very_good" model="performance.reward.rule">
+        <field name="min_score">80</field>
+        <field name="max_score">89.99</field>
+        <field name="rating">Very Good</field>
+        <field name="reward_description">One basic salary</field>
+        <field name="reward_multiplier">1</field>
+        <field name="requires_budget_approval">True</field>
+    </record>
+
+    <record id="reward_rule_good" model="performance.reward.rule">
+        <field name="min_score">70</field>
+        <field name="max_score">79.99</field>
+        <field name="rating">Good</field>
+        <field name="reward_description">Half salary</field>
+        <field name="reward_multiplier">0.5</field>
+        <field name="requires_budget_approval">True</field>
+    </record>
+
+    <record id="reward_rule_acceptable" model="performance.reward.rule">
+        <field name="min_score">50</field>
+        <field name="max_score">69.99</field>
+        <field name="rating">Acceptable</field>
+        <field name="reward_description">Quarter salary</field>
+        <field name="reward_multiplier">0.25</field>
+        <field name="requires_budget_approval">True</field>
+    </record>
+
+    <record id="reward_rule_weak" model="performance.reward.rule">
+        <field name="min_score">0</field>
+        <field name="max_score">49.99</field>
+        <field name="rating">Weak</field>
+        <field name="reward_description">No reward</field>
+        <field name="reward_multiplier">0</field>
+    </record>
+</odoo>
